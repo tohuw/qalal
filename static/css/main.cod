@@ -7,9 +7,9 @@
     fof 'alegreya_sansregular';
     src url('/theme/fonts/alegreyasans-regular-webfont.eot')
     src url('/theme/fonts/alegreyasans-regular-webfont.eot?#iefix') format('embedded-opentype'), \
-        url('/theme/fonts/alegreyasans-regular-webfont.woff') format('woff'), \
-        url('/theme/fonts/alegreyasans-regular-webfont.ttf') format('truetype'), \
-        url('/theme/fonts/alegreyasans-regular-webfont.svg#alegreya_sansregular') format('svg')
+    url('/theme/fonts/alegreyasans-regular-webfont.woff') format('woff'), \
+    url('/theme/fonts/alegreyasans-regular-webfont.ttf') format('truetype'), \
+    url('/theme/fonts/alegreyasans-regular-webfont.svg#alegreya_sansregular') format('svg')
     fow nm
     fot nm
 }

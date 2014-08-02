@@ -2,94 +2,94 @@
 <html lang="{{ DEFAULT_LANG }}">
 <head>
 {% block head %}
-  {% block metadata %}
-    <meta charset="utf-8">
-    {% if article and article.author %}
-      <meta name="author" content="{{ article.author }}" />
-      <meta name="copyright" content="{{ article.author }}" />
-    {% elif page and page.author %}
-      <meta name="author" content="{{ page.author }}" />
-      <meta name="copyright" content="{{ page.author }}" />
-    {% else %}
-      <meta name="author" content="{{ AUTHOR }}" />
-      <meta name="copyright" content="{{ AUTHOR }}" />
-    {% endif %}
-    {% if SITE_DESCRIPTION %}
-      <meta name="description" content="{% block head_description %}{{ SITE_DESCRIPTION }}{% endblock head_description %}" />
-    {% endif %}
-  {% endblock metadata %}
+    {% block metadata %}
+        <meta charset="utf-8">
+        {% if article and article.author %}
+            <meta name="author" content="{{ article.author }}" />
+            <meta name="copyright" content="{{ article.author }}" />
+        {% elif page and page.author %}
+            <meta name="author" content="{{ page.author }}" />
+            <meta name="copyright" content="{{ page.author }}" />
+        {% else %}
+            <meta name="author" content="{{ AUTHOR }}" />
+            <meta name="copyright" content="{{ AUTHOR }}" />
+        {% endif %}
+        {% if SITE_DESCRIPTION %}
+            <meta name="description" content="{% block head_description %}{{ SITE_DESCRIPTION }}{% endblock head_description %}" />
+        {% endif %}
+    {% endblock metadata %}
 
-  <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
-  
-  {% block feeds %}
-    {% if FEED_ALL_ATOM %}
-      <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
-    {% endif %}
-    {% if FEED_ALL_RSS %}
-      <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed">
-    {% endif %}
-    {% if FEED_ATOM %}
-      <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed">
-    {% endif %}
-    {% if FEED_RSS %}
-      <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed">
-    {% endif %}
-    {% if CATEGORY_FEED_ATOM and category %}
-      <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed">
-    {% endif %}
-    {% if CATEGORY_FEED_RSS and category %}
-      <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed">
-    {% endif %}
-    {% if TAG_FEED_ATOM and tag %}
-      <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed">
-    {% endif %}
-    {% if TAG_FEED_RSS and tag %}
-      <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
-    {% endif %}
-  {% endblock feeds %}
-  
-  {% block stylelinks %}
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" media="screen">
-  {% endblock stylelinks %}
+    <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+    
+    {% block feeds %}
+        {% if FEED_ALL_ATOM %}
+            <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+            <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed">
+        {% endif %}
+        {% if FEED_ATOM %}
+            <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed">
+        {% endif %}
+        {% if FEED_RSS %}
+            <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed">
+        {% endif %}
+        {% if CATEGORY_FEED_ATOM and category %}
+            <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed">
+        {% endif %}
+        {% if CATEGORY_FEED_RSS and category %}
+            <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed">
+        {% endif %}
+        {% if TAG_FEED_ATOM and tag %}
+            <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed">
+        {% endif %}
+        {% if TAG_FEED_RSS and tag %}
+            <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
+        {% endif %}
+    {% endblock feeds %}
+    
+    {% block stylelinks %}
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" media="screen">
+    {% endblock stylelinks %}
 
-  {% include 'includes/googleanalytics.html' %}
-  {% include 'includes/gosquared.html' %}
+    {% include 'includes/googleanalytics.html' %}
+    {% include 'includes/gosquared.html' %}
 {% endblock head %}
 </head>
 
 <body>
-  <header>
-    <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-    <h2>{{ SITESUBTITLE }}</h2>
-  </header>
-  <nav id="menu"><ul>
-    {% for title, link in MENUITEMS %}
-      <li class="menu-item"><a href="{{ link }}">{{ title }}</a></li>
-    {% endfor %}
-    {% if DISPLAY_PAGES_ON_MENU %}
-      {% for p in PAGES %}
-        <li class="menu-page{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-      {% endfor %}
-    {% else %}
-    {% if DISPLAY_CATEGORIES_ON_MENU %}
-      {% for cat, null in categories %}
-        <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-      {% endfor %}
-    {% endif %}
-    {% endif %}
-  </ul></nav>
-  {% block content %}
-  {% endblock %}
-  <div id="sidebar">
-    <aside class="twitterfeed">
-      
-    </aside>
-  </div>
-  <footer>
-    <address id="pelicanattr">
-      Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-    </address>
-  </footer>
-  {% include 'includes/piwik.html' %}
+    <header>
+        <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+        <h2>{{ SITESUBTITLE }}</h2>
+    </header>
+    <nav id="menu"><ul>
+        {% for title, link in MENUITEMS %}
+            <li class="menu-item"><a href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
+        {% if DISPLAY_PAGES_ON_MENU %}
+            {% for p in PAGES %}
+                <li class="menu-page{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}
+        {% else %}
+        {% if DISPLAY_CATEGORIES_ON_MENU %}
+            {% for cat, null in categories %}
+                <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            {% endfor %}
+        {% endif %}
+        {% endif %}
+    </ul></nav>
+    {% block content %}
+    {% endblock %}
+    <div id="sidebar">
+        <aside class="twitterfeed">
+            
+        </aside>
+    </div>
+    <footer>
+        <address id="pelicanattr">
+            Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+        </address>
+    </footer>
+    {% include 'includes/piwik.html' %}
 </body>
 </html>

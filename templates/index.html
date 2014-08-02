@@ -1,26 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 {% if ALLARTICLES_TITLE %}
-  {% block content_title %}
-    <h2>{{ ALLARTICLES_TITLE }}</h2>
-  {% endblock %}
+    {% block content_title %}
+        <h2>{{ ALLARTICLES_TITLE }}</h2>
+    {% endblock %}
 {% endif %}
 <ol id="post-list">
 {% for article in articles_page.object_list %}
-  <li>
-  <article>
-    <header>
-      <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-    </header>
-    <footer>
-      <span class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
-      <address>
-        By {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% endfor %}
-      </address>
-    </footer>
-    <section class="post-summary"> {{ article.summary }} </section>
-  </article>
-  </li>
+    <li>
+    <article>
+        <header>
+            <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+        </header>
+        <footer>
+            <span class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
+            <address>
+                By {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% endfor %}
+            </address>
+        </footer>
+        <section class="post-summary"> {{ article.summary }} </section>
+    </article>
+    </li>
 {% endfor %}
 </ol>
 {% include 'pagination.html' %}

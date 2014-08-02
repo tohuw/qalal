@@ -1,0 +1,16 @@
+# Ignore common temp, swap and bytecode files
+*.swn
+*.swo
+*.swp
+.~*
+.#*
+*.pyc
+
+## Ignore site-specific files...
+# Pelican
+cache
+output
+pelican-plugins
+themes
+# Sublime Text
+*.sublime-*
