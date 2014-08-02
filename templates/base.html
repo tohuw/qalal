@@ -51,6 +51,11 @@
   {% block stylelinks %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" media="screen">
   {% endblock stylelinks %}
+
+  {% block googleanalytics %}
+  {% endblock %}
+  {% block gosquared %}
+  {% endblock %}
 {% endblock head %}
 </head>
 
@@ -79,9 +84,10 @@
   {% endblock %}
   <footer>
     <address id="pelicanattr">
-    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-    which takes great advantage of <a href="http://python.org">Python</a>.
+      Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
     </address>
   </footer>
+  {% block piwik %}
+  {% endblock %}
 </body>
 </html>
