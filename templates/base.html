@@ -52,10 +52,8 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" media="screen">
   {% endblock stylelinks %}
 
-  {% block googleanalytics %}
-  {% endblock %}
-  {% block gosquared %}
-  {% endblock %}
+  {% include 'includes/googleanalytics.html' %}
+  {% include 'includes/gosquared.html' %}
 {% endblock head %}
 </head>
 
@@ -82,12 +80,16 @@
   </ul></nav>
   {% block content %}
   {% endblock %}
+  <div id="sidebar">
+    <aside class="twitterfeed">
+      
+    </aside>
+  </div>
   <footer>
     <address id="pelicanattr">
       Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
     </address>
   </footer>
-  {% block piwik %}
-  {% endblock %}
+  {% include 'includes/piwik.html' %}
 </body>
 </html>

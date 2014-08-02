@@ -1,14 +1,20 @@
 {% extends "base.html" %}
+
+{% block title %}
+  {{ super () }}
+  {{ article.title|striptags }} on 
+{% endblock %}
+
 {% block metadata %}
   {{ super() }}
   {% for keyword in article.keywords %}
-    <meta name="keywords" contents="{{keyword}}" />
+    <meta name="keywords" contents="{{keyword}}">
   {% endfor %}
   {% for description in article.description %}
-    <meta name="description" contents="{{description}}" />
+    <meta name="description" contents="{{description}}">
   {% endfor %}
   {% for tag in article.tags %}
-    <meta name="tags" contents="{{tag}}" />
+    <meta name="tags" contents="{{tag}}">
   {% endfor %}
 {% endblock %}
 
@@ -25,7 +31,7 @@
       <span class="published" title="{{ article.date.isoformat() }}">
         {{ article.locale_date }}
       </span>
-      {% if article.modified %}
+      {% if article.modified and ARTICLE_SHOW_MODDATE %}
         <span class="modified" title="{{ article.modified.isoformat() }}">
           {{ article.locale_modified }}
         </span>
@@ -36,6 +42,9 @@
             <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
           {% endfor %}
         </address>
+      {% endif %}
+      {% if ARTICLE_SHOW_SHARE %}
+        <div class="sharelinks"><span>Share this:</span>{% include 'includes/twitter.html' %}</div>
       {% endif %}
     </footer>
     <div class="post-content">

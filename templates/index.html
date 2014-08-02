@@ -13,9 +13,9 @@
       <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
     </header>
     <footer>
-      <span class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
+      <span class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>
       <address>
-      By {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% endfor %}
+        By {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% endfor %}
       </address>
     </footer>
     <section class="post-summary"> {{ article.summary }} </section>
