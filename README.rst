@@ -23,8 +23,8 @@ PAGE_SHOW_MODDATE
     Set to false to hide the modified date on pages.
 
 TWITTER_USERNAME [2]_
-    Populate with your username on Twitter (no "@") to set for sharing links and Twitter feeds [3_].
+    Populate with your username on Twitter (no "@") to set for sharing links and Twitter feeds [3]_.
 
 .. [1] JQuery is everyone's favorite example of a perhaps too-weighty library, but until `TipueSearch <http://www.tipue.com/search/>`_ [3]_ stops requiring it, or I get around to writing my own front-end to it, it'll be a necessary evil. I'm also an admittedly lazy JS hack, so I may end up using a method or two from JQuery in future versions of this template.
-.. [2] You may already have these settings from other themes.
+.. [2] You may already have this setting from other themes.
 .. [3] Not currently implemented; planned for a future version.
