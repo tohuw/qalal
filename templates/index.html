@@ -19,10 +19,12 @@
                 By {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% endfor %}
             </address>
         </footer>
-        <section class="post-summary"> {{ article.summary }} </section>
+        <section class="post-summary">{{ article.summary }}</section>
+        <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.slug }}"></a>
     </article>
     </li>
 {% endfor %}
 </ol>
 {% include 'pagination.html' %}
+{% include 'includes/commentcounts.html' %}
 {% endblock content %}
