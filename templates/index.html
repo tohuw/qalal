@@ -20,11 +20,24 @@
             </address>
         </footer>
         <section class="post-summary">{{ article.summary }}</section>
-        <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.slug }}"></a>
+        {% if DISQUS_SITENAME %}
+            {% block commentcountsdisqus %}
+                <script type="text/javascript">
+                    var disqus_shortname = '{{ DISQUS_SITENAME }}';
+                    (function () {
+                        var s = document.createElement('script'); s.async = true;
+                        s.type = 'text/javascript';
+                        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                    }());
+                </script>
+                <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.slug }}"></a>
+            {% endblock %}
+        {% endif %}
+
     </article>
     </li>
 {% endfor %}
 </ol>
 {% include 'pagination.html' %}
-{% include 'includes/commentcounts.html' %}
 {% endblock content %}

@@ -1,11 +1,21 @@
+{% extends "index.html" %}
+
 {% if DISQUS_SITENAME %}
-    <script type="text/javascript">
-        var disqus_shortname = '{{ DISQUS_SITENAME }}';
-        (function () {
-            var s = document.createElement('script'); s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
+    {% block commentcountsdisqus %}
+        <script type="text/javascript">
+            var disqus_shortname = '{{ DISQUS_SITENAME }}';
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+        <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.slug }}"></a>
+    {% endblock %}
+{% endif %}
+{% if PELICAN_COMMENT_SYSTEM %}
+    {% block commentcounts %}
+        <a href="{{ SITEURL }}/{{ article.url}}#comments" class="comments-count">{% if article.comments_count %}No Comments Yet.{% else %}{{ article.comments_count }} comment{% if article.comments_count > 1 %}s{% endif %}{% endif %}</a>
+    {% endblock %}
 {% endif %}

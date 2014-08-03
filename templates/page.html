@@ -13,8 +13,6 @@
     {{ page.content }}
 
     {% if page.modified and PAGE_SHOW_MODDATE %}
-        <p class="page-modified">
-            Last updated: {{ page.locale_modified }}
-        </p>
+        <p class="page-modified">Last updated: {{ page.locale_modified }}</p>
     {% endif %}
 {% endblock %}

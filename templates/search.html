@@ -1,26 +1,27 @@
 {% extends "base.html" %}
 
-{% block title %}
-    Search
-    {{ super() }}
-{% endblock title %}
+{% if TIPUE_SEARCH_ENABLED %}
+    {% block title %}
+        Search
+        {{ super() }}
+    {% endblock title %}
 
-{% block content %}
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
-<script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
+    {% block content %}
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        $('#tipue_search_input').tipuesearch({
-            'show': 10,
-            'mode': 'json',
-            'contentLocation': '{{ SITEURL }}/tipuesearch_content.json',
+    <script>
+        $(document).ready(function() {
+            $('#tipue_search_input').tipuesearch({
+                'show': 10,
+                'mode': 'json',
+                'contentLocation': '{{ SITEURL }}/tipuesearch_content.json',
+            });
         });
-    });
-</script>
+    </script>
 
-<section id="content" class="body">
-    <div id="tipue_search_content"></div>
-</section>
-{% endblock content %}
+    <section id="content" class="body">
+        <div id="tipue_search_content"></div>
+    </section>
+    {% endblock content %}
+{% endif %}
