@@ -20,7 +20,7 @@
     {% endblock metadata %}
 
     <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
-    
+
     {% block feeds %}
         {% if FEED_ALL_ATOM %}
             <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
@@ -47,7 +47,7 @@
             <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
         {% endif %}
     {% endblock feeds %}
-    
+
     {% block stylelinks %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" media="screen">
     {% endblock stylelinks %}
@@ -81,9 +81,9 @@
     {% block content %}
     {% endblock %}
     <div id="sidebar">
-        <aside class="twitterfeed">
-            
-        </aside>
+        {% include 'includes/twitterfeed.html' %}
+        {% include 'includes/social.html' %}
+        {% include 'includes/links.html' %}
     </div>
     <footer>
         <address id="pelicanattr">

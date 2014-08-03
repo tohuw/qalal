@@ -1,0 +1,14 @@
+{% if SOCIAL %}
+    <aside class="social">
+        <h2>Social</h2>
+        <ul>
+            <li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate">Atom Feed</a></li>
+            {% if FEED_RSS %}
+                <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS Feed</a></li>
+            {% endif %}
+            {% for name, link in SOCIAL %}
+                <li><a href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+        </ul>
+    </aside>
+{% endif %}
