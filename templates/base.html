@@ -50,6 +50,9 @@
 
     {% block stylelinks %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" media="screen">
+<!--         {% if TIPUE_SEARCH %}
+            <link href="{{ SITEURL }}/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+        {% endif %} -->
     {% endblock stylelinks %}
 
     {% include 'includes/googleanalytics.html' %}
@@ -78,6 +81,9 @@
         {% endif %}
         {% endif %}
     </ul></nav>
+    <form action="{{ SITEURL }}/search.html">
+        <input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
+    </form>
     {% block content %}
     {% endblock %}
     <div id="sidebar">
