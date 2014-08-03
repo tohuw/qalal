@@ -1,6 +1,12 @@
 {% extends "base.html" %}
+
+{% block title %}
+    Archives of
+    {{ super () }}
+{% endblock %}
+
 {% block content %}
-    <h1>Archives for {{ SITENAME }}</h1>
+    <h1>Archives of {{ SITENAME }}</h1>
     <dl>
     {% for article in dates %}
             <dt>{{ article.locale_date }}</dt>

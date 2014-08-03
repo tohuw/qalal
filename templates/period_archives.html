@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block title %}
+    Archives for {{ period | reverse | join(' ') }} on
+    {{ super () }}
+{% endblock %}
+
 {% block content %}
     <h1 class="period_archives-title">Archives for {{ period | reverse | join(' ') }}</h1>
     <dl class="period_archives-list">

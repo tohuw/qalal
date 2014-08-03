@@ -1,5 +1,9 @@
 {% extends "base.html" %}
-{% block title %}{{ SITENAME }} - Authors{% endblock %}
+
+{% block title %}
+    Authors of
+    {{ super() }}
+{% endblock %}
 
 {% block content %}
     <h1>Authors on {{ SITENAME }}</h1>

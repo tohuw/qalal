@@ -1,5 +1,11 @@
 {% extends "index.html" %}
+
+{% block title %}
+    {{ category|striptags }} Articles on
+    {{ super () }}
+{% endblock %}
+
 {% block content_title %}
-    <h2 id="category-title">Posts about {{ category }}</h2>
+    <h2 id="category-title">Articles about {{ category }}</h2>
 {% endblock %}
 

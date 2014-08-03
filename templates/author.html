@@ -1,9 +1,10 @@
 {% extends "index.html" %}
 
 {% block title %}
-    Articles by {{ author }} on 
+    Articles by {{ author }} on
+    {{ super() }}
 {% endblock %}
 
 {% block content_title %}
-    <h2>Posts by {{ author }}</h2>
+    <h2>Articles by {{ author }}</h2>
 {% endblock %}
