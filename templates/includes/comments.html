@@ -29,7 +29,7 @@
                 function generateMailToLink() {
                     var user = 'ron'; //user@domain = your email address
                     var domain = 'tohuw.net';
-                    var subject = 'New Comment for \'{{ article.title|striptags }}\' on {{ SITENAME }}' ;
+                    var subject = 'New Comment for \"{{ article.title|striptags }}\" on {{ SITENAME }}';
 
                     var d = new Date();
                     var body = ''
@@ -37,6 +37,8 @@
                         + 'Raw comment data:\n'
                         + '----------------------------------------\n'
                         + 'date: ' + d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + '\n'
+                        + 'title: ' +
+                        + 'website: ' + $("#commentform_inputWebsite").val() + '\n'
                         + 'author: ' + $("#commentForm_inputName").val() + '\n';
 
                     var replyto = $('#commentForm_replyto').val();
@@ -63,39 +65,34 @@
                 );
             });
         </script>
-        <a href="{{ FEED_DOMAIN }}/{{ PELICAN_COMMENT_SYSTEM_FEED|format(article.slug) }}">Comment Feed</a>
         <form role="form" id="commentForm" action="#">
-            <input name="Name" type="text" id="commentForm_inputName" placeholder="Enter your name or pseudonym">
+            <input name="Name" type="text" id="commentForm_inputName" placeholder="Enter your name or synonym">
             <textarea name="Text" id="commentForm_inputText" rows="10" style="resize:vertical;" placeholder="Your comment"></textarea>
             <button type="submit" id="commentForm_button">Post via email</button>
             <input name="replyto" type="hidden" id="commentForm_replyto">
         </form>
+        <a href="{{ FEED_DOMAIN }}/{{ PELICAN_COMMENT_SYSTEM_FEED|format(article.slug) }}">Comment Feed</a>
         {% if article.comments %}
-                {% for comment in article.comments recursive %}
-                    {% if loop.depth0 == 0 %}
-                        {% set marginLeft = 0 %}
-                    {% else %}
-                        {% set marginLeft = 50 %}
+            {% for comment in article.comments recursive %}
+                {% if loop.depth0 == 0 %}
+                    {% set marginLeft = 0 %}
+                {% else %}
+                    {% set marginLeft = 50 %}
+                {% endif %}
+                <article id="comment-{{comment.id}}" style="border: 1px solid #DDDDDD; padding: 5px 0px 0px 5px; margin: 0px -1px 5px {{marginLeft}}px;">
+                    <a href="{{ SITEURL }}/{{ article.url }}#comment-{{ comment.id }}" rel="bookmark" title="Permalink to this comment">Permalink</a>
+                    <h4>{{ comment.author }}</h4>
+                    <p>Posted on <abbr class="published" title="{{ comment.date.isoformat() }}">{{ comment.locale_date }}</abbr></p>
+                    {{ comment.metadata['my_custom_metadata'] }}
+                    {{ comment.content }}
+                    <button onclick="reply('{{comment.id | urlencode}}');">Reply</button>
+                    {% if comment.replies %}
+                        {{ loop(comment.replies) }}
                     {% endif %}
-                    <article id="comment-{{comment.id}}" class="staticcomment">
-                        <a href="{{ SITEURL }}/{{ article.url }}#comment-{{comment.id}}" rel="bookmark" title="Permalink to this comment">Permalink</a>
-                        <address>{{ comment.author }}</address>
-                        <p>Posted on <span class="published" title="{{ comment.date.isoformat() }}">{{ comment.locale_date }}</span></p>
-                        {{ comment.metadata['my_custom_metadata'] }}
-                        {{ comment.content }}
-                        <button onclick="reply('{{comment.id | urlencode}}');">Reply</button>
-                        {% if comment.replies %}
-                            {{ loop(comment.replies) }}
-                        {% endif %}
-                    </article>
-                    {% if PELICAN_COMMENT_SYSTEM_IDENTICON_DATA %}
-                        <aside class="staticcomment-identicon">
-                            <img src="{{ SITEURL }}/{{ comment.avatar }}" alt="Avatar" height="{{ PELICAN_COMMENT_SYSTEM_IDENTICON_SIZE }}" width="{{ PELICAN_COMMENT_SYSTEM_IDENTICON_SIZE }}">
-                        </aside>
-                    {% endif %}
-                {% endfor %}
+                </article>
+            {% endfor %}
+        {% else %}
+            <p>There are no comments yet.<p>
+        {% endif %}
     </section>
-    {% else %}
-        <p>There are no comments yet.</p>
-    {% endif %}
 {% endif %}
