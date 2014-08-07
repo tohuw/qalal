@@ -34,7 +34,7 @@
                 <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.slug }}"></a>
             {% endblock %}
         {% endif %}
-
+        {% include 'includes/commentcounts.html' %}
     </article>
     </li>
 {% endfor %}

@@ -19,7 +19,7 @@
 {% endif %}
 {% if PELICAN_COMMENT_SYSTEM and article.status != "draft" %}
     <section id="comments">
-        <script>
+        <!--<script>
             function reply(id) {
                 id = decodeURIComponent(id);
                 $('#commentForm_replyto').val(id);
@@ -31,15 +31,23 @@
                     var domain = 'tohuw.net';
                     var subject = 'New Comment for \"{{ article.title|striptags }}\" on {{ SITENAME }}';
 
-                    var d = new Date();
+                    Date.prototype.today = function () {
+                        return (((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) + "/" + ((this.getDate() < 10)?"0":"") + this.getDate() + "/" + this.getFullYear();
+                    }
+                    Date.prototype.timeNow = function () {
+                        return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds();
+                    }
+                    var datetime = new Date().today() + " " + new Date().timeNow();
+
                     var body = ''
-                        + 'Hey,\nI posted a new comment on ' + document.URL + '\n\nGreetings ' + $("#commentForm_inputName").val() + '\n\n\n'
-                        + 'Raw comment data:\n'
+                        + 'Hello,\nI posted a new comment on ' + document.URL + '\n\n-' + $("#commentForm_inputName").val() + '\n\n'
+                        + 'Comment data:\n'
                         + '----------------------------------------\n'
-                        + 'date: ' + d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + '\n'
-                        + 'title: ' +
-                        + 'website: ' + $("#commentform_inputWebsite").val() + '\n'
-                        + 'author: ' + $("#commentForm_inputName").val() + '\n';
+                        + ':title: ' + $("#commentForm_inputName").val() + ' comments on ' + '{{ article.title|striptags }}' + ' at ' + datetime + '\n'
+                        + ':date: ' + datetime + '\n'
+                        + ':author: ' + $("#commentForm_inputName").val() + '\n'
+                        + ':identifier: ' + $("#commentForm_inputIdentifier").val() + '\n'
+                        + ':website: ' + $("#commentForm_inputWebsite").val() + '\n';
 
                     var replyto = $('#commentForm_replyto').val();
                     if (replyto.length != 0) {
@@ -64,14 +72,16 @@
                     }
                 );
             });
-        </script>
-        <form role="form" id="commentForm" action="#">
+        </script> -->
+        <form role="form" id="commentForm" action="/cgi-bin/formprocessor.py" method="POST">
             <input name="Name" type="text" id="commentForm_inputName" placeholder="Enter your name or synonym">
-            <textarea name="Text" id="commentForm_inputText" rows="10" style="resize:vertical;" placeholder="Your comment"></textarea>
+            <label for="commentForm_inputIdentifier">Identifier: </label><input name="Identifier" type="password" id="commentForm_inputIdentifier">
+            <input name="Website" type="text" id="commentForm_inputWebsite" placeholder="Your website (e.g., http://tohuw.net)">
+            <textarea name="Comment" id="commentForm_inputText" rows="10" style="resize:vertical;" placeholder="Your comment"></textarea>
             <button type="submit" id="commentForm_button">Post via email</button>
             <input name="replyto" type="hidden" id="commentForm_replyto">
         </form>
-        <a href="{{ FEED_DOMAIN }}/{{ PELICAN_COMMENT_SYSTEM_FEED|format(article.slug) }}">Comment Feed</a>
+        <a href="{{ FEED_DOMAIN }}/{{ PELICAN_COMMENT_SYSTEM_FEED|format(article.slug) }}">Subscribe to Comments Feed</a>
         {% if article.comments %}
             {% for comment in article.comments recursive %}
                 {% if loop.depth0 == 0 %}
@@ -79,19 +89,21 @@
                 {% else %}
                     {% set marginLeft = 50 %}
                 {% endif %}
-                <article id="comment-{{comment.id}}" style="border: 1px solid #DDDDDD; padding: 5px 0px 0px 5px; margin: 0px -1px 5px {{marginLeft}}px;">
-                    <a href="{{ SITEURL }}/{{ article.url }}#comment-{{ comment.id }}" rel="bookmark" title="Permalink to this comment">Permalink</a>
-                    <h4>{{ comment.author }}</h4>
-                    <p>Posted on <abbr class="published" title="{{ comment.date.isoformat() }}">{{ comment.locale_date }}</abbr></p>
+                <article id="comment-{{comment.slug}}" style="border: 1px solid #DDDDDD; padding: 5px 0px 0px 5px; margin: 0px -1px 5px {{marginLeft}}px;">
+                    <a href="{{ SITEURL }}/{{ article.url }}#comment-{{ comment.slug }}" rel="bookmark" title="Permalink to this comment">Permalink</a>
+                    <address>
+                        <img src="{{ SITEURL }}/{{ comment.avatar }}" alt="Avatar" height="{{ PELICAN_COMMENT_SYSTEM_IDENTICON_SIZE }}" width="{{ PELICAN_COMMENT_SYSTEM_IDENTICON_SIZE }}">
+                        <a href="{% if comment.website %}{{ comment.website }}{% else %}{{ SITEURL }}/{{ article.url }}#comment-{{ comment.slug }}{% endif %}">{{ comment.author }}</a>
+                    </address>
+                    <p>Posted on <span class="published" title="{{ comment.date.isoformat() }}">{{ comment.locale_date }}</span></p>
                     {{ comment.metadata['my_custom_metadata'] }}
                     {{ comment.content }}
-                    <button onclick="reply('{{comment.id | urlencode}}');">Reply</button>
                     {% if comment.replies %}
                         {{ loop(comment.replies) }}
                     {% endif %}
                 </article>
             {% endfor %}
-        {% else %}
+            {% else %}
             <p>There are no comments yet.<p>
         {% endif %}
     </section>
