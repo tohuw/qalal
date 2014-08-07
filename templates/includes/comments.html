@@ -1,5 +1,5 @@
 {% if ISSO_ENABLED and article.status != "draft" %}
-    <script src="/theme/isso/embed.dev.js"></script>
+    <script data-isso="//tohuwnet.local/isso/" data-isso-css="false" data-isso-avatar="false" src="/theme/isso/embed.min.js"></script>
     <section id="isso-thread"></section>
 {% endif %}
 {% if DISQUS_SITENAME and article.status != "draft" %}

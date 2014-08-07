@@ -424,7 +424,7 @@ define("components/almond/almond", function(){});
 
 define('app/lib/ready',[],function() {
 
-    
+
 
     var loaded = false;
     var once = function(callback) {
@@ -451,7 +451,7 @@ define('app/lib/ready',[],function() {
 
 });
 define('app/config',[],function() {
-    
+
 
     var config = {
         "css": true,
@@ -657,7 +657,7 @@ define('app/i18n/eo',{
 
 define('app/i18n',["app/config", "app/i18n/de", "app/i18n/en", "app/i18n/fr", "app/i18n/ru", "app/i18n/it", "app/i18n/eo"], function(config, de, en, fr, ru, it, eo) {
 
-    
+
 
     var pluralforms = function(lang) {
         switch (lang) {
@@ -730,7 +730,7 @@ define('app/i18n',["app/config", "app/i18n/de", "app/i18n/en", "app/i18n/fr", "a
 
 define('app/lib/promise',[],function() {
 
-    
+
 
     var stderr = function(text) { console.log(text); };
 
@@ -787,7 +787,7 @@ define('app/lib/promise',[],function() {
 });
 
 define('app/globals',[],function() {
-    
+
 
     var Offset = function() {
         this.values = [];
@@ -809,7 +809,7 @@ define('app/globals',[],function() {
 });
 define('app/api',["app/lib/promise", "app/globals"], function(Q, globals) {
 
-    
+
 
     var salt = "Eech7co8Ohloopo9Ol6baimi",
         location = window.location.pathname;
@@ -1009,7 +1009,7 @@ define('app/api',["app/lib/promise", "app/globals"], function(Q, globals) {
 
 define('app/dom',[],function() {
 
-    
+
 
     window.Element.prototype.replace = function(el) {
         var element = DOM.htmlify(el);
@@ -1184,7 +1184,7 @@ define('app/dom',[],function() {
     return DOM;
 });
 define('app/utils',["app/i18n"], function(i18n) {
-    
+
 
     // return `cookie` string if set
     var cookie = function(cookie) {
@@ -1527,7 +1527,7 @@ buf.push("<div" + (jade.attr("id", 'isso-loader-' + (comment.name) + '', true, f
 };  return fn;});
 
 define('app/jade',["libjs-jade-runtime", "app/utils", "jade!app/text/postbox", "jade!app/text/comment", "jade!app/text/comment-loader"], function(runtime, utils, tt_postbox, tt_comment, tt_comment_loader) {
-    
+
 
     var globals = {},
         templates = {};
@@ -1591,7 +1591,7 @@ define('app/jade',["libjs-jade-runtime", "app/utils", "jade!app/text/postbox", "
 });
 define('app/lib/editor',["app/dom", "app/i18n"], function($, i18n) {
 
-    
+
 
     return function(el) {
         el.setAttribute("contentEditable", true);
@@ -1622,7 +1622,7 @@ define('app/lib/editor',["app/dom", "app/i18n"], function($, i18n) {
 */
 define('app/lib/identicons',["app/lib/promise", "app/config"], function(Q, config) {
 
-    
+
 
     // Number of squares width and height
     var GRID = 5;
@@ -1722,7 +1722,7 @@ define('app/lib',['require','app/lib/editor','app/lib/identicons'],function (req
 define('app/isso',["app/dom", "app/utils", "app/config", "app/api", "app/jade", "app/i18n", "app/lib", "app/globals"],
     function($, utils, config, api, jade, i18n, lib, globals) {
 
-    
+
 
     var Postbox = function(parent) {
 
@@ -2096,7 +2096,7 @@ define('app/text/svg',["text!./arrow-down.svg", "text!./arrow-up.svg"], function
 
 require(["app/lib/ready", "app/config", "app/i18n", "app/api", "app/isso", "app/count", "app/dom", "app/text/css", "app/text/svg", "app/jade"], function(domready, config, i18n, api, isso, count, $, css, svg, jade) {
 
-    
+
 
     jade.set("conf", config);
     jade.set("i18n", i18n.translate);
