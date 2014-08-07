@@ -5,8 +5,7 @@ A simple Pelican theme, built for customization
 ###############################################
 Qalal *(kaw-lal')* is a `Jinja2 <http://jinja.pocoo.org>`_ template for the static site generator `Pelican <http://blog.getpelican.com>`_. It was originally forked from the "`simple <https://github.com/getpelican/pelican/tree/master/pelican/themes/simple>`_" theme included with Pelican.
 
-.. Warning::
-    This theme is currently in heavy development. Usability ranges from "ugly" to "uh-oh". In the meantime, it may serve as a useful resource for those building themes or looking to add support for their favorite plugins.
+.. WARNING:: This theme is currently in heavy development. Usability ranges from "ugly" to "uh-oh". In the meantime, it may serve as a useful resource for those building themes or looking to add support for their favorite plugins.
 
 I created this because I wanted a simple, unencumbered theme not requiring weighty libraries where I didn't view them as necessary [1]_. It will certainly evolve over time, and I have many plans for furthering it. For now, here it is, in all its naked un-glory. Suggestions and comments are always welcome. Feel free to fork and use it under the included license.
 
