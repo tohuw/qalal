@@ -11,7 +11,7 @@
     <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.slug }}"></a>
 {% endif %}
 {% if ISSO_ENABLED %}
-    <script src="/theme/isso/count.min.js"></script>
+    <script src="/theme/isso/count.min.js" data-isso="{{ SITEURL }}/isso/"></script>
     <a href="{{SITEURL}}/{{ article.url }}#isso-thread">Comments</a>
 {% endif %}
 {% if PELICAN_COMMENT_SYSTEM %}
