@@ -1,4 +1,8 @@
-//!cofoh.com/css-on-diet-1.6.1
+//!cofoh.com/css-on-diet-1.7
+
+@cod-include {
+    reset.cod
+}
 
 @cod-defines {
     offwhite #fafafa
@@ -18,8 +22,12 @@ body {
     bac offwhite
     fof 'alegreya_sansregular'
 }
-#headerblock {
+#headerblock:after {
     cle both
+    vis hi
+    dis bl
+    hei 0
+    con "."
 }
 header#sitename {
     flo left
@@ -29,4 +37,10 @@ nav#menu {
 }
 form#searchbox {
     flo right
+}
+nav ul {
+    li- no outside no
+}
+nav li {
+    dis inline
 }
