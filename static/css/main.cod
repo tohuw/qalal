@@ -1,7 +1,7 @@
 //!cofoh.com/css-on-diet-1.6.1
 
 @cod-defines {
-    offwhite #ececec
+    offwhite #fafafa
 }
 @font-face {
     fof 'alegreya_sansregular';
@@ -17,4 +17,16 @@ body {
     miw %%
     bac offwhite
     fof 'alegreya_sansregular'
+}
+#headerblock {
+    cle both
+}
+header#sitename {
+    flo left
+}
+nav#menu {
+
+}
+form#searchbox {
+    flo right
 }
