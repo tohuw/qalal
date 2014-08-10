@@ -1,9 +1,7 @@
 //!cofoh.com/css-on-diet-1.7
-
 @cod-include {
     reset.cod
 }
-
 @cod-defines {
     offwhite #fafafa
 }
@@ -32,15 +30,34 @@ body {
 header#sitename {
     flo left
 }
-nav#menu {
+header#sitename h1 {
+    dis ib
+    fos 3.5e
+    tes 1p 1p 2p black
+}
+header#sitename h1 a {
+    ted no
+    col dodgerblue
+}
+header#sitename h1 a:hover {
 
 }
+header#sitename h2 {
+    dis ib
+    fos 1.7e
+    les .05rem
+    col darkgray
+}
 form#searchbox {
-    flo right
+    dis ib
+}
+nav#menu {
+    cle both
+    mab 1e
 }
 nav ul {
     li- no outside no
 }
 nav li {
-    dis inline
+    dis ib
 }

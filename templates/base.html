@@ -65,6 +65,11 @@
             <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
             <h2>{{ SITESUBTITLE }}</h2>
         </header>
+        {% if TIPUE_SEARCH_ENABLED %}
+            <form action="{{ SITEURL }}/search.html" id="searchbox">
+                <input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
+            </form>
+        {% endif %}
         <nav id="menu"><ul>
             {% for title, link in MENUITEMS %}
                 <li class="menu-item"><a href="{{ link }}">{{ title }}</a></li>
@@ -81,11 +86,6 @@
             {% endif %}
             {% endif %}
         </ul></nav>
-        {% if TIPUE_SEARCH_ENABLED %}
-            <form action="{{ SITEURL }}/search.html" id="searchbox">
-                <input type="text" name="q" id="tipue_search_input" autocomplete="off" required>
-            </form>
-        {% endif %}
     </div>
     {% endblock %}
     {% block content %}
