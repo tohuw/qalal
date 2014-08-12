@@ -61,7 +61,7 @@
 <body>
     {% block header %}
     <div id="headerblock">
-        <header id="sitename">
+        <header id="site-header">
             <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
             {% if TIPUE_SEARCH_ENABLED %}
             <form action="{{ SITEURL }}/search.html" id="searchbox">
@@ -88,14 +88,16 @@
         </ul></nav>
     </div>
     {% endblock %}
-    {% block content %}
-    {% endblock %}
     <div id="sidebar">
-        {% include 'includes/twitterfeed.html' %}
         {% include 'includes/social.html' %}
         {% include 'includes/links.html' %}
+        {% include 'includes/twitterfeed.html' %}
     </div>
-    <footer>
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+    <footer id="site-footer">
         {% include 'includes/credits.html' %}
     </footer>
     {% include 'includes/piwik.html' %}

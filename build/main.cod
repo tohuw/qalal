@@ -3,8 +3,8 @@
     reset.cod
 }
 @cod-defines {
-    offwhite #fafafa
-    charcoal #3a3a3a
+    offwhite #efefef
+    grayskull #666
 }
 @font-face {
     fof 'alegreya_sansregular';
@@ -20,17 +20,14 @@ html {
     fos 1.3vw
 }
 body {
-    wid 100vw
+    wid 97vw
+    ma- auto
     ovx hi
     bac offwhite
     fof 'alegreya_sansregular'
 }
-p {
-    wid 85vw
-    ma- 1.5rem au
-}
 #headerblock {
-    bai
+    mab 1e
 }
 #headerblock:after {
     cle both
@@ -39,41 +36,93 @@ p {
     hei 0
     con "."
 }
-header#sitename {
+header#site-header {
     flo left
+    mab .5rem
 }
-header#sitename h1 {
+header#site-header h1 {
     dis ib
     mal 1.1rem
     fos 3.5rem
     tes 1p 1p 2p black
 }
-header#sitename h1 a {
+header#site-header h1 a {
     ted no
-    col dodgerblue
+    col royalblue
 }
-header#sitename h2 {
+header#site-header h2 {
     mal 2.25rem
     fos 1.2rem
-    col charcoal
+    col grayskull
+    cur de
 }
 form#searchbox {
     dis ib
     mal 1rem
 }
 form#searchbox input {
+    wid 13.5rem
+    pa- 0 .25rem
+    bac whitesmoke
     fos 1rem
+    col royalblue
 }
 nav#menu {
     cle both
-    mab 1e
+    ma- au
+    tea ce
+    bac grayskull
+    bra .5rem
+    pa- .33rem
 }
 nav ul {
-    li- no outside no
+    vea mi
 }
 nav li {
     dis ib
+    ma- 0 .5rem
+    fos 1.05rem
 }
-.post-content {
-
+nav li a {
+    ted un
+    col ivory
+}
+#content {
+    wid 80vw
+    ma- au
+    ov- hi
+}
+#sidebar {
+    flo right
+    wid 15vw
+    ma- auto
+    tea ce
+}
+aside.social, aside.links {
+    ma- 1rem 0
+}
+aside.social li, aside.links li {
+    ma- .5rem .33rem
+    tea justify
+}
+iframe.twitter-timeline {
+    ma- 1rem 0
+    wid 15vw
+}
+footer#site-footer {
+    pos fi
+    bot 0
+    wid 97vw
+    ma- au
+    bra .5rem
+    bac grayskull
+    tea right
+    fos .7rem
+    col ivory
+}
+footer#site-footer address {
+    pa- .5rem
+}
+footer#site-footer a {
+    col ivory
 }

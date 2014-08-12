@@ -68,17 +68,14 @@ html {
     font-size: 1.3vw;
 }
 body {
-    width: 100vw;
+    width: 97vw;
+    margin: auto;
     overflow-x: hidden;
-    background-color: #fafafa;
+    background-color: #efefef;
     font-family: 'alegreya_sansregular';
 }
-p {
-    width: 85vw;
-    margin: 1.5rem auto;
-}
 #headerblock {
-    bai
+    margin-bottom: 1em;
 }
 #headerblock:after {
     clear: both;
@@ -87,41 +84,93 @@ p {
     height: 0;
     content: ".";
 }
-header#sitename {
+header#site-header {
     float: left;
+    margin-bottom: .5rem;
 }
-header#sitename h1 {
+header#site-header h1 {
     display: inline-block;
     margin-left: 1.1rem;
     font-size: 3.5rem;
     text-shadow: 1px 1px 2px black;
 }
-header#sitename h1 a {
+header#site-header h1 a {
     text-decoration: none;
-    color: dodgerblue;
+    color: royalblue;
 }
-header#sitename h2 {
+header#site-header h2 {
     margin-left: 2.25rem;
     font-size: 1.2rem;
-    color: #3a3a3a;
+    color: #666;
+    cursor: default;
 }
 form#searchbox {
     display: inline-block;
     margin-left: 1rem;
 }
 form#searchbox input {
+    width: 13.5rem;
+    padding: 0 .25rem;
+    background-color: whitesmoke;
     font-size: 1rem;
+    color: royalblue;
 }
 nav#menu {
     clear: both;
-    margin-bottom: 1em;
+    margin: auto;
+    text-align: center;
+    background-color: #666;
+    border-radius: .5rem;
+    padding: .33rem;
 }
 nav ul {
-    list-style: none outside none;
+    vertical-align: middle;
 }
 nav li {
     display: inline-block;
+    margin: 0 .5rem;
+    font-size: 1.05rem;
 }
-.post-content {
-
+nav li a {
+    text-decoration: underline;
+    color: ivory;
+}
+#content {
+    width: 80vw;
+    margin: auto;
+    overflow: hidden;
+}
+#sidebar {
+    float: right;
+    width: 15vw;
+    margin: auto;
+    text-align: center;
+}
+aside.social, aside.links {
+    margin: 1rem 0;
+}
+aside.social li, aside.links li {
+    margin: .5rem .33rem;
+    text-align: justify;
+}
+iframe.twitter-timeline {
+    margin: 1rem 0;
+    width: 15vw;
+}
+footer#site-footer {
+    position: fixed;
+    bottom: 0;
+    width: 97vw;
+    margin: auto;
+    border-radius: .5rem;
+    background-color: #666;
+    text-align: right;
+    font-size: .7rem;
+    color: ivory;
+}
+footer#site-footer address {
+    padding: .5rem;
+}
+footer#site-footer a {
+    color: ivory;
 }
