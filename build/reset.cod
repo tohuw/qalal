@@ -50,5 +50,8 @@ table {
     bcp collapse
     bsp 0
 }
+address {
+    fot nm
+}
 
 // End Reset

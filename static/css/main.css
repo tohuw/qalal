@@ -50,6 +50,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+address {
+    font-style: normal;
+}
 
 /* End Reset*/
 
@@ -61,10 +64,21 @@ table {
     font-weight: normal;
     font-style: normal;
 }
+html {
+    font-size: 1.3vw;
+}
 body {
-    min-width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
     background-color: #fafafa;
     font-family: 'alegreya_sansregular';
+}
+p {
+    width: 85vw;
+    margin: 1.5rem auto;
+}
+#headerblock {
+    bai
 }
 #headerblock:after {
     clear: both;
@@ -78,24 +92,25 @@ header#sitename {
 }
 header#sitename h1 {
     display: inline-block;
-    font-size: 3.5em;
+    margin-left: 1.1rem;
+    font-size: 3.5rem;
     text-shadow: 1px 1px 2px black;
 }
 header#sitename h1 a {
     text-decoration: none;
     color: dodgerblue;
 }
-header#sitename h1 a:hover {
-
-}
 header#sitename h2 {
-    display: inline-block;
-    font-size: 1.7em;
-    letter-spacing: 1.05rem;
-    color: darkgray;
+    margin-left: 2.25rem;
+    font-size: 1.2rem;
+    color: #3a3a3a;
 }
 form#searchbox {
     display: inline-block;
+    margin-left: 1rem;
+}
+form#searchbox input {
+    font-size: 1rem;
 }
 nav#menu {
     clear: both;
@@ -106,4 +121,7 @@ nav ul {
 }
 nav li {
     display: inline-block;
+}
+.post-content {
+
 }

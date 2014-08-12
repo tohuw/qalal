@@ -4,6 +4,7 @@
 }
 @cod-defines {
     offwhite #fafafa
+    charcoal #3a3a3a
 }
 @font-face {
     fof 'alegreya_sansregular';
@@ -15,10 +16,21 @@
     fow nm
     fot nm
 }
+html {
+    fos 1.3vw
+}
 body {
-    miw %%
+    wid 100vw
+    ovx hi
     bac offwhite
     fof 'alegreya_sansregular'
+}
+p {
+    wid 85vw
+    ma- 1.5rem au
+}
+#headerblock {
+    bai
 }
 #headerblock:after {
     cle both
@@ -32,24 +44,25 @@ header#sitename {
 }
 header#sitename h1 {
     dis ib
-    fos 3.5e
+    mal 1.1rem
+    fos 3.5rem
     tes 1p 1p 2p black
 }
 header#sitename h1 a {
     ted no
     col dodgerblue
 }
-header#sitename h1 a:hover {
-
-}
 header#sitename h2 {
-    dis ib
-    fos 1.7e
-    les .05rem
-    col darkgray
+    mal 2.25rem
+    fos 1.2rem
+    col charcoal
 }
 form#searchbox {
     dis ib
+    mal 1rem
+}
+form#searchbox input {
+    fos 1rem
 }
 nav#menu {
     cle both
@@ -60,4 +73,7 @@ nav ul {
 }
 nav li {
     dis ib
+}
+.post-content {
+
 }
