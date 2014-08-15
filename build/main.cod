@@ -1,6 +1,7 @@
 //!cofoh.com/css-on-diet-1.7
 @cod-include {
     reset.cod
+    font-awesome.css
 }
 @cod-defines {
     offwhite #efefef
@@ -47,8 +48,7 @@
     fot nm
 }
 html {
-    wid %%
-    fos 1.5rem
+    fos 1.3vw
 }
 body {
     ma- 0
@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
     fof 'MavenProMedium'
 }
 #header-block {
-    mab 1rem
+    mab 5vh
 }
 #header-block:after {
     cle both
@@ -71,58 +71,73 @@ h1, h2, h3, h4, h5, h6 {
 }
 header#header-title {
     flo left
-    ma- 0 2rem .5rem 0
+    ma-
 }
 header#header-title h1 {
     dis ib
-    mal 1.1rem
-    fos 2.5rem
-    tes .01rem .01rem .02rem black
+    mal 1.5rem
+    pat .5rem
+    fos 4vw
+    // tes .5vw .5vw 1vw black
 }
 header#header-title h1 a {
     ted no
-    col royalblue
+    col offwhite
 }
 header#header-title h2 {
-    mal 2.25rem
-    fos .85rem
-    col grayskull
+    mal 3rem
+    pa- .5rem 0 .5rem 1.5rem
+    bra .85rem
+    bac grayskull
+    fos 1.8vw
+    col offwhite
     cur de
 }
 form#searchbox {
     dis ib
+    vea super
     mal 1rem
 }
 form#searchbox input {
-    wid 8rem
+    wid 10rem
+    bco offwhite
+    bos #00000033 .1rem .1rem .1rem 0 is
     bra 1rem
-    pa- 0 .5rem
+    pa- .25rem
     bac white
-    fos .85rem
-    col royalblue
-}
-#header-nav {
-    flo right
-    tea right
-}
-nav h1, aside.menu h1 {
-    dis ib
-    flo right
-    ma- .25rem 1.1rem 0 .25rem
-    fos .7rem
-    fof 'MavenProBold'
+    fos 1.25vw
     col grayskull
 }
-nav ul, aside.menu ul {
+#header-nav {
+    bac grayskull
+}
+nav {
+    pat 3rem
+}
+aside.social {
     dis ib
+    vea super
+}
+aside.menu ul {
+    dis ib
+}
+nav ul {
+    dis ib
+    pa- .5rem 1rem
+    btl .75rem
+    bac #ccc
 }
 nav li, aside.menu li {
     dis ib
-    ma- 0 .25rem
-    fos .65rem
+    mat .25rem
+    fos
 }
 nav li a, aside.menu li a {
-    ted un
+    ted no
+    col offwhite
+}
+nav li {
+
 }
 #content {
     wid 88vw
@@ -133,16 +148,14 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
     fow bo
 }
 footer#site-footer {
-    pos ab
-    bot 0
-    wid %%
+    mat 10vh
+    wid 100vw
     bac grayskull
     tea right
-    fos .7rem
     col ivory
 }
 footer#site-footer address {
-    pa- .5rem
+    pa- .25vh 1vw .25vh 0
 }
 footer#site-footer a {
     col ivory
