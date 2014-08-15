@@ -7,52 +7,85 @@
     grayskull #666
 }
 @font-face {
-    fof 'alegreya_sansregular';
-    src url('/theme/fonts/alegreyasans-regular-webfont.eot')
-    src url('/theme/fonts/alegreyasans-regular-webfont.eot?#iefix') format('embedded-opentype'), \
-    url('/theme/fonts/alegreyasans-regular-webfont.woff') format('woff'), \
-    url('/theme/fonts/alegreyasans-regular-webfont.ttf') format('truetype'), \
-    url('/theme/fonts/alegreyasans-regular-webfont.svg#alegreya_sansregular') format('svg')
+    fof 'MavenProBlack'
+    src url('/theme/fonts/mavenpro/maven_pro_black-webfont.eot')
+    src url('/theme/fonts/mavenpro/maven_pro_black-webfont.eot?#iefix') format('eot'), \
+         url('/theme/fonts/mavenpro/maven_pro_black-webfont.woff') format('woff'), \
+         url('/theme/fonts/mavenpro/maven_pro_black-webfont.ttf') format('truetype'), \
+         url('/theme/fonts/mavenpro/maven_pro_black-webfont.svg#webfontXhB2DgBK') format('svg')
+    fow nm
+    fot nm
+}
+@font-face {
+    fof 'MavenProBold'
+    src url('/theme/fonts/mavenpro/maven_pro_bold-webfont.eot')
+    src url('/theme/fonts/mavenpro/maven_pro_bold-webfont.eot?#iefix') format('eot'), \
+         url('/theme/fonts/mavenpro/maven_pro_bold-webfont.woff') format('woff'), \
+         url('/theme/fonts/mavenpro/maven_pro_bold-webfont.ttf') format('truetype'), \
+         url('/theme/fonts/mavenpro/maven_pro_bold-webfont.svg#webfontNOU7iUTL') format('svg')
+    fow nm
+    fot nm
+}
+@font-face {
+    fof 'MavenProMedium'
+    src url('/theme/fonts/mavenpro/maven_pro_medium-webfont.eot')
+    src url('/theme/fonts/mavenpro/maven_pro_medium-webfont.eot?#iefix') format('eot'), \
+         url('/theme/fonts/mavenpro/maven_pro_medium-webfont.woff') format('woff'), \
+         url('/theme/fonts/mavenpro/maven_pro_medium-webfont.ttf') format('truetype'), \
+         url('/theme/fonts/mavenpro/maven_pro_medium-webfont.svg#webfontNj5iy4Dl') format('svg')
+    fow nm
+    fot nm
+}
+@font-face {
+    fof 'MavenProRegular'
+    src url('/theme/fonts/mavenpro/maven_pro_regular-webfont.eot')
+    src url('/theme/fonts/mavenpro/maven_pro_regular-webfont.eot?#iefix') format('eot'), \
+         url('/theme/fonts/mavenpro/maven_pro_regular-webfont.woff') format('woff'), \
+         url('/theme/fonts/mavenpro/maven_pro_regular-webfont.ttf') format('truetype'), \
+         url('/theme/fonts/mavenpro/maven_pro_regular-webfont.svg#webfontOM8fITNz') format('svg')
     fow nm
     fot nm
 }
 html {
-    fos 1.3vw
+    wid %%
+    fos 1.5rem
 }
 body {
-    wid 97vw
-    ma- auto
+    ma- 0
     ovx hi
     bac offwhite
-    fof 'alegreya_sansregular'
+    fof 'MavenProRegular'
 }
-#headerblock {
-    mab 1e
+h1, h2, h3, h4, h5, h6 {
+    fof 'MavenProMedium'
 }
-#headerblock:after {
+#header-block {
+    mab 1rem
+}
+#header-block:after {
     cle both
     vis hi
     dis bl
     hei 0
     con "."
 }
-header#site-header {
+header#header-title {
     flo left
-    mab .5rem
+    ma- 0 2rem .5rem 0
 }
-header#site-header h1 {
+header#header-title h1 {
     dis ib
     mal 1.1rem
-    fos 3.5rem
-    tes 1p 1p 2p black
+    fos 2.5rem
+    tes .01rem .01rem .02rem black
 }
-header#site-header h1 a {
+header#header-title h1 a {
     ted no
     col royalblue
 }
-header#site-header h2 {
+header#header-title h2 {
     mal 2.25rem
-    fos 1.2rem
+    fos .85rem
     col grayskull
     cur de
 }
@@ -61,60 +94,48 @@ form#searchbox {
     mal 1rem
 }
 form#searchbox input {
-    wid 13.5rem
-    pa- 0 .25rem
-    bac whitesmoke
-    fos 1rem
+    wid 8rem
+    bra 1rem
+    pa- 0 .5rem
+    bac white
+    fos .85rem
     col royalblue
 }
-nav#menu {
-    cle both
-    ma- au
-    tea ce
-    bac grayskull
-    bra .5rem
-    pa- .33rem
+#header-nav {
+    flo right
+    tea right
 }
-nav ul {
-    vea mi
-}
-nav li {
+nav h1, aside.menu h1 {
     dis ib
-    ma- 0 .5rem
-    fos 1.05rem
+    flo right
+    ma- .25rem 1.1rem 0 .25rem
+    fos .7rem
+    fof 'MavenProBold'
+    col grayskull
 }
-nav li a {
+nav ul, aside.menu ul {
+    dis ib
+}
+nav li, aside.menu li {
+    dis ib
+    ma- 0 .25rem
+    fos .65rem
+}
+nav li a, aside.menu li a {
     ted un
-    col ivory
 }
 #content {
-    wid 80vw
+    wid 88vw
     ma- au
     ov- hi
 }
-#sidebar {
-    flo right
-    wid 15vw
-    ma- auto
-    tea ce
-}
-aside.social, aside.links {
-    ma- 1rem 0
-}
-aside.social li, aside.links li {
-    ma- .5rem .33rem
-    tea justify
-}
-iframe.twitter-timeline {
-    ma- 1rem 0
-    wid 15vw
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    fow bo
 }
 footer#site-footer {
-    pos fi
+    pos ab
     bot 0
-    wid 97vw
-    ma- au
-    bra .5rem
+    wid %%
     bac grayskull
     tea right
     fos .7rem

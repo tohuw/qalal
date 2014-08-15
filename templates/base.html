@@ -60,8 +60,8 @@
 
 <body>
     {% block header %}
-    <div id="headerblock">
-        <header id="site-header">
+    <div id="header-block">
+        <header id="header-title">
             <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
             {% if TIPUE_SEARCH_ENABLED %}
             <form action="{{ SITEURL }}/search.html" id="searchbox">
@@ -70,29 +70,31 @@
             {% endif %}
             <h2>{{ SITESUBTITLE }}</h2>
         </header>
-        <nav id="menu"><ul>
-            {% for title, link in MENUITEMS %}
-                <li class="menu-item"><a href="{{ link }}">{{ title }}</a></li>
-            {% endfor %}
-            {% if DISPLAY_PAGES_ON_MENU %}
-                {% for p in PAGES %}
-                    <li class="menu-page{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-                {% endfor %}
-            {% else %}
-            {% if DISPLAY_CATEGORIES_ON_MENU %}
-                {% for cat, null in categories %}
-                    <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                {% endfor %}
-            {% endif %}
-            {% endif %}
-        </ul></nav>
+        <div id="header-nav">
+            <nav>
+                <h1>{{ MENU_TITLE }}</h1>
+                <ul>
+                    {% for title, link in MENUITEMS %}
+                        <li class="menu-item"><a href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                        {% for p in PAGES %}
+                            <li class="menu-page{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                        {% endfor %}
+                    {% else %}
+                        {% if DISPLAY_CATEGORIES_ON_MENU %}
+                            {% for cat, null in categories %}
+                                <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                    {% endif %}
+                </ul>
+            </nav>
+            {% include 'includes/social.html' %}
+            {% include 'includes/links.html' %}
+        </div>
     </div>
     {% endblock %}
-    <div id="sidebar">
-        {% include 'includes/social.html' %}
-        {% include 'includes/links.html' %}
-        {% include 'includes/twitterfeed.html' %}
-    </div>
     <div id="content">
     {% block content %}
     {% endblock %}

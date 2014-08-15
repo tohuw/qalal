@@ -1,6 +1,6 @@
 {% if LINKS %}
-    <aside class="links">
-        <h2>Other Links</h2>
+    <aside class="menu links">
+        <h1>{{ LINKS_TITLE }}</h1>
         <ul>
             {% for name, link in LINKS %}
                 <li><a href="{{ link }}">{{ name }}</a></li>

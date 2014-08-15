@@ -23,7 +23,6 @@ time, mark, audio, video {
     ma- 0
     pa- 0
     b-- 0
-    fos %%
     fo ih
     vea ba
 }
@@ -52,6 +51,9 @@ table {
 }
 address {
     fot nm
+}
+h1, h2, h3, h4, h5, h6 {
+    fow nm
 }
 
 // End Reset
