@@ -5,7 +5,7 @@ Qalal *(kaw-lal')* is a [Jinja2](http://jinja.pocoo.org>) template for the stati
 
 **Warning:** This theme is currently in heavy development. Usability ranges from "ugly" to "uh-oh". In the meantime, it may serve as a useful resource for those building themes or looking to add support for their favorite plugins.
 
-I created this because I wanted a simple, unencumbered theme not requiring weighty libraries where I didn't view them as necessary[^JQuery]. It will certainly evolve over time, and I have many plans for furthering it. For now, here it is, in all its naked un-glory. Suggestions and comments are always welcome. Feel free to fork and use it under the included license.
+I created this because I wanted a simple, unencumbered theme not requiring weighty libraries where I didn't view them as necessary[^jquery]. It will certainly evolve over time, and I have many plans for furthering it. For now, here it is, in all its naked un-glory. Suggestions and comments are always welcome. Feel free to fork and use it under the included license.
 
 ## Features
 
@@ -13,7 +13,7 @@ I created this because I wanted a simple, unencumbered theme not requiring weigh
     Rather than ascribe to a rigid grid-type system, Qalal uses semantically-focused HTML and relies on proper styling to render the look and feel as you desire, rather than requiring you to fight with esoteric grids and boxes.
 
 -   **Highly accessible.**
-    Primarily due to the semantic focus in the markup, Qalal is easy for screen readers to understand and features excellent cross-browser support [4].
+    Primarily due to the semantic focus in the markup, Qalal is easy for screen readers to understand and features excellent cross-browser support[^browsersupport].
 
 -   **Index page displays most recent article instead of list of recent articles.**
     This is more interesting and invites the reader to jump right in to your content.
@@ -25,7 +25,7 @@ I created this because I wanted a simple, unencumbered theme not requiring weigh
     CSS-On-Diet (COD) is a unique CSS pre-processor written in Python. It is designed to provide the usual advantages of pre-processed CSS and decrease the general tedium involved with writing CSS.
 
 -   **Web fonts are included.**
-    Rather than relying on e.g. [Google Fonts](http://www.google.com/fonts) for web fonts support, fonts are included via the CSS2-native @font-face directive. Currently included are selections from [MavenPro](http://vissol.co.uk/mavenpro/) and [FontAwesome](http://fontawesome.io) [3], both freely licensed fonts (under [SIL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)).
+    Rather than relying on e.g. [Google Fonts](http://www.google.com/fonts) for web fonts support, fonts are included via the CSS2-native @font-face directive. Currently included are selections from [MavenPro](http://vissol.co.uk/mavenpro/) and [FontAwesome](http://fontawesome.io)[^fontawesomecaveat], both freely licensed fonts (under [SIL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)).
 
 ## Settings
 
@@ -57,7 +57,7 @@ SOCIAL_TITLE
 FEED_TITLE
 :    Provide a title for the Atom and RSS feeds. Currently, they share titles; I would expect anyone to only want one or the other feed on their site.
 
-TWITTER_USERNAME [2]
+TWITTER_USERNAME[^gotthis]
 :    Populate with your username on Twitter (no "@") to set for sharing links.
 
 CREDITS_SHOW
@@ -76,19 +76,22 @@ ISSO_AVATARS
 :    Set to true to display the Isso Comments Identicons.
 
 
-### Plugin-Provided Settings [2]
+### Plugin-Provided Settings[^gothis]
 
 Additionally, note these common settings from additional features on this site, some of which appear in the [official Pelican settings documentation](http://docs.getpelican.com/en/latest/settings.html)
 
-PELICAN\_COMMENT_SYSTEM [5]
+PELICAN\_COMMENT_SYSTEM[^nyi]
 :    Set to true to use [Pelican Comment System](https://github.com/getpelican/pelican-plugins/tree/master/pelican\_comment\_system), a static comments option.
 
 DISQUS_SITENAME
 :    Set to the name of your site registered on [Disqus](http://disqus.com) to enable and configure Disqus support.
 
-[^JQuery]: JQuery is everyone's favorite example of a perhaps too-weighty library, but there's enough plugins expecting it, and prettifying with it is too much easier. Sorry?
+[^jquery]: JQuery is everyone's favorite example of a perhaps too-weighty library, but there's enough plugins expecting it, and prettifying with it is too much easier. Sorry?
 
-[2]: You may already have these settings from other themes or previous uses of a plugin.
-[3]: FontAwesome styles are deliberately limited, but of course the standard CSS available in the download package could be re-introduced, or the existing CSS could be expanded to include more glyph styles.
-[4]: Browser support for IE is intentionally limited to IE 10+. Other popular browsers should be fine +/- 2 versions or so.
-[5]: Not currently implemented; planned for a future version.
+[^gotthis]: You may already have these settings from other themes or previous uses of a plugin.
+
+[^fontawesomecaveat]: FontAwesome styles are deliberately limited, but of course the standard CSS available in the download package could be re-introduced, or the existing CSS could be expanded to include more glyph styles.
+
+[^browsersupport]: Browser support for IE is intentionally limited to IE 10+. Other popular browsers should be fine +/- 2 versions or so.
+
+[^nyi]: Not currently implemented; planned for a future version.
