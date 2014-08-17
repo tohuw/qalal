@@ -77,12 +77,12 @@ form#searchbox {
 }
 form#searchbox input {
     wid 20rem
-    bos #00000033 .2rem .2rem .2rem .33rem is
+    bos bluedust-ethereal .1rem .1rem .1rem is
     b-- 0
-    bra 1rem
-    pa- .25rem
+    pa- .25rem .5rem
     bac white
     fos 1.25vw
+    fof 'FontAwesome'
     col bluedust
 }
 

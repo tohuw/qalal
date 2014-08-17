@@ -63,11 +63,7 @@
     <div id="header-block">
         <header id="header-title">
             <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-            {% if TIPUE_SEARCH_ENABLED %}
-            <form action="{{ SITEURL }}/search.html" id="searchbox">
-                <input type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search..." required>
-            </form>
-            {% endif %}
+            {% include 'includes/searchbox.html' %}
             <h2>{{ SITESUBTITLE }}</h2>
         </header>
         <div id="header-nav">

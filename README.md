@@ -7,7 +7,7 @@ Qalal *(kaw-lal')* is a [Jinja2](http://jinja.pocoo.org>) template for the stati
 
 I created this because I wanted a simple, unencumbered theme not requiring weighty libraries where I didn't view them as necessary. JQuery is currently required for a few plugins, and I may use it myself as well, but I don't plan to add much more than that (if anything). It will certainly evolve over time, and I have many plans for furthering it. For now, here it is, in all its naked un-glory. Suggestions and comments are always welcome. Feel free to fork and use it under the included license.
 
-## Features
+## Key Features
 
 -   **Less opinionated layout.**  
     Rather than ascribe to a rigid grid-type system, Qalal uses semantically-focused HTML and relies on proper styling to render the look and feel as you desire, rather than requiring you to fight with esoteric grids and boxes.

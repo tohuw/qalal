@@ -27,3 +27,10 @@
 .fa-github:hover:not(monochrome) {
     col black
 }
+.fa-search:before {
+    fof 'FontAwesome'
+    con '\f002'
+}
+.fa-search:hover:not(monochrome) {
+    col black
+}
