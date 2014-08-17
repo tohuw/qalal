@@ -1,0 +1,27 @@
+{% if ARTICLES_RECENT_SHOW %}
+<aside id="articles-list">
+    {% if ARTICLES_RECENT_TITLE %}
+        <h1>{{ ARTICLES_RECENT_TITLE }}</h2>
+    {% endif %}
+    <ol>
+        {% for article in articles %}
+            <li>
+            <article>
+                <header>
+                    <h3><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
+                </header>
+                <footer>
+                    <span class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</span>
+                    <address>
+                        By {% for author in article.authors %}<a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% endfor %}
+                    </address>
+                </footer>
+                <section class="post-summary">{{ article.summary }}</section>
+                {% include 'includes/commentcounts.html' %}
+            </article>
+            </li>
+        {% endfor %}
+    </ol>
+</aside>
+{% include 'includes/pagination.html' %}
+{% endif %}

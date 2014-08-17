@@ -1,0 +1,29 @@
+//!cofoh.com/css-on-diet-1.7
+.fa-rss:before {
+    fof 'FontAwesome'
+    con '\f09e'
+}
+.fa-rss:hover:not(monochrome) {
+    col #FA9C39
+}
+.fa-twitter:before {
+    fof 'FontAwesome'
+    con '\f099'
+}
+.fa-twitter:hover:not(monochrome) {
+    col #55ACEE
+}
+.fa-linkedin:before {
+    fof 'FontAwesome'
+    con '\f0e1'
+}
+.fa-linkedin:hover:not(monochrome) {
+    col #1884BB
+}
+.fa-github:before {
+    fof 'FontAwesome'
+    con '\f09b'
+}
+.fa-github:hover:not(monochrome) {
+    col black
+}

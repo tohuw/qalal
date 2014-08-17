@@ -21,9 +21,9 @@
 {% block content %}
     <article>
         <header>
-            <h2 class="post-title">
+            <h1 class="post-title">
                 <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-            </h2>
+            </h1>
             {% import 'translations.html' as translations with context %}
             {{ translations.translations_for(article) }}
         </header>

@@ -68,10 +68,10 @@
                 <input type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search..." required>
             </form>
             {% endif %}
-            {% include 'includes/social.html' %}
             <h2>{{ SITESUBTITLE }}</h2>
         </header>
         <div id="header-nav">
+            {% include 'includes/social.html' %}
             <nav>
                 <ul>
                     {% for title, link in MENUITEMS %}
@@ -98,6 +98,7 @@
     {% endblock %}
     </div>
     <footer id="site-footer">
+        {% include 'includes/articleslist.html' %}
         {% include 'includes/links.html' %}
         {% include 'includes/credits.html' %}
     </footer>
