@@ -13,21 +13,27 @@ Features
 ========
 
 -   **Less opinionated layout.**
+
     Rather than ascribe to a rigid grid-type system, Qalal uses semantically-focused HTML and relies on proper styling to render the look and feel as you desire, rather than requiring you to fight with esoteric grids and boxes.
 
 -   **Highly accessible.**
+
     Primarily due to the semantic focus in the markup, Qalal is easy for screen readers to understand and features excellent cross-browser support [4]_.
 
 -   **Index page displays most recent article instead of list of recent articles.**
+
     This is more interesting and invites the reader to jump right in to your content.
 
 -   **Recent articles are an aside in the footer.**
+
     After enjoying your most recent article, readers are invited to read on with the latest articles you've written. It's suggested to display the Archives and Categories in the menu to provide a more complete article list.
 
--   **Pre-Processed CSS sources via `CSS-On-Diet <http://www.cofoh.com/css-on-diet>`_**
+-   **Pre-Processed CSS sources via `CSS-On-Diet <http://www.cofoh.com/css-on-diet>`_ **
+
     CSS-On-Diet (COD) is a unique CSS pre-processor written in Python. It is designed to provide the usual advantages of pre-processed CSS and decrease the general tedium involved with writing CSS.
 
 -   **Web fonts are included.**
+
     Rather than relying on e.g. `Google Fonts <http://www.google.com/fonts>`_ for web fonts support, fonts are included via the CSS2-native @font-face directive. Currently included are selections from `MavenPro <http://vissol.co.uk/mavenpro/>`_ and `FontAwesome <http://fontawesome.io>`_ [3]_, both freely licensed fonts (under `SIL <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>`_).
 
 Settings
