@@ -9,6 +9,27 @@ Qalal *(kaw-lal')* is a `Jinja2 <http://jinja.pocoo.org>`_ template for the stat
 
 I created this because I wanted a simple, unencumbered theme not requiring weighty libraries where I didn't view them as necessary [1]_. It will certainly evolve over time, and I have many plans for furthering it. For now, here it is, in all its naked un-glory. Suggestions and comments are always welcome. Feel free to fork and use it under the included license.
 
+Features
+========
+
+-   **Less opinionated layout.**
+    Rather than ascribe to a rigid grid-type system, Qalal uses semantically-focused HTML and relies on proper styling to render the look and feel as you desire, rather than requiring you to fight with esoteric grids and boxes.
+
+-   **Highly accessible.**
+    Primarily due to the semantic focus in the markup, Qalal is easy for screen readers to understand and features excellent cross-browser support [4]_.
+
+-   **Index page displays most recent article instead of list of recent articles.**
+    This is more interesting and invites the reader to jump right in to your content.
+
+-   **Recent articles are an aside in the footer.**
+    After enjoying your most recent article, readers are invited to read on with the latest articles you've written. It's suggested to display the Archives and Categories in the menu to provide a more complete article list.
+
+-   **Pre-Processed CSS sources via `CSS-On-Diet <http://www.cofoh.com/css-on-diet>`_**
+    CSS-On-Diet (COD) is a unique CSS pre-processor written in Python. It is designed to provide the usual advantages of pre-processed CSS and decrease the general tedium involved with writing CSS.
+
+-   **Web fonts are included.**
+    Rather than relying on e.g. `Google Fonts <http://www.google.com/fonts>`_ for web fonts support, fonts are included via the CSS2-native @font-face directive. Currently included are selections from `MavenPro <http://vissol.co.uk/mavenpro/>`_ and `FontAwesome <http://fontawesome.io>`_ [3]_, both freely licensed fonts (under `SIL <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>`_).
+
 Settings
 ========
 
@@ -16,8 +37,11 @@ Custom Settings
 ---------------
 In the interest of enhancing customization, I've added support for a few new settings for pelicanconf.py:
 
-ALLARTICLES_TITLE
-    Set to false to hide the title header on the all articles page (index.html)
+ARTICLES_RECENT_SHOW
+    Set to true to display the recent articles list.
+
+ARTICLES_RECENT_TITLE
+    Provide an optional title to the recent articles list.
 
 ARTICLE_SHOW_MODDATE
     Set to false to hide the modified date on articles.
@@ -28,8 +52,17 @@ ARTICLE_SHOW_SHARE
 PAGE_SHOW_MODDATE
     Set to false to hide the modified date on pages.
 
+LINKS_TITLE
+    Provide an optional title to the Links/Blogroll section.
+
+SOCIAL_TITLE
+    Provide an optional title to the Social links section.
+
+FEED_TITLE
+    Provide a title for the Atom and RSS feeds. Currently, they share titles; I would expect anyone to only want one or the other feed on their site.
+
 TWITTER_USERNAME [2]_
-    Populate with your username on Twitter (no "@") to set for sharing links and Twitter feeds.
+    Populate with your username on Twitter (no "@") to set for sharing links.
 
 CREDITS_SHOW
     Set to false to hide Pelican and theme credits. (It would be swell of you to leave attribution on, at least to Pelican.)
@@ -37,19 +70,28 @@ CREDITS_SHOW
 TIPUE_SEARCH_ENABLED
     Set to false to hide `Tipue Search <http://www.tipue.com/search/>`_ elements. Defaults to checking for the existence of the plugin and enabling if it is present.
 
-ISSO_ENABLED [3]_
+ISSO_ENABLED
     Set to true to use `Isso Comments <http://posativ.org/isso/>`_ in your articles, and include comment counts on your article lists.
 
-Plugin Settings [2]_
---------------------
+ISSO_DEFAULT_STYLE
+    Set to true to apply the default `Isso Comments <http://posativ.org/isso/>`_ styling.
+
+ISSO_AVATARS
+    Set to true to display the `Isso Comments <http://posativ.org/isso/>`_ Identicons.
+
+
+Plugin-Provided Settings [2]_
+-----------------------------
 Additionally, note these common settings from additional features on this site, some of which appear in the `official Pelican settings documentation <http://docs.getpelican.com/en/latest/settings.html>`_:
 
-PELICAN_COMMENT_SYSTEM [3]_
+PELICAN_COMMENT_SYSTEM [5]_
     Set to true to use `Pelican Comment System <https://github.com/getpelican/pelican-plugins/tree/master/pelican_comment_system>`_, a static comments option.
 
 DISQUS_SITENAME
     Set to the name of your site registered on `Disqus <http://disqus.com>`_ to enable and configure Disqus support.
 
-.. [1] JQuery is everyone's favorite example of a perhaps too-weighty library, but there's enough plugins expecting it, and prettifying is too much easier. Sorry?
-.. [2] You may already have these settings from other themes.
-.. [3] Not currently implemented; planned for a future version.
+.. [1] JQuery is everyone's favorite example of a perhaps too-weighty library, but there's enough plugins expecting it, and prettifying with it is too much easier. Sorry?
+.. [2] You may already have these settings from other themes or previous uses of a plugin.
+.. [3] FontAwesome styles are deliberately limited, but of course the standard CSS available in the download package could be re-introduced, or the existing CSS could be expanded to include more glyph styles.
+.. [4] Browser support for IE is intentionally limited to IE 10+. Other popular browsers should be fine +/- 2 versions or so.
+.. [5] Not currently implemented; planned for a future version.
