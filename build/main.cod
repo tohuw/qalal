@@ -1,65 +1,20 @@
 //!cofoh.com/css-on-diet-1.7
 @cod-include {
     reset.cod
+    fonts.cod
     fontawesome.cod
 }
 @cod-defines {
     offwhite #efefef
-    grayskull #555
     ash #333
-    bluedust #0075c0
     grayash #444
+    grayskull #555
+    bluedust #0075c0
+    bluedust-ethereal #0075c088
+    ghostblack #000000cc
 }
-@font-face {
-    fof 'MavenProBlack'
-    src url('/theme/fonts/mavenpro/maven_pro_black-webfont.eot')
-    src url('/theme/fonts/mavenpro/maven_pro_black-webfont.eot?#iefix') format('eot'), \
-        url('/theme/fonts/mavenpro/maven_pro_black-webfont.woff') format('woff'), \
-        url('/theme/fonts/mavenpro/maven_pro_black-webfont.ttf') format('truetype'), \
-        url('/theme/fonts/mavenpro/maven_pro_black-webfont.svg#webfontXhB2DgBK') format('svg')
-    fow nm
-    fot nm
-}
-@font-face {
-    fof 'MavenProBold'
-    src url('/theme/fonts/mavenpro/maven_pro_bold-webfont.eot')
-    src url('/theme/fonts/mavenpro/maven_pro_bold-webfont.eot?#iefix') format('eot'), \
-        url('/theme/fonts/mavenpro/maven_pro_bold-webfont.woff') format('woff'), \
-        url('/theme/fonts/mavenpro/maven_pro_bold-webfont.ttf') format('truetype'), \
-        url('/theme/fonts/mavenpro/maven_pro_bold-webfont.svg#webfontNOU7iUTL') format('svg')
-    fow nm
-    fot nm
-}
-@font-face {
-    fof 'MavenProMedium'
-    src url('/theme/fonts/mavenpro/maven_pro_medium-webfont.eot')
-    src url('/theme/fonts/mavenpro/maven_pro_medium-webfont.eot?#iefix') format('eot'), \
-        url('/theme/fonts/mavenpro/maven_pro_medium-webfont.woff') format('woff'), \
-        url('/theme/fonts/mavenpro/maven_pro_medium-webfont.ttf') format('truetype'), \
-        url('/theme/fonts/mavenpro/maven_pro_medium-webfont.svg#webfontNj5iy4Dl') format('svg')
-    fow nm
-    fot nm
-}
-@font-face {
-    fof 'MavenProRegular'
-    src url('/theme/fonts/mavenpro/maven_pro_regular-webfont.eot')
-    src url('/theme/fonts/mavenpro/maven_pro_regular-webfont.eot?#iefix') format('eot'), \
-        url('/theme/fonts/mavenpro/maven_pro_regular-webfont.woff') format('woff'), \
-        url('/theme/fonts/mavenpro/maven_pro_regular-webfont.ttf') format('truetype'), \
-        url('/theme/fonts/mavenpro/maven_pro_regular-webfont.svg#webfontOM8fITNz') format('svg')
-    fow nm
-    fot nm
-}
-@font-face {
-    fof 'FontAwesome';
-    src url('/theme/fonts/fontawesome/fontawesome-webfont.eot?v=4.1.0')
-    src url('/theme/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), \
-        url('/theme/fonts/fontawesome/fontawesome-webfont.woff?v=4.1.0') format('woff'), \
-        url('/theme/fonts/fontawesome/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), \
-        url('/theme/fonts/fontawesome/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg')
-    fow nm
-    fot nm
-}
+
+// Roots
 html {
     fos 1.3vw
 }
@@ -72,10 +27,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
     fof 'MavenProMedium'
 }
+
+// Header
 div#header-block {
     mab 5vh
 }
 div#header-block:after {
+    // forces a clear after the header block
     cle both
     vis hi
     dis bl
@@ -91,7 +49,7 @@ header#header-title h1 {
     mal 1.5rem
     pat .5rem
     fos 4vw
-    tes .5vw .5vh 1vmin black
+    tes .33rem .33rem .5rem ghostblack
 }
 header#header-title h1 a {
     ted no
@@ -107,9 +65,11 @@ header#header-title h2 {
     bac ash
     fos 1.8vw
     col offwhite
-    tes .25vw .25vh .5vmin black
+    tes .25rem .25rem .33rem ghostblack
     cur de
 }
+
+// Search
 form#searchbox {
     dis ib
     vea super
@@ -117,25 +77,16 @@ form#searchbox {
 }
 form#searchbox input {
     wid 20rem
-    bco offwhite
-    bos #00000033 .1rem .1rem .1rem 0 is
+    bos #00000033 .2rem .2rem .2rem .33rem is
+    b-- 0
     bra 1rem
     pa- .25rem
     bac white
     fos 1.25vw
     col bluedust
 }
-aside.social {
-    flo right
-    dis ib
-    mat .5rem
-}
-div#header-nav {
-    bac ash
-}
-nav {
-    pat 3rem
-}
+
+// Menu & Social Links Shared
 nav ul, aside.social ul {
     dis ib
     fos 0
@@ -146,23 +97,40 @@ nav li, aside.social li {
 nav li.active, nav li:hover {
     bac bluedust
 }
+nav li a, aside.social li a {
+    fos 1.8vw
+    ted no
+    col offwhite
+}
+
+// Menu
+div#header-nav {
+    bac ash
+}
+nav {
+    pat 3rem
+}
 nav li {
     mar .5rem
     pa- .25rem .5rem
     bra .5rem .5rem 0 0
     bac grayskull
 }
+
+// Social Links
+aside.social {
+    flo right
+    dis ib
+    ma- .5rem .5rem 0 0
+}
 aside.social li {
     pa- 0 .25rem
 }
-nav li a, aside.social li a {
-    fos 1.8vw
-    ted no
-    col offwhite
-}
 aside.social li a {
-    tes .25vw .25vh .4vmin black, .1vw .1vh .5vmin white
+    tes .25rem .25rem .5rem #ffffff44
 }
+
+// Primary Content
 div#content {
     wid 88vw
     ma- au
@@ -171,6 +139,8 @@ div#content {
 article h1, article h2, article h3, article h4, article h5, article h6 {
     fow bo
 }
+
+// Footer
 footer#site-footer {
     wid 100vw
     ov- hi
@@ -192,17 +162,19 @@ footer#site-footer li a {
     ted un
     col offwhite
 }
+
+// Recent Articles List
 aside#articles-list {
     flo left
     wid 66vw
     bac grayskull
     pos re
 }
+
+// Blogroll
 aside#links {
     bac grayash
     wid 34vw
-    bl- 66vw solid grayskull
-    mal -66vw
     flo left
 }
 aside#links li a {
@@ -212,6 +184,8 @@ aside#links span.links-name {
     fos 115%
     ted un
 }
+
+// Credits
 address#credits {
     cle both
     pa- .25vh 1vw .25vh 0

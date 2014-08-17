@@ -1,0 +1,32 @@
+//!cofoh.com/css-on-diet-1.7
+
+@font-face {
+    fof 'MavenProMedium'
+    src url('/theme/fonts/mavenpro/maven_pro_medium-webfont.eot')
+    src url('/theme/fonts/mavenpro/maven_pro_medium-webfont.eot?#iefix') format('eot'), \
+        url('/theme/fonts/mavenpro/maven_pro_medium-webfont.woff') format('woff'), \
+        url('/theme/fonts/mavenpro/maven_pro_medium-webfont.ttf') format('truetype'), \
+        url('/theme/fonts/mavenpro/maven_pro_medium-webfont.svg#webfontNj5iy4Dl') format('svg')
+    fow nm
+    fot nm
+}
+@font-face {
+    fof 'MavenProRegular'
+    src url('/theme/fonts/mavenpro/maven_pro_regular-webfont.eot')
+    src url('/theme/fonts/mavenpro/maven_pro_regular-webfont.eot?#iefix') format('eot'), \
+        url('/theme/fonts/mavenpro/maven_pro_regular-webfont.woff') format('woff'), \
+        url('/theme/fonts/mavenpro/maven_pro_regular-webfont.ttf') format('truetype'), \
+        url('/theme/fonts/mavenpro/maven_pro_regular-webfont.svg#webfontOM8fITNz') format('svg')
+    fow nm
+    fot nm
+}
+@font-face {
+    fof 'FontAwesome';
+    src url('/theme/fonts/fontawesome/fontawesome-webfont.eot?v=4.1.0')
+    src url('/theme/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), \
+        url('/theme/fonts/fontawesome/fontawesome-webfont.woff?v=4.1.0') format('woff'), \
+        url('/theme/fonts/fontawesome/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), \
+        url('/theme/fonts/fontawesome/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg')
+    fow nm
+    fot nm
+}
