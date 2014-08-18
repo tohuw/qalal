@@ -116,13 +116,22 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'FontAwesome';
     content: '\f002';
 }
-.fa-search:hover:not(monochrome) {
-    color: black;
+.fa-warning:before {
+    font-family: 'FontAwesome';
+    content: '\f071';
+}
+.fa-play:before {
+    font-family: 'FontAwesome';
+    content: '\f04b';
+}
+.fa-info-circle:before {
+    font-family: 'FontAwesome';
+    content: '\f05a';
 }
 
 /* Roots*/
 html {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
 }
 body {
     margin: 0;
@@ -139,12 +148,7 @@ div#header-block {
     margin-bottom: 5vh;
 }
 div#header-block:after {
-    /* forces a clear after the header block*/
-    clear: both;
-    visibility: hidden;
-    display: block;
-    height: 0;
-    content: ".";
+    clear: both;         visibility: hidden;         display: block;         height: 0;         content: ".";
 }
 header#header-title {
     float: left;
@@ -154,7 +158,7 @@ header#header-title h1 {
     display: inline-block;
     margin-left: 1.5rem;
     padding-top: .5rem;
-    font-size: 4vw;
+    font-size: 3rem;
     text-shadow: .33rem .33rem .5rem rgba(0,0,0,0.8);
 }
 header#header-title h1 a {
@@ -169,7 +173,7 @@ header#header-title h2 {
     padding: .5rem 1.5rem .5rem 1.5rem;
     border-radius: .85rem;
     background-color: #333;
-    font-size: 1.8vw;
+    font-size: 1.25rem;
     color: #efefef;
     text-shadow: .25rem .25rem .33rem rgba(0,0,0,0.8);
     cursor: default;
@@ -187,7 +191,7 @@ form#searchbox input {
     border: 0;
     padding: .25rem .5rem;
     background-color: white;
-    font-size: 1.25vw;
+    font-size: 1.05rem;
     font-family: 'FontAwesome';
     color: #0075c0;
 }
@@ -204,7 +208,7 @@ nav li.active, nav li:hover {
     background-color: #0075c0;
 }
 nav li a, aside.social li a {
-    font-size: 1.8vw;
+    font-size: 1.25rem;
     text-decoration: none;
     color: #efefef;
 }
@@ -243,7 +247,280 @@ div#content {
     overflow: hidden;
 }
 article h1, article h2, article h3, article h4, article h5, article h6 {
+    margin-bottom: 1.25rem;
     font-weight: bold;
+}
+div#content article header {
+    float: left;
+}
+h1.post-title:before {
+    color: #555;
+    content: '~';
+}
+h1.post-title {
+    text-align: center;
+    font-size: 3.5rem;
+}
+h1.post-title:after {
+    color: #555;
+    content: '~';
+}
+article h1.post-title a {
+    text-decoration: none;
+    color: black;
+}
+footer.post-info {
+    margin: .5rem 0 1.5rem 0;
+    float: right;
+}
+footer.post-info span {
+    display: inherit;
+    text-align: right;
+    line-height: 1.3em;
+    font-size: .85rem;
+    font-style: italic;
+}
+footer.post-info span.published, footer.post-info span.modified {
+    display: inline-block;
+}
+footer.post-info span.modified {
+    font-size: .7rem;
+}
+footer.postinfo span.tags {
+    display: inline-block;
+}
+footer.post-info address {
+    text-align: right;
+    font-size: .9rem;
+    font-style: italic;
+}
+footer.post-info address a {
+    color: black;
+}
+footer.post-info span.tags {
+}
+footer.post-info span.tags ul, footer.post-info span.tags ul li {
+    display: inline-block;
+}
+footer.post-info span.tags ul li:before {
+    content: '';
+}
+footer.post-info span.tags ul li {
+    margin-right: .5rem;
+}
+div.post-content {
+    clear: both;
+}
+div.post-content h2 {
+    font-size: 1.75rem;
+}
+div.post-content h3 {
+    font-size: 1.5rem;
+}
+article p {
+    margin-bottom: 1rem;
+    line-height: 125%;
+}
+article a:link {
+    color: rgba(0,0,0,0.8);
+}
+article a:visited {
+    color: #333;
+}
+article a:hover, article a:active {
+    color: black;
+}
+article hr {
+    border: 0;
+    height: .2vh;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.33), rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.33), rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.33), rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.33), rgba(0,0,0,0)) ;
+}
+article abbr {
+    border-bottom: 1px dotted #555;
+}
+article ol {
+    margin-left: 1rem;
+    list-style: decimal inside none;
+    color: #555;
+}
+article ol li p {
+    display: inline-block;
+}
+article ul li:before {
+    position: absolute;
+    margin: .5rem 1.5rem 0 0;
+    font-family: 'FontAwesome';
+    font-size: .85rem;
+    content: '\f04b';
+    color: rgba(0,0,0,0.2);
+}
+article ul li p {
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+article dt:after {
+    content: ':';
+}
+article dd {
+    margin: 0 0 1rem 1rem;
+    font-style: italic;
+}
+article a.footnote-ref {
+    position: relative;
+    top: -.5em;
+    padding: 0 .25em;
+    border: .1em solid rgba(0,0,0,0.2);
+    border-radius: 50%;
+    line-height: 0;
+    font-size: 75%;
+    text-decoration: none;
+}
+article .footnote hr:after {
+    position: relative;
+    font-size: .95rem;
+    content: 'Footnotes:';
+}
+article .footnote ol {
+    margin-top: 1.25rem;
+    font-size: .9rem;
+}
+article a.footnote-backref {
+    font-size: .8em;
+    text-decoration: none;
+}
+
+/* Error, Warning & Info Boxes*/
+article .error:before, article .warning:before, article .info:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    font-size: 2.75rem;
+    color: rgba(0,0,0,0.2);
+}
+article .error, article .warning, article .info {
+    display: block;
+    width: 95%;
+    min-height: 2rem;
+    margin: 0 auto .5rem auto;
+    padding: .5rem .5rem .5rem .5rem;
+    border-radius: 2rem;
+    color: #333;
+}
+article .error p, article .warning p, article .info p {
+    margin: 0;
+    padding-left: 2rem;
+    font-size: .95rem;
+}
+article .warning:before {
+    content: '\f071';
+}
+article .warning {
+    background-color: #ffa;
+}
+article .warning:hover {
+    background-color: #ff8;
+    color: black;
+}
+article .info:before {
+    content: '\f05a';
+}
+article .info {
+    background-color: #bde5f8;
+}
+article .info:hover {
+    background-color: #add5f8;
+    color: black;
+}
+
+/* Isso*/
+#isso-thread {
+    padding: 1em 1rem 3rem 1rem;
+    background-color: #efefef;
+}
+#isso-thread h4 {
+    margin: 0 1rem 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #333;
+}
+#isso-thread a:link {
+    color: rgba(0,0,0,0.8);
+}
+#isso-thread a:visited {
+    color: #333;
+}
+#isso-thread a:hover, #isso-thread a:active {
+    color: black;
+}
+#isso-root {
+    margin: 1rem;
+}
+.isso-postbox .textarea {
+    width: 85%fi;
+    min-height: 2rem;
+    padding: .5vw;
+    border: 1px solid #555;
+    background-color: white;
+    font-size: .85rem;
+    color: #555;
+}
+.isso-postbox .input-wrapper input {
+    float: left;
+    margin: .5rem .5rem .5rem 0;
+    font-size: .75rem;
+}
+.isso-postbox .post-action {
+    padding-top: .5rem;
+}
+.isso-postbox .post-action input {
+    height: 1.25rem;
+    border: 1px solid #555;
+    background-color: rgba(0,0,0,0.035);
+    font-size: .7rem;
+    color: #333;
+}
+.isso-postbox .post-action input:hover {
+    background-color: rgba(0,0,0,0.059);
+}
+.isso-comment {
+    clear: both;
+    width: 34.5rem;
+    padding: 1rem;
+    background-color: whitesmoke;
+}
+.isso-comment-header span, .isso-comment-header a.author {
+    padding-right: .5rem;
+    font-style: italic;
+}
+.isso-comment-header .spacer {
+    display: none;
+}
+.isso-comment-header .permalink:before {
+    content: '(';
+}
+.isso-comment-header .permalink {
+    font-size: .85rem;
+}
+.isso-comment-header .permalink:after {
+    content: ')';
+}
+.isso-comment .text {
+    margin: .5rem 2rem;
+    font-size: .9rem;
+}
+.isso-comment a.upvote, .isso-comment a.downvote, .isso-comment span.spacer, .isso-comment a.edit {
+    display: none;
+}
+.isso-comment a.delete {
+    margin-left: 2rem;
+    padding: 0 .25rem;
+    border: 1px solid #555;
+    border-radius: .33rem;
+    background-color: rgba(0,0,0,0.027);
+    font-size: .85rem;
+    text-decoration: none;
 }
 
 /* Footer*/
@@ -255,16 +532,17 @@ footer#site-footer {
     color: #efefef;
 }
 footer#site-footer h1 {
-    margin: .5rem;
-    font-size: 1.4vw;
+    margin: 1rem;
+    font-size: 1.85rem;
     font-style: italic;
+    color: white;
 }
 footer#site-footer li {
-    margin: 0 0 .33rem .5rem;
+    margin: 0 0 1rem 1rem;
     text-align: left;
 }
 footer#site-footer li a {
-    font-size: 1vw;
+    font-size: .85rem;
     text-decoration: underline;
     color: #efefef;
 }
@@ -272,30 +550,72 @@ footer#site-footer li a {
 /* Recent Articles List*/
 aside#articles-list {
     float: left;
-    width: 66vw;
+    width: 60vw;
     background-color: #555;
     position: relative;
+}
+aside#articles-list article {
+    min-height: 10vh;
+}
+aside#articles-list h2 {
+    display: inline-block;
+}
+aside#articles-list h2 a {
+    font-size: 1.1rem;
+}
+aside#articles-list a.comments-count:before {
+    content: '(';
+}
+aside#articles-list a.comments-count {
+    display: inline-block;
+    font-style: italic;
+    text-decoration: none;
+    font-size: .85rem;
+}
+aside#articles-list a.comments-count:after {
+    content: ')';
+}
+aside#articles-list aside.article-image {
+    float: left;
+}
+aside#articles-list aside.article-image img {
+    height: 10vh;
+    margin-right: .5rem;
+    box-shadow: .25rem .25rem 1.5rem rgba(255,255,255,0.188);
+    border-radius: 50%;
+    opacity: .95;
+}
+aside#articles-list section.post-summary {
+    margin: .5rem;
+    font-size: .85rem;
+    line-height: 110%;
 }
 
 /* Blogroll*/
 aside#links {
     background-color: #444;
-    width: 34vw;
+    width: 40vw;
     float: left;
 }
 aside#links li a {
+    font-style: italic;
     text-decoration: none;
 }
 aside#links span.links-name {
-    font-size: 115%;
+    font-size: 1.05rem;
+    font-style: normal;
     text-decoration: underline;
 }
 
 /* Credits*/
 address#credits {
     clear: both;
-    padding: .25vh 1vw .25vh 0;
+    padding: .33rem 1rem;
     background-color: #333;
     text-align: right;
-    font-size: 1vw;
+    font-size: .8rem;
+    color: rgba(239,239,239,0.667);
+}
+address#credits a {
+    color: rgba(239,239,239,0.667);
 }

@@ -31,6 +31,15 @@
     fof 'FontAwesome'
     con '\f002'
 }
-.fa-search:hover:not(monochrome) {
-    col black
+.fa-warning:before {
+    fof 'FontAwesome'
+    con '\f071'
+}
+.fa-play:before {
+    fof 'FontAwesome'
+    con '\f04b'
+}
+.fa-info-circle:before {
+    fof 'FontAwesome'
+    con '\f05a'
 }

@@ -1,11 +1,27 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
 {% block title %}
     {{ category|striptags }} Articles on
     {{ super () }}
 {% endblock %}
 
-{% block content_title %}
-    <h2 id="category-title">Articles about {{ category }}</h2>
+{% block content %}
+    <ol>
+        {% for article in articles %}
+            <li>
+            <article>
+                <header>
+                    <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                    {% include 'includes/commentcounts.html' %}
+                    {% if article.image %}
+                        <aside class="article-image"><img src="{{ article.image }}"></aside>
+                    {% endif %}
+                </header>
+                <section class="post-summary">
+                    {{ article.summary }}
+                </section>
+            </article>
+            </li>
+        {% endfor %}
+    </ol>
 {% endblock %}
-
