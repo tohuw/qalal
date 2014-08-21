@@ -5,6 +5,7 @@
 .~*
 .#*
 *.pyc
+.sass-cache
 
 ## Ignore site-specific files...
 # Pelican

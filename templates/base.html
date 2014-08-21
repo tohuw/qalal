@@ -49,7 +49,7 @@
     {% endblock feeds %}
 
     {% block stylelinks %}
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" media="screen">
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css" media="screen">
     {% endblock stylelinks %}
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -96,7 +96,9 @@
     <footer id="site-footer">
         {% include 'includes/articleslist.html' %}
         {% include 'includes/links.html' %}
-        {% include 'includes/credits.html' %}
+        <address id="credits">
+            <a href="{{ SITEURL }}">{{ SITENAME }}</a>: powered by <a href="http://getpelican.com/">Pelican</a>. Theme: <a href="https://github.com/tohuw/qalal">Qalal</a>
+        </address>
     </footer>
     {% include 'includes/piwik.html' %}
 </body>

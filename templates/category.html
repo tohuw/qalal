@@ -6,22 +6,10 @@
 {% endblock %}
 
 {% block content %}
-    <ol>
+    <h1 id="category-title">{{ category }} Articles on {{ SITENAME }}</h1>
+    <ol id="category-list">
         {% for article in articles %}
-            <li>
-            <article>
-                <header>
-                    <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-                    {% include 'includes/commentcounts.html' %}
-                    {% if article.image %}
-                        <aside class="article-image"><img src="{{ article.image }}"></aside>
-                    {% endif %}
-                </header>
-                <section class="post-summary">
-                    {{ article.summary }}
-                </section>
-            </article>
-            </li>
+            {% include 'includes/articleitem.html' %}
         {% endfor %}
     </ol>
 {% endblock %}

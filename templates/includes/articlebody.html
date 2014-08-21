@@ -11,36 +11,52 @@
         {{ translations.translations_for(article) }}
     </header>
     <footer class="post-info">
-        <span class="published" title="{{ article.date.isoformat() }}">
-            {{ article.locale_date }}
-        </span>
-        {% if article.modified and ARTICLE_SHOW_MODDATE %}
-            <span class="modified" title="{{ article.modified.isoformat() }}">
-                (Modified {{ article.locale_modified }})
+        {% if ARTICLE_SHOW_DATE and article.date %}
+            <span class="published">
+                {{ article.locale_date }}
             </span>
         {% endif %}
-        {% if article.authors %}
+        {% if ARTICLE_SHOW_CATEGORY and article.category %}
+            <span class="category">
+                in <a href="{{ article.category.url }}">{{ article.category }}</a>
+            </span>
+        {% endif %}
+        {% if article.authors and ARTICLE_SHOW_AUTHORS %}
             <address>
                 By {% for author in article.authors %}
-                    <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                    {% if CUSTOM_AUTHOR_URL %}
+                        <a href="{{ SITEURL }}/{{ CUSTOM_AUTHOR_URL }}">
+                    {% else %}
+                        <a href="{{ SITEURL }}/{{ author.url }}">
+                    {% endif %}
+                    {{ author }}</a>
                 {% endfor %}
             </address>
         {% endif %}
-        {% if ARTICLE_SHOW_TAGS and article.tags %}
-            <span class="tags">
-                Tags: 
-                <ul>
-                    {% for tag in article.tags %}
-                        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-                    {% endfor %}
-                </ul>
-            </span>
-        {% endif %}
         {% if ARTICLE_SHOW_SHARE %}
-            <div class="sharelinks"><span>Share this:</span>{% include 'includes/twitter.html' %}</div>
+            <div class="sharelinks"><span>Share this:</span>
+                {% include 'includes/twitter.html' %}
+            </div>
         {% endif %}
     </footer>
     <div class="post-content">
         {{ article.content }}
     </div>
+    {% if ARTICLE_SHOW_TAGS and article.tags %}
+        <footer class="tags">
+            <ul>
+                {% for tag in article.tags %}
+                    <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                {% endfor %}
+            </ul>
+        </footer>
+    {% endif %}
+    {% if article.modified and ARTICLE_SHOW_EDITINFO %}
+        <footer class="edit-info">
+            <p class="edit-date">Modified {{ article.locale_modified }}
+            {% if article.editreason %}
+                <p class="edit-reason">{{ article.editreason }}
+            {% endif %}
+        </footer>
+    {% endif %}
 </article>

@@ -1,0 +1,93 @@
+#isso-thread {
+    margin-top: 2rem;
+    padding: 1em 1rem 3rem 1rem;
+    background-color: $offwhite;
+    
+    h4 {
+        margin: 0 1rem 1rem;
+        text-align: center;
+        font-size: 1.25rem;
+        color: $ash;
+    }
+    a {
+        @include link-colors($ghostblack, $grayskull, $grayskull, $grayash);
+    }
+    #isso-root {
+        margin: 1rem;
+    }
+    .isso-postbox {
+        .textarea {
+            width: 60%;
+            min-height: 2rem;
+            padding: .5vw;
+            border: 1px solid #555;
+            background-color: white;
+            font-size: .85rem;
+            color: #555;
+        }
+        .input-wrapper input {
+            float: left;
+            margin: .5rem .5rem .5rem 0;
+            font-size: .75rem;
+        }
+        .post-action {
+            padding-top: .5rem;
+
+            input {
+                height: 1.25rem;
+                border: 1px solid #555;
+                background-color: lighten($nearlygone, 70%);
+                font-size: .7rem;
+                color: #333;
+            
+                &:hover {
+                    background-color: lighten($nearlygone, 50%);
+                }
+            }
+        }
+    }
+    .isso-comment {
+        clear: both;
+        width: 95%;
+        margin: 0 auto;
+        padding: 1rem;
+        background-color: whitesmoke;
+
+        .text {
+            margin: .5rem 2rem;
+            font-size: .9rem;
+        }
+
+        a.upvote, a.downvote, span.spacer, a.edit {
+            display: none;
+        }
+
+        a.delete {
+            margin-left: 2rem;
+            padding: 0 .25rem;
+            border: 1px solid $grayskull;
+            background-color: lighten($nearlygone, 75%);
+            font-size: .85rem;
+            text-decoration: none;
+        }
+    }
+    .isso-comment-header {
+        span {
+            padding-right: .5rem;
+            font-style: italic;
+        }
+        .spacer {
+            display: none;
+        }
+        .permalink {
+            font-size: .85rem;
+
+            &:before {
+                content: '(';
+            }
+            &:after {
+                content: ')';
+            }
+        }
+    }
+}

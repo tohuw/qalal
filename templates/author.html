@@ -5,6 +5,11 @@
     {{ super() }}
 {% endblock %}
 
-{% block content_title %}
-    <h2>Articles by {{ author }}</h2>
+{% block content %}
+    <h1 id="author-title">Articles by {{ author }} on {{ SITENAME }}</h1>
+    <ol id="author-list">
+        {% for article in articles %}
+            {% include 'includes/articleitem.html' %}
+        {% endfor %}
+    </ol>
 {% endblock %}

@@ -1,0 +1,67 @@
+@mixin SetBaseWithDarkenedHover($baseBgColor, $baseColor) {
+    background-color: $baseBgColor;
+    color: $baseColor;
+
+    &:hover {
+        background-color: darken($baseBgColor, 2%);
+        color: darken($baseColor, 100%);
+    }
+}
+
+.info {
+    @include SetBaseWithDarkenedHover($bluebird, $ash);
+    display: block;
+    width: 95%;
+    min-height: 2rem;
+    margin: 1rem auto;
+    padding: .5rem;
+    padding-bottom: .0;
+    border-radius: .5rem;
+    color: $ash;
+
+    &:before {
+        position: absolute;
+        margin-top: -.25rem;
+        font-family: 'FontAwesome';
+        font-size: 2.75rem;
+        color: $nearlygone;
+        content: '\f05a';
+    }
+
+    p {
+        margin-bottom: 0 !important;
+        padding: 0 0 .25rem 2rem;
+        font-size: .9rem;
+
+        &:before {
+            font-style: italic;
+            content: "Note: ";
+        }
+    }
+}
+
+.warning {
+    @extend .info;
+    @include SetBaseWithDarkenedHover($canary, $ash);
+
+    &:before {
+        content: '\f06a';
+    }
+
+    p:before {
+        content: "Warning: "
+    }
+}
+
+.error {
+    @extend .info;
+    @include SetBaseWithDarkenedHover($palered, $ash);
+
+    &:before {
+        content: '\f071';
+    }
+
+    p:before {
+        content: "Error: "
+    }
+}

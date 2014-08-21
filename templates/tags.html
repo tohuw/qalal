@@ -7,7 +7,9 @@
 
 {% block content %}
     <h1 id="tags-title">Tags on {{ SITENAME }}</h1>
+    <ul class="tags-list">
     {%- for tag, articles in tags|sort %}
         <li class="tags-item"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
     {% endfor %}
+    </ul>
 {% endblock %}

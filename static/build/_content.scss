@@ -1,0 +1,294 @@
+#content {
+    width: 88vw;
+    min-height: 50vh;
+    margin: auto;
+    overflow: hidden;
+
+    #{headers()} {
+        margin-bottom: 1.25rem;
+        font-weight: bold;
+        color: $grayash;
+        
+        a {
+            text-decoration: none;    
+        }
+    }
+
+    h1, div#tipue_search_results_count {
+        margin: 0;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    h2, div.tipue_search_content_title {
+        font-size: 1.6rem;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        line-height: 125%;
+        font-size: 1.33rem;
+    }
+
+    a {
+        @include link-colors($ghostblack, $bluedust, $bluedust, #grayash);
+
+        &.comments-count {
+            margin-left: .5rem;
+            font-size: .9rem;
+            font-style: italic;
+        }
+
+        &.footnote-ref {
+            position: relative;
+            top: -.5em;
+            padding: 0 .25em;
+            border: .1em solid rgba(0,0,0,0.2);
+            border-radius: 50%;
+            line-height: 0;
+            font-size: 75%;
+            text-decoration: none;
+
+            &:hover {
+                border-color: lighten($bluedust, 33%);
+                color: $bluedust;
+            }
+        }
+    }
+
+    abbr {
+        border-bottom: 1px dotted #555;
+    }
+
+    ol {
+        margin-left: 1rem;
+        list-style: decimal inside none;
+        color: #555;
+
+        &#category-list, &#tag-list, &#author-list {
+            margin-top: 1rem;
+            list-style: none outside none;
+
+            h2 {
+                display: inline-block;
+                margin-bottom: .5rem;
+            
+                a {
+                    font-size: 1.6rem;
+                }
+            }
+        
+            a {
+                &.comments-count {
+                    display: inline-block;
+                    font-style: italic;
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                
+                    &:before {
+                        content: '(';
+                    }
+        
+                    &:after {
+                        content: ')';
+                    }
+                }
+            }
+
+            li {
+                margin-bottom: 3.5rem;
+            }
+        }
+
+        li p {
+            display: inline;
+        }
+
+    }
+    
+    ul {
+        &.tags-list, &.authors-list {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;        
+        }
+
+        li {
+            margin-bottom: 1rem;
+
+            &:before {
+                position: absolute;
+                margin-top: .25rem;
+                font-family: 'FontAwesome';
+                font-size: .85rem;
+                content: '\f04b';
+                color: rgba(0,0,0,0.2);
+            }
+            
+            p, a {
+                display: inline-block;
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+    ul.categories-list li {
+        font-size: 1.5rem;
+    }
+
+    dl {
+        dt {
+            color: $bluedust;
+
+            &:after {
+                content: ":";
+            }
+        }
+    
+        dd {
+            margin: 0 0 1rem 1rem;
+            font-style: italic;
+        }
+    }
+    
+    hr {
+        border: 0;
+        height: .2vh;
+        @include background-image(linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.33) 50%,rgba(0,0,0,0) 100%));
+    }
+    
+    aside.article-image img {
+        @include box-shadow($grayash .25rem .25rem .75rem);
+    }
+
+    .footnote {
+        hr {
+            margin-top: 2rem;
+
+            &:after {
+                font-size: .97rem;
+                content: "Footnotes:";
+            }
+        }
+        ol {
+            margin-top: 1.25rem;
+            font-size: .9rem;
+
+            li {
+
+            }
+        }
+        a.footnote-backref {
+            font-size: .8em;
+            text-decoration: none;
+        }
+    }
+
+    footer.post-info {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 1.1rem;
+        color: $grayskull;
+
+        ul {
+            display: inline-block;
+            
+            li {
+                display: inherit;
+                padding-right: .5rem;
+
+                &:before {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    footer.tags {
+        margin-top: 3rem;
+        // Fix clipping issue with tag li's
+        padding-bottom: .25rem;
+
+        ul {
+            display: inline;
+
+            li {
+                display: inline;
+                margin-right: .5rem;
+                padding: 0 .25rem;
+                border: 1px solid $grayskull;
+                border-radius: .25rem;
+                background-color: $bluebird;
+                text-align: center;
+                
+                &:before {
+                    content: none;
+                }
+
+                &:hover {
+                    background-color: darken($bluebird, 5%)
+                }
+
+                a {
+                    margin-left: 0;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    footer.edit-info {
+        @extend footer.tags;
+        margin-top: .5rem;
+        border-radius: .5rem;
+        padding: .5rem;
+        background-color: lighten($canary, 10%);
+        font-size: .85rem;
+
+        p {
+            margin-bottom: .25rem;
+        }
+
+        p.edit-date {
+            font-weight: bold;
+        }
+
+        p.edit-reason {
+            margin-left: .5rem;
+            font-style: italic;
+        }
+    }
+}
+
+// Search Results
+div#tipue_search_content {
+    div.tipue_search_content_url {
+        margin-top: 1.25rem;
+
+        a {
+            color: $bluedust;
+        }
+    }
+
+    div.tipue_search_content_text {
+        margin: 1rem 0 0 1rem;
+    
+        span.h01 {
+            padding: 0 .25rem;
+            border-radius: .25rem;
+            background-color: lighten($canary, 0%)
+        }
+    }
+}
