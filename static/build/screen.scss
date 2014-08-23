@@ -53,9 +53,10 @@ $palered: #ffbaba;
 // Base Styles
 html {
     background-color: white;
-    font-size: 24px;
+    font-size: 1.6vw;
     font-family: "MavenPro Regular";
 }
+
 #{headers()} {
     font-family: "MavenPro Medium";
 }
@@ -64,26 +65,29 @@ html {
 div#header-block {
     margin-bottom: 5vh;
 }
+
 header#header-title {
     float: left;
+
     h1 {
         display: inline-block;
         margin-left: 1.5rem;
         padding-top: .5rem;
-        font-size: 3rem;
+        font-size: 2.75rem;
         text-shadow: .33rem .33rem .5rem rgba(0,0,0,0.8);
-        
+
         a {
             text-decoration: none;
             @include link-colors(#efefef, #0075c0);
         }
     }
+
     h2 {
         margin-left: 3rem;
         padding: .5rem 1.5rem .5rem 1.5rem;
         border-radius: .85rem;
         background-color: #333;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         color: #efefef;
         text-shadow: .25rem .25rem .33rem rgba(0,0,0,0.8);
         cursor: default;
@@ -95,9 +99,9 @@ form#searchbox {
     display: inline-block;
     vertical-align: super;
     margin-left: 1rem;
-    
+
     input {
-        width: 20rem;
+        width: 10rem;
         box-shadow: nearlygone .1rem .1rem .1rem inset;
         border: 0;
         padding: .25rem .5rem;
@@ -124,7 +128,7 @@ form#searchbox {
 
     nav {
         padding-top: 3rem;
-            
+
         li {
             margin-right: .5rem;
             padding: .25rem .5rem;
@@ -136,7 +140,7 @@ form#searchbox {
             }
 
             a {
-                font-size: 1.25rem;
+                font-size: 1.15rem;
             }
         }
     }
@@ -155,14 +159,14 @@ aside.social {
         &:active, &:hover {
             background-color: transparent;
         }
- 
+
         a {
             font-size: 1.3rem;
             font-family: 'FontAwesome';
             text-shadow: .1rem .1rem .75rem $fadedwhite;
 
             &:hover, &:active {
-                
+
             }
         }
     }
@@ -181,10 +185,11 @@ footer#site-footer {
         font-style: italic;
         color: white;
     }
+
     li {
         margin: 0 0 1rem 1rem;
         text-align: left;
-        
+
         a {
             font-size: .85rem;
             text-decoration: underline;
@@ -198,7 +203,8 @@ aside.article-image {
     float: left;
 
     img {
-        height: 10vh;
+        width: 6vw;
+        height: 6vw;
         margin-right: .5rem;
         box-shadow: .25rem .25rem 1.5rem transparentize(white, .85);
         border-radius: 50%;
@@ -216,25 +222,26 @@ aside#recent-articles {
     article {
         min-height: 10vh;
     }
+
     h2 {
         display: inline-block;
-        
+
         a {
             font-size: 1.1rem;
         }
     }
-    
+
     a {
         &.comments-count {
             display: inline-block;
             font-style: italic;
             text-decoration: none;
             font-size: .85rem;
-        
+
             &:before {
                 content: '(';
             }
-    
+
             &:after {
                 content: ')';
             }
@@ -258,6 +265,7 @@ aside#links {
         font-style: italic;
         text-decoration: none;
     }
+
     span.links-name {
         font-size: 1.05rem;
         font-style: normal;
@@ -272,6 +280,7 @@ address#credits {
     text-align: right;
     font-size: .8rem;
     color: $fadedwhite;
+
     a {
         color: inherit;
     }
