@@ -183,8 +183,24 @@
         @include background-image(linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.33) 50%,rgba(0,0,0,0) 100%));
     }
 
-    aside.article-image img {
-        @include box-shadow($grayash .25rem .25rem .75rem);
+    aside {
+        float: right;
+        width: 33vw;
+
+        blockquote {
+            border-top: .2rem solid lighten($grayskull, 50%);
+            border-bottom: .2rem solid lighten($grayskull, 50%);
+            border-left: none;
+
+            p {
+                font-style: normal;
+                font-weight: bold;
+            }
+        }
+
+        &.article-image img {
+            @include box-shadow($grayash .25rem .25rem .75rem);
+        }
     }
 
     .footnote {
