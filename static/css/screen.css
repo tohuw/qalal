@@ -2390,9 +2390,9 @@ a .fa-github:hover:not(monochrome) {
 }
 #content pre {
   overflow: auto;
-  margin-bottom: .5rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(239, 239, 239, 0.5);
 }
 #content ol {
   margin-left: 1rem;
