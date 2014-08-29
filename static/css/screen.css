@@ -2358,7 +2358,7 @@ a .fa-github:hover:not(monochrome) {
   color: rgba(0, 0, 0, 0.8);
 }
 #content a:visited {
-  color: #grayash;
+  color: #444;
 }
 #content a:hover {
   color: #0075c0;
@@ -2392,7 +2392,7 @@ a .fa-github:hover:not(monochrome) {
   overflow: auto;
   margin-bottom: .5rem;
   padding-bottom: 1rem;
-  background-color: #6e6e6e;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 #content ol {
   margin-left: 1rem;

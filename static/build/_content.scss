@@ -52,7 +52,7 @@
     }
 
     a {
-        @include link-colors($ghostblack, $bluedust, $bluedust, #grayash);
+        @include link-colors($ghostblack, $bluedust, $bluedust, $grayash);
 
         &.comments-count {
             margin-left: .5rem;
@@ -85,7 +85,7 @@
         overflow: auto;
         margin-bottom: .5rem;
         padding-bottom: 1rem;
-        background-color: lighten($grayskull, 10%);
+        background-color: $nearlygone;
     }
 
     ol {
