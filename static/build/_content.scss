@@ -81,6 +81,11 @@
         border-bottom: 1px dotted #555;
     }
 
+    pre {
+        overflow: auto;
+        margin-bottom: 1.5rem;
+    }
+
     ol {
         margin-left: 1rem;
         list-style: decimal inside none;

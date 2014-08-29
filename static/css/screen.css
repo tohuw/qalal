@@ -2388,6 +2388,10 @@ a .fa-github:hover:not(monochrome) {
 #content abbr {
   border-bottom: 1px dotted #555;
 }
+#content pre {
+  overflow: auto;
+  margin-bottom: 1.5rem;
+}
 #content ol {
   margin-left: 1rem;
   list-style: decimal inside none;
