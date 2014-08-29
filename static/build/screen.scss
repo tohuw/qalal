@@ -206,7 +206,7 @@ aside.article-image {
     img {
         width: 6vw;
         height: 6vw;
-        margin-right: .5rem;
+        margin: .5rem .5rem 0 0;
         box-shadow: .25rem .25rem 1.5rem transparentize(white, .85);
         border-radius: 50%;
         opacity: .95;
@@ -225,8 +225,6 @@ aside#recent-articles {
     }
 
     h2 {
-        display: inline-block;
-
         a {
             font-size: 1.1rem;
         }

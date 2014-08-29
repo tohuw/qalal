@@ -202,7 +202,7 @@ aside.article-image {
 aside.article-image img {
   width: 6vw;
   height: 6vw;
-  margin-right: .5rem;
+  margin: .5rem .5rem 0 0;
   box-shadow: 0.25rem 0.25rem 1.5rem rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   opacity: .95;
@@ -216,9 +216,6 @@ aside#recent-articles {
 }
 aside#recent-articles article {
   min-height: 10vh;
-}
-aside#recent-articles h2 {
-  display: inline-block;
 }
 aside#recent-articles h2 a {
   font-size: 1.1rem;
