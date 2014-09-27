@@ -215,6 +215,7 @@ aside#recent-articles {
   position: relative;
 }
 aside#recent-articles ol li {
+  height: 7vw;
   padding-top: 1rem;
 }
 aside#recent-articles ol li article {
