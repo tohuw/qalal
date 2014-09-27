@@ -214,25 +214,28 @@ aside#recent-articles {
   background-color: #555;
   position: relative;
 }
-aside#recent-articles article {
+aside#recent-articles ol li {
+  padding-top: 1rem;
+}
+aside#recent-articles ol li article {
   min-height: 10vh;
 }
-aside#recent-articles h2 a {
+aside#recent-articles ol li h2 a {
   font-size: 1.1rem;
 }
-aside#recent-articles a.comments-count {
+aside#recent-articles ol li a.comments-count {
   display: inline-block;
   font-style: italic;
   text-decoration: none;
   font-size: .85rem;
 }
-aside#recent-articles a.comments-count:before {
+aside#recent-articles ol li a.comments-count:before {
   content: '(';
 }
-aside#recent-articles a.comments-count:after {
+aside#recent-articles ol li a.comments-count:after {
   content: ')';
 }
-aside#recent-articles section.post-summary {
+aside#recent-articles ol li section.post-summary {
   margin: .5rem;
   font-size: .85rem;
   line-height: 110%;
