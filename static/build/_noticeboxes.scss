@@ -9,7 +9,7 @@
 }
 
 .info {
-    @include SetBaseWithDarkenedHover($bluebird, $ash);
+    @include SetBaseWithDarkenedHover($Info, $Overlay);
     display: block;
     width: 95%;
     min-height: 2rem;
@@ -17,14 +17,14 @@
     padding: .5rem;
     padding-bottom: .0;
     border-radius: .5rem;
-    color: $ash;
+    color: $Overlay;
 
     &:before {
         position: absolute;
         margin-top: -.25rem;
         font-family: 'FontAwesome';
         font-size: 2.75rem;
-        color: $nearlygone;
+        color: $SubText;
         content: '\f05a';
     }
 
@@ -42,7 +42,7 @@
 
 .warning {
     @extend .info;
-    @include SetBaseWithDarkenedHover($canary, $ash);
+    @include SetBaseWithDarkenedHover($Warning, $Overlay);
 
     &:before {
         content: '\f06a';
@@ -55,7 +55,7 @@
 
 .error {
     @extend .info;
-    @include SetBaseWithDarkenedHover($palered, $ash);
+    @include SetBaseWithDarkenedHover($Alert, $Overlay);
 
     &:before {
         content: '\f071';

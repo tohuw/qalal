@@ -1,16 +1,16 @@
 #isso-thread {
     margin-top: 2rem;
     padding: 1em 1rem 3rem 1rem;
-    background-color: $offwhite;
-    
+    background-color: $OverlayText;
+
     h4 {
         margin: 0 1rem 1rem;
         text-align: center;
         font-size: 1.25rem;
-        color: $ash;
+        color: $Overlay;
     }
     a {
-        @include link-colors($ghostblack, $grayskull, $grayskull, $grayash);
+        @include link-colors($LinksNormal, $grayskull, $grayskull, $grayash);
     }
     #isso-root {
         margin: 1rem;
@@ -21,7 +21,7 @@
             min-height: 2rem;
             padding: .5vw;
             border: 1px solid #555;
-            background-color: white;
+            background-color: $Background;
             font-size: .85rem;
             color: #555;
         }
@@ -36,12 +36,12 @@
             input {
                 height: 1.25rem;
                 border: 1px solid #555;
-                background-color: lighten($nearlygone, 70%);
+                background-color: lighten($SubText, 70%);
                 font-size: .7rem;
                 color: #333;
-            
+
                 &:hover {
-                    background-color: lighten($nearlygone, 50%);
+                    background-color: lighten($SubText, 50%);
                 }
             }
         }
@@ -51,7 +51,7 @@
         width: 95%;
         margin: 0 auto;
         padding: 1rem;
-        background-color: whitesmoke;
+        background-color: $BackgroundAlt;
 
         .text {
             margin: .5rem 2rem;
@@ -66,7 +66,7 @@
             margin-left: 2rem;
             padding: 0 .25rem;
             border: 1px solid $grayskull;
-            background-color: lighten($nearlygone, 75%);
+            background-color: lighten($SubText, 75%);
             font-size: .85rem;
             text-decoration: none;
         }

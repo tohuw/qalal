@@ -38,22 +38,30 @@ a img {
 }
 @include reset-html5;
 
-// Color Palette
-$offwhite: #efefef;
-$fadedwhite: transparentize($offwhite, .5);
-$ghostblack: transparentize(black, .2);
-$nearlygone: transparentize(black, .8);
-$ash: #333;
+// Palette
+$Background: #fff;
+$BackgroundAlt: #f5f5f5;
+$SubText: transparentize(black, .8);
+$LinksNormal: transparentize(black, .2);
+
+$Overlay: #333;
+$OverlayText: #efefef;
+$OverlayTextHighlight: #fff;
+$OverlaySubText: transparentize($OverlayText, .5);
+$OverlayShadow: transparentize(white, .85);
+
+$Info: #bde5f8;
+$Warning: #ffa;
+$Alert: #ffbaba;
+
 $grayash: #444;
 $grayskull: #555;
 $bluedust: #0075c0;
-$bluebird: #bde5f8;
-$canary: #ffa;
-$palered: #ffbaba;
+
 
 // Base Styles
 html {
-    background-color: white;
+    background-color: $Background;
     font-size: 1.6vw;
     font-family: "MavenPro Regular";
 }
@@ -103,7 +111,7 @@ form#searchbox {
 
     input {
         width: 10rem;
-        box-shadow: nearlygone .1rem .1rem .1rem inset;
+        box-shadow: $SubText .1rem .1rem .1rem inset;
         border: 0;
         padding: .25rem .5rem;
         background-color: white;
@@ -115,11 +123,11 @@ form#searchbox {
 
 // Menu
 #header-nav {
-    background-color: $ash;
+    background-color: $Overlay;
 
     a {
         text-decoration: none;
-        color: $offwhite;
+        color: $OverlayText;
     }
 
     ul, li {
@@ -164,7 +172,7 @@ aside.social {
         a {
             font-size: 1.3rem;
             font-family: 'FontAwesome';
-            text-shadow: .1rem .1rem .75rem $fadedwhite;
+            text-shadow: .1rem .1rem .75rem $OverlaySubText;
 
             &:hover, &:active {
 
@@ -178,13 +186,13 @@ footer#site-footer {
     width: 100vw;
     overflow: hidden;
     background-color: $grayash;
-    color: $offwhite;
+    color: $OverlayText;
 
     h1 {
         margin: 1rem;
         font-size: 1.85rem;
         font-style: italic;
-        color: white;
+        color: OverlayTextHighlight;
     }
 
     li {
@@ -194,7 +202,7 @@ footer#site-footer {
         a {
             font-size: .85rem;
             text-decoration: underline;
-            color: $offwhite;
+            color: $OverlayText;
         }
     }
 }
@@ -207,7 +215,7 @@ aside.article-image {
         width: 6vw;
         height: 6vw;
         margin: .5rem .5rem 0 0;
-        box-shadow: .25rem .25rem 1.5rem transparentize(white, .85);
+        box-shadow: .25rem .25rem 1.5rem $OverlayShadow
         border-radius: 50%;
         opacity: .95;
     }
@@ -282,10 +290,10 @@ aside#links {
 address#credits {
     clear: both;
     padding: .33rem 1rem;
-    background-color: $ash;
+    background-color: $Overlay;
     text-align: right;
     font-size: .8rem;
-    color: $fadedwhite;
+    color: $OverlaySubText;
 
     a {
         color: inherit;
