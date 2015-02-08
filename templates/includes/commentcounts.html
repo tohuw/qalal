@@ -14,6 +14,3 @@
     <script src="/theme/isso/count.min.js" data-isso="{{ SITEURL }}/isso/"></script>
     <a href="{{SITEURL}}/{{ article.url }}#isso-thread" class="comments-count">Comments</a>
 {% endif %}
-{% if PELICAN_COMMENT_SYSTEM %}
-    <a href="{{ SITEURL }}/{{ article.url}}#comments" class="comments-count">Leave a comment. {% if article.comments_count > 0 %}({{ article.comments_count }}){% endif %}</a>
-{% endif %}

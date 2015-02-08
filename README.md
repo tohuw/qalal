@@ -60,9 +60,6 @@ SOCIAL_TITLE
 FEED_TITLE
 :    Provide a title for the Atom and RSS feeds. Currently, they share titles; I would expect anyone to only want one or the other feed on their site anyway.
 
-TWITTER_USERNAME
-:    Populate with your username on Twitter (no "@") to set for sharing links.
-
 TIPUE_SEARCH\_ENABLED
 :    Set to false to hide [Tipue Search](http://www.tipue.com/search/) elements. Defaults to checking for the existence of the plugin and enabling if it is present.
 
@@ -82,9 +79,8 @@ ISSO_AVATARS
 
 Additionally, note these common settings from additional features on this site, some of which appear in the [official Pelican settings documentation](http://docs.getpelican.com/en/latest/settings.html)
 
-PELICAN\_COMMENT_SYSTEM
-:    Set to true to use [Pelican Comment System](https://github.com/getpelican/pelican-plugins/tree/master/pelican\_comment\_system), a static comments option.
-    *Note:* This feature is not yet fully implemented.
+TWITTER_USERNAME
+:    Populate with your username on Twitter (no "@") to set for sharing links.
 
 DISQUS_SITENAME
 :    Set to the name of your site registered on [Disqus](http://disqus.com) to enable and configure Disqus support.
