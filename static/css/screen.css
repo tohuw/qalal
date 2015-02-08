@@ -1,274 +1,401 @@
-@font-face {
-  font-family: "MavenPro Regular";
-  src: url('/theme/fonts/mavenpro/maven_pro_regular-webfont.eot?1408061534') format('embedded-opentype'), url('/theme/fonts/mavenpro/maven_pro_regular-webfont.svg?1408061534') format('svg'), url('/theme/fonts/mavenpro/maven_pro_regular-webfont.ttf?1408061534') format('truetype'), url('/theme/fonts/mavenpro/maven_pro_regular-webfont.woff?1408061534') format('woff');
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
 }
-@font-face {
-  font-family: "MavenPro Medium";
-  src: url('/theme/fonts/mavenpro/maven_pro_medium-webfont.eot?1408061534') format('embedded-opentype'), url('/theme/fonts/mavenpro/maven_pro_medium-webfont.svg?1408061534') format('svg'), url('/theme/fonts/mavenpro/maven_pro_medium-webfont.ttf?1408061534') format('truetype'), url('/theme/fonts/mavenpro/maven_pro_medium-webfont.woff?1408061534') format('woff');
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
 }
-@font-face {
-  font-family: "MavenPro Bold";
-  src: url('/theme/fonts/mavenpro/maven_pro_bold-webfont.eot?1408061534') format('embedded-opentype'), url('/theme/fonts/mavenpro/maven_pro_bold-webfont.svg?1408061534') format('svg'), url('/theme/fonts/mavenpro/maven_pro_bold-webfont.ttf?1408061534') format('truetype'), url('/theme/fonts/mavenpro/maven_pro_bold-webfont.woff?1408061534') format('woff');
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
 }
-@font-face {
-  font-family: "MavenPro Black";
-  src: url('/theme/fonts/mavenpro/maven_pro_black-webfont.eot?1408061534') format('embedded-opentype'), url('/theme/fonts/mavenpro/maven_pro_black-webfont.svg?1408061534') format('svg'), url('/theme/fonts/mavenpro/maven_pro_black-webfont.ttf?1408061534') format('truetype'), url('/theme/fonts/mavenpro/maven_pro_black-webfont.woff?1408061534') format('woff');
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
 }
-@font-face {
-  font-family: "FontAwesome";
-  src: url('/theme/fonts/fontawesome/fontawesome-webfont.eot?1407173380') format('embedded-opentype'), url('/theme/fonts/fontawesome/fontawesome-webfont.svg?1407173380') format('svg'), url('/theme/fonts/fontawesome/fontawesome-webfont.ttf?1407173380') format('truetype'), url('/theme/fonts/fontawesome/fontawesome-webfont.woff?1407173380') format('woff');
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+/**
+ * Remove default margin.
+ */
+body {
   margin: 0;
-  padding: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
   border: 0;
 }
 
-html {
-  line-height: 1;
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
 }
 
-ol, ul {
-  list-style: none;
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
 }
 
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-
-html {
-  background-color: white;
-  font-size: 1.6vw;
+@font-face {
   font-family: "MavenPro Regular";
+  src: url('/theme/fonts/mavenpro/maven_pro_regular-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/fonts/mavenpro/maven_pro_regular-webfont.svg?1423283565') format('svg'), url('/theme/fonts/mavenpro/maven_pro_regular-webfont.ttf?1423283565') format('truetype'), url('/theme/fonts/mavenpro/maven_pro_regular-webfont.woff?1423283565') format('woff');
 }
-
-h1, h2, h3, h4, h5, h6 {
+@font-face {
   font-family: "MavenPro Medium";
+  src: url('/theme/fonts/mavenpro/maven_pro_medium-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/fonts/mavenpro/maven_pro_medium-webfont.svg?1423283565') format('svg'), url('/theme/fonts/mavenpro/maven_pro_medium-webfont.ttf?1423283565') format('truetype'), url('/theme/fonts/mavenpro/maven_pro_medium-webfont.woff?1423283565') format('woff');
 }
-
-div#header-block {
-  margin-bottom: 5vh;
+@font-face {
+  font-family: "MavenPro Bold";
+  src: url('/theme/fonts/mavenpro/maven_pro_bold-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/fonts/mavenpro/maven_pro_bold-webfont.svg?1423283565') format('svg'), url('/theme/fonts/mavenpro/maven_pro_bold-webfont.ttf?1423283565') format('truetype'), url('/theme/fonts/mavenpro/maven_pro_bold-webfont.woff?1423283565') format('woff');
 }
-
-header#header-title {
-  float: left;
+@font-face {
+  font-family: "MavenPro Black";
+  src: url('/theme/fonts/mavenpro/maven_pro_black-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/fonts/mavenpro/maven_pro_black-webfont.svg?1423283565') format('svg'), url('/theme/fonts/mavenpro/maven_pro_black-webfont.ttf?1423283565') format('truetype'), url('/theme/fonts/mavenpro/maven_pro_black-webfont.woff?1423283565') format('woff');
 }
-header#header-title h1 {
-  display: inline-block;
-  margin-left: 1.5rem;
-  padding-top: .5rem;
-  font-size: 2.75rem;
-  text-shadow: 0.33rem 0.33rem 0.5rem rgba(0, 0, 0, 0.8);
+@font-face {
+  font-family: "FontAwesome";
+  src: url('/theme/fonts/fontawesome/fontawesome-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/fonts/fontawesome/fontawesome-webfont.svg?1423283565') format('svg'), url('/theme/fonts/fontawesome/fontawesome-webfont.ttf?1423283565') format('truetype'), url('/theme/fonts/fontawesome/fontawesome-webfont.woff?1423283565') format('woff');
 }
-header#header-title h1 a {
-  text-decoration: none;
-  color: #efefef;
-}
-header#header-title h1 a:hover {
-  color: #0075c0;
-}
-header#header-title h2 {
-  margin-left: 3rem;
-  padding: .5rem 1.5rem .5rem 1.5rem;
-  border-radius: .85rem;
-  background-color: #333;
-  font-size: 1.1rem;
-  color: #efefef;
-  text-shadow: 0.25rem 0.25rem 0.33rem rgba(0, 0, 0, 0.8);
-  cursor: default;
-}
-
-form#searchbox {
-  display: inline-block;
-  vertical-align: super;
-  margin-left: 1rem;
-}
-form#searchbox input {
-  width: 10rem;
-  box-shadow: nearlygone .1rem .1rem .1rem inset;
-  border: 0;
-  padding: .25rem .5rem;
-  background-color: white;
-  font-size: 1.05rem;
-  font-family: 'FontAwesome';
-  color: #0075c0;
-}
-
-#header-nav {
-  background-color: #333;
-}
-#header-nav a {
-  text-decoration: none;
-  color: #efefef;
-}
-#header-nav ul, #header-nav li {
-  display: inline-block;
-  font-size: 0;
-}
-#header-nav nav {
-  padding-top: 3rem;
-}
-#header-nav nav li {
-  margin-right: .5rem;
-  padding: .2rem .5rem;
-  border-radius: .5rem .5rem 0 0;
-  background-color: #555;
-}
-#header-nav nav li:active, #header-nav nav li:hover {
-  background-color: #0075c0;
-}
-#header-nav nav li a {
-  font-size: 1.15rem;
-}
-
-aside.social {
-  float: right;
-  display: inline-block;
-  margin: .5rem .5rem 0 0;
-}
-aside.social li {
-  padding: 0 .25rem;
-  background-color: transparent;
-}
-aside.social li:active, aside.social li:hover {
-  background-color: transparent;
-}
-aside.social li a {
-  font-size: 1.3rem;
-  font-family: 'FontAwesome';
-  text-shadow: 0.1rem 0.1rem 0.75rem rgba(239, 239, 239, 0.5);
-}
-
-footer#site-footer {
-  width: 100vw;
-  overflow: hidden;
-  background-color: #444;
-  color: #efefef;
-}
-footer#site-footer h1 {
-  margin: 1rem;
-  font-size: 1.85rem;
-  font-style: italic;
-  color: white;
-}
-footer#site-footer li {
-  margin: 0 0 1rem 1rem;
-  text-align: left;
-}
-footer#site-footer li a {
-  font-size: .85rem;
-  text-decoration: underline;
-  color: #efefef;
-}
-
-aside.article-image {
-  float: left;
-}
-aside.article-image img {
-  width: 6vw;
-  height: 6vw;
-  margin: .5rem .5rem 0 0;
-  box-shadow: 0.25rem 0.25rem 1.5rem rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  opacity: .95;
-}
-
-aside#recent-articles {
-  float: left;
-  width: 60vw;
-  background-color: #555;
-  position: relative;
-}
-aside#recent-articles ol li {
-  height: 7vw;
-  padding-top: 1rem;
-}
-aside#recent-articles ol li article {
-  min-height: 10vh;
-}
-aside#recent-articles ol li h2 a {
-  font-size: 1.1rem;
-}
-aside#recent-articles ol li a.comments-count {
-  display: inline-block;
-  font-style: italic;
-  text-decoration: none;
-  font-size: .85rem;
-}
-aside#recent-articles ol li a.comments-count:before {
-  content: '(';
-}
-aside#recent-articles ol li a.comments-count:after {
-  content: ')';
-}
-aside#recent-articles ol li section.post-summary {
-  margin: .5rem;
-  font-size: .85rem;
-  line-height: 110%;
-}
-
-aside#links {
-  background-color: #444;
-  width: 40vw;
-  float: left;
-}
-aside#links li a {
-  font-style: italic;
-  text-decoration: none;
-}
-aside#links span.links-name {
-  font-size: 1.05rem;
-  font-style: normal;
-  text-decoration: underline;
-}
-
-address#credits {
-  clear: both;
-  padding: .33rem 1rem;
-  background-color: #333;
-  text-align: right;
-  font-size: .8rem;
-  color: rgba(239, 239, 239, 0.5);
-}
-address#credits a {
-  color: inherit;
-}
-
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2311,289 +2438,14 @@ a .fa-github:hover:not(monochrome) {
   content: "\f1e2";
 }
 
-#content {
-  width: 88vw;
-  min-height: 50vh;
-  margin: auto;
-  overflow: hidden;
-}
-#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
-  margin-bottom: 1.25rem;
-  font-weight: bold;
-  color: #444;
-}
-#content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, #content h6 a {
-  text-decoration: none;
-}
-#content h1, #content div#tipue_search_results_count {
-  margin: 0;
-  text-align: center;
-  font-size: 2.33rem;
-}
-#content h2, #content div.tipue_search_content_title {
-  font-size: 1.6rem;
-}
-#content h2 a, #content div.tipue_search_content_title a {
-  text-decoration: none;
-}
-#content h3 {
-  font-size: 1.4rem;
-}
-#content p {
-  margin-bottom: 1rem;
-  line-height: 125%;
-  font-size: 1.33rem;
-}
-#content blockquote {
-  margin: 2rem 0 2rem 3rem;
-  padding: .3rem 0 .05rem .25rem;
-  border-left: 0.2rem solid #d4d4d4;
-}
-#content blockquote p {
-  line-height: 160% !important;
-  font-size: 1.32rem;
-  font-style: italic;
-  color: #444;
-}
-#content a {
-  color: rgba(0, 0, 0, 0.8);
-}
-#content a:visited {
-  color: #444;
-}
-#content a:hover {
-  color: #0075c0;
-}
-#content a:active {
-  color: #0075c0;
-}
-#content a.comments-count {
-  margin-left: .5rem;
-  font-size: .9rem;
-  font-style: italic;
-}
-#content a.footnote-ref {
-  position: relative;
-  top: -.5em;
-  padding: 0 .25em;
-  border: 0.1em solid rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  line-height: 0;
-  font-size: 75%;
-  text-decoration: none;
-}
-#content a.footnote-ref:hover {
-  border-color: #69c5ff;
-  color: #0075c0;
-}
-#content abbr {
-  border-bottom: 1px dotted #555;
-}
-#content pre {
-  overflow: auto;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  background-color: rgba(239, 239, 239, 0.5);
-}
-#content ol {
-  margin-left: 1rem;
-  list-style: decimal inside none;
-  color: #555;
-}
-#content ol#category-list, #content ol#tag-list, #content ol#author-list {
-  margin-top: 1rem;
-  list-style: none outside none;
-}
-#content ol#category-list h2, #content ol#tag-list h2, #content ol#author-list h2 {
-  display: inline-block;
-  margin-bottom: .5rem;
-}
-#content ol#category-list h2 a, #content ol#tag-list h2 a, #content ol#author-list h2 a {
-  font-size: 1.6rem;
-}
-#content ol#category-list a.comments-count, #content ol#tag-list a.comments-count, #content ol#author-list a.comments-count {
-  display: inline-block;
-  font-style: italic;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-#content ol#category-list a.comments-count:before, #content ol#tag-list a.comments-count:before, #content ol#author-list a.comments-count:before {
-  content: '(';
-}
-#content ol#category-list a.comments-count:after, #content ol#tag-list a.comments-count:after, #content ol#author-list a.comments-count:after {
-  content: ')';
-}
-#content ol#category-list li, #content ol#tag-list li, #content ol#author-list li {
-  margin-bottom: 3.5rem;
-}
-#content ol li p {
-  display: inline;
-}
-#content ul.tags-list, #content ul.authors-list {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-#content ul li {
-  margin-bottom: 1rem;
-}
-#content ul li:before {
-  position: absolute;
-  margin-top: .25rem;
-  font-family: 'FontAwesome';
-  font-size: .85rem;
-  content: '\f04b';
-  color: rgba(0, 0, 0, 0.2);
-}
-#content ul li p, #content ul li a {
-  display: inline-block;
-  margin-left: 1.5rem;
-}
-#content ul.categories-list li {
-  font-size: 1.5rem;
-}
-#content dl dt {
-  color: #0075c0;
-}
-#content dl dt:after {
-  content: ":";
-}
-#content dl dd {
-  margin: 0 0 1rem 1rem;
-  font-style: italic;
-}
-#content img {
-  float: right;
-  margin-left: 2rem;
-  -moz-box-shadow: #444 0.25rem 0.25rem 0.75rem;
-  -webkit-box-shadow: #444 0.25rem 0.25rem 0.75rem;
-  box-shadow: #444 0.25rem 0.25rem 0.75rem;
-}
-#content hr {
-  border: 0;
-  height: .2vh;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjMzIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0.33)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.33) 50%, rgba(0, 0, 0, 0) 100%);
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.33) 50%, rgba(0, 0, 0, 0) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.33) 50%, rgba(0, 0, 0, 0) 100%);
-}
-#content aside {
-  float: right;
-  width: 33vw;
-}
-#content aside blockquote {
-  border-top: 0.2rem solid #d4d4d4;
-  border-bottom: 0.2rem solid #d4d4d4;
-  border-left: none;
-}
-#content aside blockquote p {
-  font-style: normal;
-  font-weight: bold;
-}
-#content aside.article-image img {
-  -moz-box-shadow: #444 0.25rem 0.25rem 0.75rem;
-  -webkit-box-shadow: #444 0.25rem 0.25rem 0.75rem;
-  box-shadow: #444 0.25rem 0.25rem 0.75rem;
-}
-#content .footnote {
-  margin-bottom: 2rem;
-}
-#content .footnote hr {
-  margin-top: 2rem;
-}
-#content .footnote hr:after {
-  font-size: .97rem;
-  content: "Footnotes:";
-}
-#content .footnote ol {
-  margin-top: 1.25rem;
-  font-size: 1.1rem;
-}
-#content .footnote ol li p {
-  font-size: 1.15rem;
-}
-#content .footnote a.footnote-backref {
-  font-size: .8em;
-  text-decoration: none;
-}
-#content footer.post-info {
-  width: 100%;
-  margin: 1rem 0 1.5rem 0;
-  text-align: center;
-  font-size: 1.1rem;
-  color: #555;
-}
-#content footer.post-info ul {
-  display: inline-block;
-}
-#content footer.post-info ul li {
-  display: inherit;
-  padding-right: .5rem;
-}
-#content footer.post-info ul li:before {
-  content: none;
-}
-#content footer.tags, #content footer.edit-info {
-  margin-top: 3rem;
-  padding-bottom: .25rem;
-}
-#content footer.tags ul, #content footer.edit-info ul {
-  display: inline;
-}
-#content footer.tags ul li, #content footer.edit-info ul li {
-  display: inline;
-  margin-right: .5rem;
-  padding: 0 .25rem;
-  border: 1px solid #555;
-  border-radius: .25rem;
-  background-color: #bde5f8;
-  text-align: center;
-}
-#content footer.tags ul li:before, #content footer.edit-info ul li:before {
-  content: none;
-}
-#content footer.tags ul li:hover, #content footer.edit-info ul li:hover {
-  background-color: #a6dcf6;
-}
-#content footer.tags ul li a, #content footer.edit-info ul li a {
-  margin-left: 0;
-  text-decoration: none;
-}
-#content footer.tags ul li a:hover, #content footer.edit-info ul li a:hover {
-  color: inherit;
-}
-#content footer.edit-info {
-  margin-top: .5rem;
-  border-radius: .5rem;
-  padding: .5rem;
-  background-color: #ffffdd;
-  font-size: .85rem;
-}
-#content footer.edit-info p {
-  margin-bottom: .25rem;
-}
-#content footer.edit-info p.edit-date {
-  font-weight: bold;
-}
-#content footer.edit-info p.edit-reason {
-  margin-left: .5rem;
-  font-style: italic;
+html {
+  background-color: white;
+  font-size: 1.6vw;
+  font-family: "MavenPro Regular";
 }
 
-div#tipue_search_content div.tipue_search_content_url {
-  margin-top: 1.25rem;
-}
-div#tipue_search_content div.tipue_search_content_url a {
-  color: #0075c0;
-}
-div#tipue_search_content div.tipue_search_content_text {
-  margin: 1rem 0 0 1rem;
-}
-div#tipue_search_content div.tipue_search_content_text span.h01 {
-  padding: 0 .25rem;
-  border-radius: .25rem;
-  background-color: #ffffaa;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "MavenPro Medium";
 }
 
 .info, .warning, .error {
@@ -2617,7 +2469,7 @@ div#tipue_search_content div.tipue_search_content_text span.h01 {
   margin-top: -.25rem;
   font-family: 'FontAwesome';
   font-size: 2.75rem;
-  color: rgba(0, 0, 0, 0.2);
+  color: #555;
   content: '\f05a';
 }
 .info p, .warning p, .error p {
@@ -2658,96 +2510,4 @@ div#tipue_search_content div.tipue_search_content_text span.h01 {
 }
 .error p:before {
   content: "Error: ";
-}
-
-#isso-thread {
-  margin-top: 2rem;
-  padding: 1em 1rem 3rem 1rem;
-  background-color: #efefef;
-}
-#isso-thread h4 {
-  margin: 0 1rem 1rem;
-  text-align: center;
-  font-size: 1.25rem;
-  color: #333;
-}
-#isso-thread a {
-  color: rgba(0, 0, 0, 0.8);
-}
-#isso-thread a:visited {
-  color: #444;
-}
-#isso-thread a:hover {
-  color: #555;
-}
-#isso-thread a:active {
-  color: #555;
-}
-#isso-thread #isso-root {
-  margin: 1rem;
-}
-#isso-thread .isso-postbox .textarea {
-  width: 60%;
-  min-height: 2rem;
-  padding: .5vw;
-  border: 1px solid #555;
-  background-color: white;
-  font-size: .85rem;
-  color: #555;
-}
-#isso-thread .isso-postbox .input-wrapper input {
-  float: left;
-  margin: .5rem .5rem .5rem 0;
-  font-size: .75rem;
-}
-#isso-thread .isso-postbox .post-action {
-  padding-top: .5rem;
-}
-#isso-thread .isso-postbox .post-action input {
-  height: 1.25rem;
-  border: 1px solid #555;
-  background-color: rgba(179, 179, 179, 0.2);
-  font-size: .7rem;
-  color: #333;
-}
-#isso-thread .isso-postbox .post-action input:hover {
-  background-color: rgba(128, 128, 128, 0.2);
-}
-#isso-thread .isso-comment {
-  clear: both;
-  width: 95%;
-  margin: 0 auto;
-  padding: 1rem;
-  background-color: whitesmoke;
-}
-#isso-thread .isso-comment .text {
-  margin: .5rem 2rem;
-  font-size: .9rem;
-}
-#isso-thread .isso-comment a.upvote, #isso-thread .isso-comment a.downvote, #isso-thread .isso-comment span.spacer, #isso-thread .isso-comment a.edit {
-  display: none;
-}
-#isso-thread .isso-comment a.delete {
-  margin-left: 2rem;
-  padding: 0 .25rem;
-  border: 1px solid #555;
-  background-color: rgba(191, 191, 191, 0.2);
-  font-size: .85rem;
-  text-decoration: none;
-}
-#isso-thread .isso-comment-header span {
-  padding-right: .5rem;
-  font-style: italic;
-}
-#isso-thread .isso-comment-header .spacer {
-  display: none;
-}
-#isso-thread .isso-comment-header .permalink {
-  font-size: .85rem;
-}
-#isso-thread .isso-comment-header .permalink:before {
-  content: '(';
-}
-#isso-thread .isso-comment-header .permalink:after {
-  content: ')';
 }

@@ -7,7 +7,6 @@
         color: darken($baseColor, 100%);
     }
 }
-
 .info {
     @include SetBaseWithDarkenedHover($Info, $Overlay);
     display: block;
@@ -17,7 +16,7 @@
     padding: .5rem;
     padding-bottom: .0;
     border-radius: .5rem;
-    color: $Overlay;
+    color: $Text;
 
     &:before {
         position: absolute;
@@ -39,7 +38,6 @@
         }
     }
 }
-
 .warning {
     @extend .info;
     @include SetBaseWithDarkenedHover($Warning, $Overlay);
@@ -52,7 +50,6 @@
         content: "Warning: "
     }
 }
-
 .error {
     @extend .info;
     @include SetBaseWithDarkenedHover($Alert, $Overlay);

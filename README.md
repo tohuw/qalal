@@ -11,15 +11,15 @@ I created this because I wanted a simple, unencumbered theme not requiring weigh
     Rather than ascribe to a rigid grid-type system, Qalal uses semantically-focused HTML and relies on proper styling to render the look and feel as you desire, rather than requiring you to fight with esoteric grids and boxes.
 
 -   **Highly accessible.**
-    Primarily due to the semantic focus in the markup, Qalal is easy for screen readers to understand and features excellent cross-browser support. Browser support for IE is intentionally limited to IE 10+. Other popular browsers should be fine +/- 2 versions or so.
+    Primarily due to the semantic focus in the markup, Qalal is easy for screen readers to understand and features excellent cross-browser support. Browser support for IE is intentionally limited to IE 10+. Other popular browsers should be fine, provided it's a reasonably recent version.
 
--   **Index page displays most recent article instead of list of recent articles.**
+-   **Index page displays most recent article instead of a list of recent articles.**
     This is more interesting and invites the reader to jump right in to your content.
 
 -   **Recent articles are an aside in the footer.**
     After enjoying your most recent article, readers are invited to read on with the latest articles you've written. It's suggested to display the Archives and Categories in the menu to provide a more complete article list.
 
--   **Pre-Processed CSS sources via [SASS with Compass](http://compass-style.org/)**
+-   **Pre-Processed CSS sources via [Sass with Compass](http://compass-style.org/)**
     Compass is a well-known framework built on top of [Sass](http://sass-lang.com/), making for easy style management without a dependency on complicated output. Like Pelican, all the work is done up front and the output is simple and static.
 
 -   **Web fonts are included.**
@@ -58,7 +58,7 @@ SOCIAL_TITLE
 :    Provide an optional title to the Social links section.
 
 FEED_TITLE
-:    Provide a title for the Atom and RSS feeds. Currently, they share titles; I would expect anyone to only want one or the other feed on their site.
+:    Provide a title for the Atom and RSS feeds. Currently, they share titles; I would expect anyone to only want one or the other feed on their site anyway.
 
 TWITTER_USERNAME
 :    Populate with your username on Twitter (no "@") to set for sharing links.
