@@ -419,7 +419,7 @@ a .fa-github:hover:not(monochrome) {
   color: black;
 }
 
-.fa {
+.fa, [class^="fa-"], [class*=" fa-"] {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;

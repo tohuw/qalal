@@ -21,7 +21,7 @@ a .fa-github:hover:not(monochrome) {
 }
 // End RAS Additions
 
-.fa {
+.fa, [class^="fa-"], [class*=" fa-"] {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
