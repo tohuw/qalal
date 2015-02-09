@@ -3,7 +3,8 @@
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  *    Modified by Ron Scott-Adams for Tohuw.Net:
  *      - Removed @font-face declaration, as that's in my SCSS
- *      - Added hover styles
+ *      - Added some hover styles
+ *      - Rewrote declaration for fa such that e.g. ".fa-rss" has the same style as ".fa .fa-rss" would.
  */
 
 // RAS Additions
