@@ -1,7 +1,8 @@
 @import "compass";
 
-@import "normalize";
-@include normalize;
+// @import "normalize";
+// @include normalize;
+@import "compass/reset";
 
 @import "webfonts";
 @import "font-awesome";
