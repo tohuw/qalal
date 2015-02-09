@@ -1,5 +1,5 @@
 {% if ISSO_ENABLED %}
-    <script src="/theme/isso/count.min.js" data-isso="{{ SITEURL }}/isso/"></script>
+    <script src="{{ ISSO_URL }}/js/count.min.js" data-isso="{{ ISSO_URL }}"></script>
     <a href="{{SITEURL}}/{{ article.url }}#isso-thread" class="comments-count">Comments</a>
 {% endif %}
 {% if DISQUS_SITENAME %}
