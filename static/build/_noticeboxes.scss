@@ -17,7 +17,6 @@
     padding-bottom: .0;
     border-radius: .5rem;
     color: $Text;
-
     &:before {
         position: absolute;
         margin-top: -.25rem;
@@ -26,12 +25,10 @@
         color: $SubText;
         content: '\f05a';
     }
-
     p {
         margin-bottom: 0 !important;
         padding: 0 0 .25rem 2rem;
         font-size: .9rem;
-
         &:before {
             font-style: italic;
             content: "Note: ";
@@ -41,11 +38,9 @@
 .warning {
     @extend .info;
     @include SetBaseWithDarkenedHover($Warning, $Overlay);
-
     &:before {
         content: '\f06a';
     }
-
     p:before {
         content: "Warning: "
     }
@@ -53,11 +48,9 @@
 .error {
     @extend .info;
     @include SetBaseWithDarkenedHover($Alert, $Overlay);
-
     &:before {
         content: '\f071';
     }
-
     p:before {
         content: "Error: "
     }
