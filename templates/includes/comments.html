@@ -1,5 +1,5 @@
 {% if ISSO_ENABLED and article.status != "draft" %}
-    <script data-isso="{{ SITEURL }}/isso/" data-isso-css="{% if ISSO_DEFAULT_STYLE %}true{% else %}false{% endif %}" data-isso-avatar="{% if ISSO_AVATARS %}true{% else %}false{% endif %}" src="{{ SITEURL }}/theme/isso/embed.min.js"></script>
+    <script data-isso="{{ ISSO_URL }}" data-isso-css="{% if ISSO_DEFAULT_STYLE %}{{ ISSO_DEFAULT_STYLE }}{% else %}true{% endif %}" {% if ISSO_LANG %}data-isso-lang="{{ ISSO_LANG }}"{% endif %} data-isso-reply-to-self="{{ ISSO_REPLY_TO_SELF }}" data-isso-max-comments-top="{{ ISSO_MAX_COMMENTS_TOP }}" data-isso-max-comments-nested="{{ ISSO_MAX_COMMENTS_NESTED }}" data-isso-reveal-on-click="{{ ISSO_REVEAL_ON_CLICK }}" data-isso-avatar="{% if ISSO_AVATARS %}{{ ISSO_AVATARS }}{% else %}true{% endif %}" {% if ISSO_AVATAR_BG %}data-isso-avatar-bg="{{ ISSO_AVATAR_BG }}"{% endif %} {% if ISSO_AVATAR_FG %}data-isso-avatar-fg="{{ ISSO_AVATAR_FG }}"{% endif %} data-isso-vote="{% if ISSO_VOTING %}{{ ISSO_VOTING }}{% else %}true{% endif %}" src="{{ ISSO_URL }}/js/embed.min.js"></script>
     <section id="isso-thread"></section>
 {% endif %}
 {% if DISQUS_SITENAME and article.status != "draft" %}

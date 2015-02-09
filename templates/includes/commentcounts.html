@@ -1,3 +1,7 @@
+{% if ISSO_ENABLED %}
+    <script src="/theme/isso/count.min.js" data-isso="{{ SITEURL }}/isso/"></script>
+    <a href="{{SITEURL}}/{{ article.url }}#isso-thread" class="comments-count">Comments</a>
+{% endif %}
 {% if DISQUS_SITENAME %}
     <script>
         var disqus_shortname = '{{ DISQUS_SITENAME }}';
@@ -9,8 +13,4 @@
         }());
     </script>
     <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" data-disqus-identifier="{{ article.slug }}" class="comments-count"></a>
-{% endif %}
-{% if ISSO_ENABLED %}
-    <script src="/theme/isso/count.min.js" data-isso="{{ SITEURL }}/isso/"></script>
-    <a href="{{SITEURL}}/{{ article.url }}#isso-thread" class="comments-count">Comments</a>
 {% endif %}
