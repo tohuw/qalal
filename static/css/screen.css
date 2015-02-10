@@ -2439,6 +2439,12 @@ a .fa-github:hover:not(monochrome) {
   content: "\f1e2";
 }
 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html {
   background-color: white;
   font-family: "MavenPro Regular";
