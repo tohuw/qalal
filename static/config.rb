@@ -1,6 +1,6 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
-require 'normalize'
+require 'compass-html5bp'
 
 # Set this to the root of your project when deployed:
 http_path = "/theme"

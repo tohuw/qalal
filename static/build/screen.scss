@@ -1,7 +1,11 @@
 @import "compass";
 
-@import "normalize";
-@include normalize;
+@import "html5bp";
+@include html5bp-normalize;
+@include html5bp-base-styles;
+@include html5bp-browserupgrade;
+@include html5bp-helpers;
+@include html5bp-media;
 
 @import "webfonts";
 @import "font-awesome";
