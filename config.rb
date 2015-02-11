@@ -4,11 +4,11 @@ require 'compass-html5bp'
 
 # Set this to the root of your project when deployed:
 http_path = "/theme"
-css_dir = "css"
-sass_dir = "build"
-images_dir = "images"
-javascripts_dir = "js"
-fonts_dir = "fonts"
+css_dir = "static/css"
+sass_dir = "static/build"
+images_dir = "static/images"
+javascripts_dir = "static/js"
+fonts_dir = "static/fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

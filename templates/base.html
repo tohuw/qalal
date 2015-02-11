@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
-<head>
-{% block head %}
-    {% block metadata %}
+<!doctype html>
+<html class="no-js" lang="{{ DEFAULT_LANG }}">
+    <head>
+    {% block head %}
+        {% block metadata %}
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         {% if article and article.author %}
             <meta name="author" content="{{ article.author }}" />
             <meta name="copyright" content="{{ article.author }}" />
@@ -14,14 +15,16 @@
             <meta name="author" content="{{ AUTHOR }}" />
             <meta name="copyright" content="{{ AUTHOR }}" />
         {% endif %}
+        <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
         {% if SITE_DESCRIPTION %}
             <meta name="description" content="{% block head_description %}{{ SITE_DESCRIPTION }}{% endblock head_description %}" />
         {% endif %}
-    {% endblock metadata %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
 
-    {% block feeds %}
+        {% block feeds %}
         {% if FEED_ALL_ATOM %}
             <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed">
         {% endif %}
@@ -46,60 +49,67 @@
         {% if TAG_FEED_RSS and tag %}
             <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
         {% endif %}
-    {% endblock feeds %}
+        {% endblock feeds %}
 
-    {% block stylelinks %}
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css" media="screen">
-    {% endblock stylelinks %}
+        <!-- main.css uses compass-html5bp to include normalize, see https://github.com/tohuw/compass-html5bp -->
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" media="screen, print">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    {% endblock head %}
+    </head>
+    <body>
+        {% block browserupgrade %}
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        {% endblock %}
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    {% include 'includes/googleanalytics.html' %}
-    {% include 'includes/gosquared.html' %}
-{% endblock head %}
-</head>
-
-<body>
-    {% block header %}
-    <div id="header-block">
+        {% block header %}
         <header id="header-title">
             <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
             {% include 'includes/searchbox.html' %}
             <h2>{{ SITESUBTITLE }}</h2>
         </header>
-        <div id="header-nav">
-            {% include 'includes/social.html' %}
-            <nav>
-                <ul>
-                    {% for title, link in MENUITEMS %}
-                        <li class="menu-item"><a href="{{ link }}">{{ title }}</a></li>
+        {% include 'includes/social.html' %}
+        <nav>
+            <ul>
+                {% for title, link in MENUITEMS %}
+                    <li class="menu-item"><a href="{{ link }}">{{ title }}</a></li>
+                {% endfor %}
+                {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in PAGES %}
+                        <li class="menu-page{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                     {% endfor %}
-                    {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for p in PAGES %}
-                            <li class="menu-page{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                {% else %}
+                    {% if DISPLAY_CATEGORIES_ON_MENU %}
+                        {% for cat, null in categories %}
+                            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                         {% endfor %}
-                    {% else %}
-                        {% if DISPLAY_CATEGORIES_ON_MENU %}
-                            {% for cat, null in categories %}
-                                <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                            {% endfor %}
-                        {% endif %}
                     {% endif %}
-                </ul>
-            </nav>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endblock %}
+
+        <div id="content">
+        {% block content %}
+        {% endblock %}
         </div>
-    </div>
-    {% endblock %}
-    <div id="content">
-    {% block content %}
-    {% endblock %}
-    </div>
-    <footer id="site-footer">
-        {% include 'includes/articleslist.html' %}
-        {% include 'includes/links.html' %}
-        <address id="credits">
-            <a href="{{ SITEURL }}">{{ SITENAME }}</a>: powered by <a href="http://getpelican.com/">Pelican</a>. License: <a href="{{ SITEURL }}/rights.html">CC BY-NC-SA 4.0</a> Theme: <a href="https://github.com/tohuw/qalal">Qalal</a>
-        </address>
-    </footer>
-    {% include 'includes/piwik.html' %}
-</body>
+
+        <footer id="site-footer">
+            {% include 'includes/articleslist.html' %}
+            {% include 'includes/links.html' %}
+            <address id="credits">
+                <a href="{{ SITEURL }}">{{ SITENAME }}</a>: powered by <a href="http://getpelican.com/">Pelican</a>. License: <a href="{{ SITEURL }}/rights.html">CC BY-NC-SA 4.0</a> Theme: <a href="https://github.com/tohuw/qalal">Qalal</a>
+            </address>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        {% include 'includes/googleanalytics.html' %}
+        {% include 'includes/piwik.html' %}
+        {% include 'includes/gosquared.html' %}
+    </body>
 </html>
