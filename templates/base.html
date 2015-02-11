@@ -49,12 +49,12 @@
         {% if TAG_FEED_RSS and tag %}
             <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
         {% endif %}
-        {% endblock feeds %}
+        {% endblock %}
 
         <!-- main.css uses compass-html5bp to include normalize, see https://github.com/tohuw/compass-html5bp -->
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" media="screen, print">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    {% endblock head %}
+    {% endblock %}
     </head>
     <body>
         {% block browserupgrade %}
