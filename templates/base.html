@@ -20,6 +20,7 @@
             <meta name="description" content="{% block head_description %}{{ SITE_DESCRIPTION }}{% endblock head_description %}" />
         {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% endblock metadata %}
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
@@ -49,19 +50,19 @@
         {% if TAG_FEED_RSS and tag %}
             <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed">
         {% endif %}
-        {% endblock %}
+        {% endblock feeds %}
 
         <!-- main.css uses compass-html5bp to include normalize, see https://github.com/tohuw/compass-html5bp -->
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" media="screen, print">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    {% endblock %}
+    {% endblock head %}
     </head>
     <body>
         {% block browserupgrade %}
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        {% endblock %}
+        {% endblock browserupgrade %}
 
         {% block header %}
         <header id="header-title">
@@ -88,11 +89,11 @@
                 {% endif %}
             </ul>
         </nav>
-        {% endblock %}
+        {% endblock header %}
 
         <div id="content">
         {% block content %}
-        {% endblock %}
+        {% endblock content %}
         </div>
 
         <footer id="site-footer">
