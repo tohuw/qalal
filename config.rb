@@ -3,7 +3,7 @@ require 'compass/import-once/activate'
 require 'compass-html5bp'
 
 # Set this to the root of your project when deployed:
-http_path = "/theme"
+http_path = "/"
 css_dir = "static/css"
 sass_dir = "static/build"
 images_dir = "static/images"
