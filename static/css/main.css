@@ -273,6 +273,42 @@ textarea {
   padding: 0.2em 0;
 }
 
+html.errorpages {
+  color: #888;
+  display: table;
+  font-family: sans-serif;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+html.errorpages * {
+  line-height: 1.2;
+  margin: 0;
+}
+html.errorpages body {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 2em auto;
+}
+html.errorpages h1 {
+  color: #555;
+  font-size: 2em;
+  font-weight: 400;
+}
+html.errorpages p {
+  margin: 0 auto;
+  width: 280px;
+}
+@media only screen and (max-width: 280px) {
+  html.errorpages body, html.errorpages p {
+    width: 95%;
+  }
+  html.errorpages h1 {
+    font-size: 1.5em;
+    margin: 0 0 0.3em;
+  }
+}
+
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -2444,6 +2480,27 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "MavenPro Medium";
+}
+
+ul.tagcloud {
+  list-style: none;
+  padding: 0;
+}
+
+ul.tagcloud li {
+  display: inline-block;
+}
+ul.tagcloud li.tagclouditem-1 {
+  font-size: 150%;
+}
+ul.tagcloud li.tagclouditem-2 {
+  font-size: 125%;
+}
+ul.tagcloud li.tagclouditem-3 {
+  font-size: 110%;
+}
+ul.tagcloud li.tagclouditem-4 {
+  font-size: 95%;
 }
 
 .info, .warning, .error {
