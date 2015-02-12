@@ -406,23 +406,23 @@ html.errorpages p {
 }
 @font-face {
   font-family: "MavenPro Regular";
-  src: url('/theme/static/fonts/mavenpro/maven_pro_regular-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/static/fonts/mavenpro/maven_pro_regular-webfont.svg?1423283565') format('svg'), url('/theme/static/fonts/mavenpro/maven_pro_regular-webfont.ttf?1423283565') format('truetype'), url('/theme/static/fonts/mavenpro/maven_pro_regular-webfont.woff?1423283565') format('woff');
+  src: url('/css/fonts/mavenpro/maven_pro_regular-webfont.eot?1423283565') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.svg?1423283565') format('svg'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.ttf?1423283565') format('truetype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.woff?1423283565') format('woff');
 }
 @font-face {
   font-family: "MavenPro Medium";
-  src: url('/theme/static/fonts/mavenpro/maven_pro_medium-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/static/fonts/mavenpro/maven_pro_medium-webfont.svg?1423283565') format('svg'), url('/theme/static/fonts/mavenpro/maven_pro_medium-webfont.ttf?1423283565') format('truetype'), url('/theme/static/fonts/mavenpro/maven_pro_medium-webfont.woff?1423283565') format('woff');
+  src: url('/css/fonts/mavenpro/maven_pro_medium-webfont.eot?1423283565') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.svg?1423283565') format('svg'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.ttf?1423283565') format('truetype'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.woff?1423283565') format('woff');
 }
 @font-face {
   font-family: "MavenPro Bold";
-  src: url('/theme/static/fonts/mavenpro/maven_pro_bold-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/static/fonts/mavenpro/maven_pro_bold-webfont.svg?1423283565') format('svg'), url('/theme/static/fonts/mavenpro/maven_pro_bold-webfont.ttf?1423283565') format('truetype'), url('/theme/static/fonts/mavenpro/maven_pro_bold-webfont.woff?1423283565') format('woff');
+  src: url('/css/fonts/mavenpro/maven_pro_bold-webfont.eot?1423283565') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.svg?1423283565') format('svg'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.ttf?1423283565') format('truetype'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.woff?1423283565') format('woff');
 }
 @font-face {
   font-family: "MavenPro Black";
-  src: url('/theme/static/fonts/mavenpro/maven_pro_black-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/static/fonts/mavenpro/maven_pro_black-webfont.svg?1423283565') format('svg'), url('/theme/static/fonts/mavenpro/maven_pro_black-webfont.ttf?1423283565') format('truetype'), url('/theme/static/fonts/mavenpro/maven_pro_black-webfont.woff?1423283565') format('woff');
+  src: url('/css/fonts/mavenpro/maven_pro_black-webfont.eot?1423283565') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.svg?1423283565') format('svg'), url('/css/fonts/mavenpro/maven_pro_black-webfont.ttf?1423283565') format('truetype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.woff?1423283565') format('woff');
 }
 @font-face {
   font-family: "FontAwesome";
-  src: url('/theme/static/fonts/fontawesome/fontawesome-webfont.eot?1423283565') format('embedded-opentype'), url('/theme/static/fonts/fontawesome/fontawesome-webfont.svg?1423283565') format('svg'), url('/theme/static/fonts/fontawesome/fontawesome-webfont.ttf?1423283565') format('truetype'), url('/theme/static/fonts/fontawesome/fontawesome-webfont.woff?1423283565') format('woff');
+  src: url('/css/fonts/fontawesome/fontawesome-webfont.eot?1423283565') format('embedded-opentype'), url('/css/fonts/fontawesome/fontawesome-webfont.svg?1423283565') format('svg'), url('/css/fonts/fontawesome/fontawesome-webfont.ttf?1423283565') format('truetype'), url('/css/fonts/fontawesome/fontawesome-webfont.woff?1423283565') format('woff');
 }
 /*!
  *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome

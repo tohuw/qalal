@@ -2,16 +2,22 @@ require 'compass/import-once/activate'
 # Require any additional compass plugins here.
 require 'compass-html5bp'
 
-# Set this to the root of your project when deployed:
-http_path = "/"
-css_dir = "static/css"
-sass_dir = "static/build"
-images_dir = "static/images"
-javascripts_dir = "static/js"
-fonts_dir = "static/fonts"
+# Sass Paths
+http_path = '/'
+http_javascripts_path = http_path + 'js/'
+http_stylesheets_path = http_path + 'css/'
+http_images_path = http_stylesheets_path + 'images/'
+http_fonts_path = http_stylesheets_path + 'fonts/'
+
+# Sass Directories
+javascripts_dir = 'static/js/'
+css_dir = 'static/css/'
+sass_dir = css_dir + 'src/'
+images_dir = css_dir + 'images/'
+fonts_dir = css_dir + 'fonts/'
 
 # You can select your preferred output style here (can be overridden via the command line):
-# output_style = :expanded or :nested or :compact or :compressed
+output_style = :expanded  # or :nested or :compact or :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
