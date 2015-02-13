@@ -1,3 +1,5 @@
 source 'https://rubygems.org'
 gem 'compass', '>=1.0.3'
-gem 'compass-html5bp', '>=0.1'
+gem 'compass-html5bp', '>=0.3.2'
+gem 'font-awesome-sass', '>= 4.3.0'
+gem 'scss-lint', '>=0.33.0'

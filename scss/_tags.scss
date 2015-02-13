@@ -1,0 +1,33 @@
+.tagcloud {
+  @include tag-cloud;
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+
+    .tagclouditem-1 {
+      @extend .xxl;
+    }
+
+    .tagclouditem-2 {
+      @extend .xl;
+    }
+
+    .tagclouditem-3 {
+      @extend .l;
+    }
+
+    &.tagclouditem-4 {
+      @extend .s;
+    }
+
+    &.tagclouditem-5 {
+      @extend .xs;
+    }
+
+    &.tagclouditem-6 {
+      @extend .xxs;
+    }
+  }
+}

@@ -1,15 +1,18 @@
-@import "compass";
+@import 'compass';
 
-@import "html5bp";
+@import 'html5bp';
 @include html5bp;
 
-@import "webfonts";
-@import "font-awesome";
+@import 'palette';
 
-@import "palette";
+@import 'webfonts';
+@import 'font-awesome-compass';
+@import 'font-awesome';
+@import 'font-awesome-extensions';
 
-@import "content";
+@import 'content';
 
-@import "noticeboxes";
+@import 'noticeboxes';
+@import 'tags';
 
-@import "isso";
+@import 'isso';

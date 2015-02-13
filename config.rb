@@ -1,6 +1,7 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
 require 'compass-html5bp'
+require 'font-awesome-sass'
 
 # Sass Paths
 http_path = '/'
@@ -16,8 +17,9 @@ sass_dir = 'scss/'
 images_dir = css_dir + 'images/'
 fonts_dir = css_dir + 'fonts/'
 
+# environment = :production
 # You can select your preferred output style here (can be overridden via the command line):
-output_style = :expanded  # or :nested or :compact or :compressed
+# output_style = :compressed  # or :nested or :compact or :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true

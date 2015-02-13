@@ -1,57 +1,61 @@
-@mixin SetBaseWithDarkenedHover($baseBgColor, $baseColor) {
-    background-color: $baseBgColor;
-    color: $baseColor;
+@mixin setbasewithdarkenedhover($basebgcolor, $basecolor) {
+  background-color: $basebgcolor;
+  color: $basecolor;
 
-    &:hover {
-        background-color: darken($baseBgColor, 2%);
-        color: darken($baseColor, 100%);
-    }
+  &:hover {
+    background-color: darken($basebgcolor, 2%);
+    color: darken($basecolor, 100%);
+  }
 }
+
 .info {
-    @include SetBaseWithDarkenedHover($Info, $Overlay);
-    display: block;
-    width: 95%;
-    min-height: 2rem;
-    margin: 1rem auto;
-    padding: .5rem;
-    padding-bottom: .0;
-    border-radius: .5rem;
-    color: $Text;
+  @include setbasewithdarkenedhover($info, $overlay);
+  display: block;
+  width: 95%;
+  min-height: 2rem;
+  margin: 1rem auto;
+  padding: .5rem;
+  padding-bottom: .0;
+  border-radius: .5rem;
+  color: $text;
+  &:before {
+    position: absolute;
+    margin-top: -.25rem;
+    font-family: 'FontAwesome';
+    font-size: 2.75rem;
+    color: $subtext;
+    content: '\f05a';
+  }
+  p {
+    margin-bottom: 0 !important;
+    padding: 0 0 .25rem 2rem;
+    font-size: .9rem;
+
     &:before {
-        position: absolute;
-        margin-top: -.25rem;
-        font-family: 'FontAwesome';
-        font-size: 2.75rem;
-        color: $SubText;
-        content: '\f05a';
+      font-style: italic;
+      content: "Note: ";
     }
-    p {
-        margin-bottom: 0 !important;
-        padding: 0 0 .25rem 2rem;
-        font-size: .9rem;
-        &:before {
-            font-style: italic;
-            content: "Note: ";
-        }
-    }
+  }
 }
+
 .warning {
-    @extend .info;
-    @include SetBaseWithDarkenedHover($Warning, $Overlay);
-    &:before {
-        content: '\f06a';
-    }
-    p:before {
-        content: "Warning: "
-    }
+  @extend .info;
+  @include setbasewithdarkenedhover($warning, $overlay);
+  &:before {
+    content: '\f06a';
+  }
+  p:before {
+    content: "Warning: "
+  }
 }
+
 .error {
-    @extend .info;
-    @include SetBaseWithDarkenedHover($Alert, $Overlay);
-    &:before {
-        content: '\f071';
-    }
-    p:before {
-        content: "Error: "
-    }
+  @extend .info;
+  @include setbasewithdarkenedhover($alert, $overlay);
+  &:before {
+    content: '\f071';
+  }
+  p:before {
+    content: "Error: "
+  }
 }

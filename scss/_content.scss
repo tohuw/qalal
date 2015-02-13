@@ -1,34 +1,9 @@
 * { @include box-sizing(border-box); }
 html {
-    background-color: $Background;
-    font-family: "MavenPro Regular";
+  background-color: $background;
+  font-family: "MavenPro Regular";
 }
 
 #{headers()} {
-    font-family: "MavenPro Medium";
-}
-
-ul.tagcloud {
-  list-style: none;
-    padding: 0;
-}
-
-ul.tagcloud li {
-    display: inline-block;
-
-    &.tagclouditem-1 {
-        font-size: 150%;
-    }
-
-    &.tagclouditem-2 {
-        font-size: 125%;
-    }
-
-    &.tagclouditem-3 {
-        font-size: 110%;
-    }
-
-    &.tagclouditem-4 {
-        font-size: 95%;
-    }
+  font-family: "MavenPro Medium";
 }
