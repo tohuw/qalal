@@ -12,7 +12,7 @@ http_fonts_path = http_stylesheets_path + 'fonts/'
 # Sass Directories
 javascripts_dir = 'static/js/'
 css_dir = 'static/css/'
-sass_dir = css_dir + 'src/'
+sass_dir = 'scss/'
 images_dir = css_dir + 'images/'
 fonts_dir = css_dir + 'fonts/'
 
