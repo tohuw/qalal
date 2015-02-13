@@ -1,9 +1,0 @@
-* { @include box-sizing(border-box); }
-html {
-  background-color: $background;
-  font-family: "MavenPro Regular";
-}
-
-#{headers()} {
-  font-family: "MavenPro Medium";
-}

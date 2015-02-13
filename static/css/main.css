@@ -2785,19 +2785,17 @@ a .fa-github:hover:not(monochrome) {
   color: #000;
 }
 
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 html {
   background-color: #fff;
-  font-family: "MavenPro Regular";
+  font-family: 'MavenPro Regular';
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "MavenPro Medium";
+  font-family: 'MavenPro Medium';
+}
+
+header {
+  background-color: #333;
 }
 
 .info, .warning, .error {
