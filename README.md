@@ -1,34 +1,40 @@
 # Qalal
 ## A simple Pelican theme, built for customization
 
-Qalal *(kaw-lal')* is a [Jinja2](http://jinja.pocoo.org>) template for the static site generator [Pelican](http://blog.getpelican.com>). It was originally forked from the "[simple](https://github.com/getpelican/pelican/tree/master/pelican/themes/simple>)" theme included with Pelican.
+Qalal *(kaw-lal')* is a [Jinja2](http://jinja.pocoo.org>) template for the static site generator [Pelican](http://blog.getpelican.com>). It was inspired by (and borrows from) the "[simple](https://github.com/getpelican/pelican/tree/master/pelican/themes/simple>)" theme included with Pelican. It incorporates files and practices from the very useful [HTML5 Boilerplate](http://html5boilerplate.com).
 
-I created this because I wanted a simple, unencumbered theme not requiring weighty libraries where I didn't view them as necessary. JQuery is currently required for a few plugins, and I may use it myself as well, but I don't plan to add much more than that (if anything). It will certainly evolve over time, and I have many plans for furthering it. For now, here it is, in all its naked un-glory. Suggestions and comments are always welcome. Feel free to fork and use it under the included license.
+I created this because I wanted a simple, unencumbered theme not requiring weighty libraries where I didn't view them as necessary, but still taking advantage of modern development tools and methods. Suggestions and comments are always welcome. Feel free to fork and use it under the included license.
 
 ## Key Features
+### Less opinionated layout.
 
--   **Less opinionated layout.**
-    Rather than ascribe to a rigid grid-type system, Qalal uses semantically-focused HTML and relies on proper styling to render the look and feel as you desire, rather than requiring you to fight with esoteric grids and boxes.
+Rather than ascribe to a rigid grid-type system, Qalal uses semantically-focused HTML and relies on proper styling to render the look and feel as you desire, rather than requiring you to fight with esoteric grids and boxes. Wherever an opinion is exerted, it's to fit a tangible best practice that should still allow a high degree of freedom.
 
--   **Highly accessible.**
-    Primarily due to the semantic focus in the markup, Qalal is easy for screen readers to understand and features excellent cross-browser support. Browser support for IE is intentionally limited to IE 10+. Other popular browsers should be fine, provided it's a reasonably recent version.
+### Highly accessible.
 
--   **Index page displays most recent article instead of a list of recent articles.**
-    This is more interesting and invites the reader to jump right in to your content.
+Primarily due to the semantic focus in the markup, Qalal is easy for screen readers to understand and features excellent cross-browser support, made even better by [Modernizr](http://modernizr.com). Browser support is limited under the same guidance provided by [H5BP](https://github.com/h5bp/html5-boilerplate/issues/1050). IE 8+, and other relatively recent browsers ought to work fine.
 
--   **Recent articles are an aside in the footer.**
-    After enjoying your most recent article, readers are invited to read on with the latest articles you've written. It's suggested to display the Archives and Categories in the menu to provide a more complete article list.
+### Index page displays most recent article instead of a list of recent articles.
 
--   **Pre-Processed CSS sources via [Sass with Compass](http://compass-style.org/)**
-    Compass is a well-known framework built on top of [Sass](http://sass-lang.com/), making for easy style management without a dependency on complicated output. Like Pelican, all the work is done up front and the output is simple and static.
+This is more interesting and invites the reader to jump right in to your content.
 
--   **Web fonts are included.**
-    Rather than relying on e.g. [Google Fonts](http://www.google.com/fonts) for web fonts support, fonts are included via the CSS2-native @font-face directive. Currently included are selections from [MavenPro](http://vissol.co.uk/mavenpro/) and [FontAwesome](http://fontawesome.io) both freely licensed fonts (under [SIL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)).
+### Recent articles are an aside in the footer.
 
-    *Note:* FontAwesome styles are deliberately limited, but of course the standard CSS available in the download package could be re-introduced, or the existing CSS could be expanded to include more glyph styles.
+After enjoying your most recent article, readers are invited to read on with the latest articles you've written. It's suggested to display the Archives and Categories in the menu to provide a more complete article list.
+
+### Pre-Processed CSS sources via [Sass with Compass](http://compass-style.org/)
+
+Compass is a well-known framework built on top of [Sass](http://sass-lang.com/), making for easy style management without a dependency on complicated output. Like Pelican, all the work is done up front and the output is simple and static. A Compass config.rb is included, as well as a [Bundler](http://bundler.io) Gemfile.
+
+### Web fonts are included.
+
+Rather than relying on e.g. [Google Fonts](http://www.google.com/fonts) for web fonts support, fonts are included via the CSS2-native @font-face directive. Currently included are selections from [MavenPro](http://vissol.co.uk/mavenpro/) and [FontAwesome](http://fontawesome.io) (via the official Compass Font Awesome extension). Both are freely licensed fonts (under [SIL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)).
+
+## Usage
+
+Use this theme as you would any other Pelican theme: download it into your Pelican themes folder. The provided "extras" folder can be taken and adapted into your blog. The files are all [direct copies from H5BP](https://github.com/h5bp/html5-boilerplate/tree/master/dist) - [their documentation](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/misc.md) explains them further.
 
 ## Settings
-
 ### Custom Settings
 
 In the interest of enhancing customization, I've added support for a few new settings for pelicanconf.py:
@@ -72,6 +78,14 @@ ISSO_DEFAULT\_STYLE
 ISSO_AVATARS
 :    Set to true to display the Isso Comments Identicons.
 
+ISSO_AVATAR\_BG
+:   Provide a color for avatar backgrounds.
+
+ISSO_AVATAR\_FG
+:   Provide a color for avatar foregrounds.
+
+ISSO_VOTING
+:   Enable or Disable Isso's voting feature.
 
 ### Plugin-Provided Settings
 
