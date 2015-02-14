@@ -62,39 +62,28 @@
         <![endif]-->
         {% endblock browserupgrade %}
 
+        <div class="top">
         {% block header %}
-        <header class="site-header">
-            <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-            {% include 'includes/searchbox.html' %}
-            <h2>{{ SITESUBTITLE }}</h2>
-        </header>
-        {% include 'includes/social.html' %}
-        <nav>
-            <ul>
-                {% for title, link in MENUITEMS %}
-                    <li class="menu-item"><a href="{{ link }}">{{ title }}</a></li>
-                {% endfor %}
-                {% if DISPLAY_PAGES_ON_MENU %}
-                    {% for p in PAGES %}
-                        <li class="menu-page{% if p == page %} active{% endif %}"><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-                    {% endfor %}
-                {% else %}
-                    {% if DISPLAY_CATEGORIES_ON_MENU %}
-                        {% for cat, null in categories %}
-                            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                        {% endfor %}
-                    {% endif %}
-                {% endif %}
-            </ul>
-        </nav>
+            <header class="site-header">
+                <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+                <h2>{{ SITESUBTITLE }}</h2>
+                {% include 'includes/searchbox.html' %}
+            </header>
+            <div class="wrapper">
+                <span class="links">
+                    {% include 'includes/menu.html' %}
+                    {% include 'includes/social.html' %}
+                </span>
+            </div>
         {% endblock header %}
+        </div>
 
         <div class="content">
         {% block content %}
         {% endblock content %}
         </div>
 
-        <footer class="site-footer">
+        <footer class="bottom">
             {% include 'includes/articleslist.html' %}
             {% include 'includes/links.html' %}
             <address class="credits">

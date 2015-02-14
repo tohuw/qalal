@@ -407,6 +407,7 @@ html.errorpages p {
 }
 @font-face {
   font-family: "MavenPro Regular";
+<<<<<<< Updated upstream
   src: url('/css/fonts/mavenpro/maven_pro_regular-webfont.eot?1423872905') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.svg?1423872905') format('svg'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.ttf?1423872905') format('truetype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.woff?1423872905') format('woff');
 }
 @font-face {
@@ -420,6 +421,21 @@ html.errorpages p {
 @font-face {
   font-family: "MavenPro Black";
   src: url('/css/fonts/mavenpro/maven_pro_black-webfont.eot?1423872905') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.svg?1423872905') format('svg'), url('/css/fonts/mavenpro/maven_pro_black-webfont.ttf?1423872905') format('truetype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.woff?1423872905') format('woff');
+=======
+  src: url('/css/fonts/mavenpro/maven_pro_regular-webfont.eot?1423873298') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.svg?1423873298') format('svg'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.ttf?1423873298') format('truetype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.woff?1423873298') format('woff');
+}
+@font-face {
+  font-family: "MavenPro Medium";
+  src: url('/css/fonts/mavenpro/maven_pro_medium-webfont.eot?1423873298') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.svg?1423873298') format('svg'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.ttf?1423873298') format('truetype'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.woff?1423873298') format('woff');
+}
+@font-face {
+  font-family: "MavenPro Bold";
+  src: url('/css/fonts/mavenpro/maven_pro_bold-webfont.eot?1423873298') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.svg?1423873298') format('svg'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.ttf?1423873298') format('truetype'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.woff?1423873298') format('woff');
+}
+@font-face {
+  font-family: "MavenPro Black";
+  src: url('/css/fonts/mavenpro/maven_pro_black-webfont.eot?1423873298') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.svg?1423873298') format('svg'), url('/css/fonts/mavenpro/maven_pro_black-webfont.ttf?1423873298') format('truetype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.woff?1423873298') format('woff');
+>>>>>>> Stashed changes
 }
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -429,8 +445,13 @@ html.errorpages p {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
+<<<<<<< Updated upstream
   src: url(/css/fonts/font-awesome/fontawesome-webfont.eot?1423872905);
   src: url(/css/fonts/font-awesome/fontawesome-webfont.eot?&1423872905#iefix) format("embedded-opentype"), url(/css/fonts/font-awesome/fontawesome-webfont.woff2?1423872905) format("woff2"), url(/css/fonts/font-awesome/fontawesome-webfont.woff?1423872905) format("woff"), url(/css/fonts/font-awesome/fontawesome-webfont.ttf?1423872905) format("truetype"), url(/css/fonts/font-awesome/fontawesome-webfont.svg?1423872905#fontawesomeregular) format("svg");
+=======
+  src: url(/css/fonts/font-awesome/fontawesome-webfont.eot?1423873298);
+  src: url(/css/fonts/font-awesome/fontawesome-webfont.eot?&1423873298#iefix) format("embedded-opentype"), url(/css/fonts/font-awesome/fontawesome-webfont.woff2?1423873298) format("woff2"), url(/css/fonts/font-awesome/fontawesome-webfont.woff?1423873298) format("woff"), url(/css/fonts/font-awesome/fontawesome-webfont.ttf?1423873298) format("truetype"), url(/css/fonts/font-awesome/fontawesome-webfont.svg?1423873298#fontawesomeregular) format("svg");
+>>>>>>> Stashed changes
   font-weight: normal;
   font-style: normal;
 }
@@ -2794,8 +2815,58 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'MavenPro Medium';
 }
 
-#site-header {
-  background-color: #333;
+.top header {
+  padding-left: .67em;
+}
+.top header,
+.top .links {
+  background-color: #fcfcfc;
+  padding-bottom: .67em;
+}
+.top .wrapper {
+  text-align: center;
+}
+.top .links {
+  border-radius: 0 0 .9em .9em;
+  margin: auto;
+  padding: .67em;
+}
+.top h1, .top h2, .top h3, .top h4, .top h5, .top h6,
+.top ul,
+.top li,
+.top nav,
+.top aside {
+  display: inline-block;
+  margin: 0 .1em 0 0;
+}
+.top .searchform {
+  float: right;
+  margin-right: .67em;
+  margin-top: .67em;
+}
+.top .searchform .fa-search.unfocused {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 2rem;
+  width: 1em;
+}
+.top .searchform .fa-search.focused {
+  background: #fff;
+  border: 2px inset #eee;
+  border-radius: .25em;
+  cursor: beam;
+  font-size: 1.25rem;
+  padding: .25em;
+  width: 10em;
+}
+.top ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.top li {
+  font-size: 1.5em;
 }
 #site-header h1, #site-header h2, #site-header h3, #site-header h4, #site-header h5, #site-header h6 {
   margin-top: 0;
@@ -2803,7 +2874,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .info, .warning, .error {
   background-color: #bde5f8;
-  color: #333;
+  color: #fcfcfc;
   display: block;
   width: 95%;
   min-height: 2rem;
@@ -2837,7 +2908,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .warning {
   background-color: #ffa;
-  color: #333;
+  color: #fcfcfc;
 }
 .warning:hover {
   background-color: #ffffa0;
@@ -2852,7 +2923,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .error {
   background-color: #ffbaba;
-  color: #333;
+  color: #fcfcfc;
 }
 .error:hover {
   background-color: #ffb0b0;
@@ -2894,4 +2965,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .tagcloud li {
   display: inline-block;
+}
+
+.no-js .searchform {
+  display: none;
+  visibility: hidden;
 }

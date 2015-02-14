@@ -1,5 +1,5 @@
 {% if TIPUE_SEARCH_ENABLED %}
-    <form action="{{ SITEURL }}/search.html" id="searchbox">
-        <input type="search" name="q" id="tipue_search_input" class="fa-search" autocomplete="off" placeholder="&#xf002; Search..." required>
+    <form action="{{ SITEURL }}/search.html" id="searchbox" class="searchform">
+        <input type="search" name="q" id="tipue_search_input" class="fa-search unfocused" autocomplete="off" title="Search this site" placeholder="&#xf002; Search..." required>
     </form>
 {% endif %}

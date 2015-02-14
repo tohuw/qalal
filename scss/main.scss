@@ -8,12 +8,15 @@
 @import 'webfonts';
 @import 'font-awesome-compass';
 @import 'font-awesome';
-@import 'font-awesome-extensions';
+@import 'font-awesome-extra';
 
-@import 'body';
-@import 'site-header';
+@import 'base';
+@import 'top';
+@import 'content';
+@import 'bottom';
 
 @import 'noticeboxes';
 @import 'tags';
-
 @import 'isso';
+
+@import 'no-js';
