@@ -1,0 +1,64 @@
+.top {
+  header {
+    padding-left: .67em;
+  }
+
+  header,
+  .links {
+    background-color: $overlay;
+    padding-bottom: .67em;
+  }
+
+  .wrapper {
+    text-align: center;
+  }
+
+  .links {
+    border-radius: 0 0 .9em .9em;
+    margin: auto;
+    padding: .67em;
+  }
+
+  #{headings(all)},
+  ul,
+  li,
+  nav,
+  aside {
+    display: inline-block;
+    margin: 0 .1em 0 0;
+  }
+
+  .searchform {
+    float: right;
+    margin-right: .67em;
+    margin-top: .67em;
+
+    .fa-search.unfocused {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      font-size: 2rem;
+      width: 1em;
+    }
+
+    .fa-search.focused {
+      background: #fff;
+      border: 2px inset $overlay-shadow;
+      border-radius: .25em;
+      cursor: beam;
+      font-size: 1.25rem;
+      padding: .25em;
+      width: 10em;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    font-size: 1.5em;
+  }
+}
