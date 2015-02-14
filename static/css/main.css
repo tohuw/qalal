@@ -407,19 +407,19 @@ html.errorpages p {
 }
 @font-face {
   font-family: "MavenPro Regular";
-  src: url('/css/fonts/mavenpro/maven_pro_regular-webfont.eot?1423283565') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.svg?1423283565') format('svg'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.ttf?1423283565') format('truetype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.woff?1423283565') format('woff');
+  src: url('/css/fonts/mavenpro/maven_pro_regular-webfont.eot?1423872905') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.svg?1423872905') format('svg'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.ttf?1423872905') format('truetype'), url('/css/fonts/mavenpro/maven_pro_regular-webfont.woff?1423872905') format('woff');
 }
 @font-face {
   font-family: "MavenPro Medium";
-  src: url('/css/fonts/mavenpro/maven_pro_medium-webfont.eot?1423283565') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.svg?1423283565') format('svg'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.ttf?1423283565') format('truetype'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.woff?1423283565') format('woff');
+  src: url('/css/fonts/mavenpro/maven_pro_medium-webfont.eot?1423872905') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.svg?1423872905') format('svg'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.ttf?1423872905') format('truetype'), url('/css/fonts/mavenpro/maven_pro_medium-webfont.woff?1423872905') format('woff');
 }
 @font-face {
   font-family: "MavenPro Bold";
-  src: url('/css/fonts/mavenpro/maven_pro_bold-webfont.eot?1423283565') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.svg?1423283565') format('svg'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.ttf?1423283565') format('truetype'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.woff?1423283565') format('woff');
+  src: url('/css/fonts/mavenpro/maven_pro_bold-webfont.eot?1423872905') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.svg?1423872905') format('svg'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.ttf?1423872905') format('truetype'), url('/css/fonts/mavenpro/maven_pro_bold-webfont.woff?1423872905') format('woff');
 }
 @font-face {
   font-family: "MavenPro Black";
-  src: url('/css/fonts/mavenpro/maven_pro_black-webfont.eot?1423283565') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.svg?1423283565') format('svg'), url('/css/fonts/mavenpro/maven_pro_black-webfont.ttf?1423283565') format('truetype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.woff?1423283565') format('woff');
+  src: url('/css/fonts/mavenpro/maven_pro_black-webfont.eot?1423872905') format('embedded-opentype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.svg?1423872905') format('svg'), url('/css/fonts/mavenpro/maven_pro_black-webfont.ttf?1423872905') format('truetype'), url('/css/fonts/mavenpro/maven_pro_black-webfont.woff?1423872905') format('woff');
 }
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -429,8 +429,8 @@ html.errorpages p {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(/css/fonts/font-awesome/fontawesome-webfont.eot?1421952752);
-  src: url(/css/fonts/font-awesome/fontawesome-webfont.eot?&1421952752#iefix) format("embedded-opentype"), url(/css/fonts/font-awesome/fontawesome-webfont.woff2?1421952752) format("woff2"), url(/css/fonts/font-awesome/fontawesome-webfont.woff?1421952752) format("woff"), url(/css/fonts/font-awesome/fontawesome-webfont.ttf?1421952752) format("truetype"), url(/css/fonts/font-awesome/fontawesome-webfont.svg?1421952752#fontawesomeregular) format("svg");
+  src: url(/css/fonts/font-awesome/fontawesome-webfont.eot?1423872905);
+  src: url(/css/fonts/font-awesome/fontawesome-webfont.eot?&1423872905#iefix) format("embedded-opentype"), url(/css/fonts/font-awesome/fontawesome-webfont.woff2?1423872905) format("woff2"), url(/css/fonts/font-awesome/fontawesome-webfont.woff?1423872905) format("woff"), url(/css/fonts/font-awesome/fontawesome-webfont.ttf?1423872905) format("truetype"), url(/css/fonts/font-awesome/fontawesome-webfont.svg?1423872905#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2796,6 +2796,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #site-header {
   background-color: #333;
+}
+#site-header h1, #site-header h2, #site-header h3, #site-header h4, #site-header h5, #site-header h6 {
+  margin-top: 0;
 }
 
 .info, .warning, .error {

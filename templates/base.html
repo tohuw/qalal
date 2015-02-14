@@ -23,7 +23,6 @@
         {% endblock metadata %}
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
 
         {% block feeds %}
         {% if FEED_ALL_ATOM %}
@@ -52,7 +51,6 @@
         {% endif %}
         {% endblock feeds %}
 
-        <!-- main.css uses compass-html5bp to include normalize, see https://github.com/tohuw/compass-html5bp -->
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" media="screen, print">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     {% endblock head %}
@@ -65,7 +63,7 @@
         {% endblock browserupgrade %}
 
         {% block header %}
-        <header id="site-header">
+        <header class="site-header">
             <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
             {% include 'includes/searchbox.html' %}
             <h2>{{ SITESUBTITLE }}</h2>
@@ -91,15 +89,15 @@
         </nav>
         {% endblock header %}
 
-        <div id="content">
+        <div class="content">
         {% block content %}
         {% endblock content %}
         </div>
 
-        <footer id="site-footer">
+        <footer class="site-footer">
             {% include 'includes/articleslist.html' %}
             {% include 'includes/links.html' %}
-            <address id="credits">
+            <address class="credits">
                 <a href="{{ SITEURL }}">{{ SITENAME }}</a>: powered by <a href="http://getpelican.com/">Pelican</a>. License: <a href="{{ SITEURL }}/rights.html">CC BY-NC-SA 4.0</a> Theme: <a href="https://github.com/tohuw/qalal">Qalal</a>
             </address>
         </footer>
