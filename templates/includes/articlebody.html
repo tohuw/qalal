@@ -21,6 +21,7 @@
                 in <a href="{{ article.category.url }}">{{ article.category }}</a>
             </span>
         {% endif %}
+
         {% if article.authors and ARTICLE_SHOW_AUTHORS %}
             <address>
                 By {% for author in article.authors %}
@@ -33,6 +34,13 @@
                 {% endfor %}
             </address>
         {% endif %}
+
+        {% if ARTICLE_SHOW_STATS %}
+            <span class="readtime" title="{{ article.stats['wc'] }} words">
+                a {{ article.stats['read_mins'] }} minute read
+            </span>
+        {% endif %}
+
         {% if ARTICLE_SHOW_SHARE %}
             <div class="sharelinks"><span>Share this:</span>
                 {% include 'includes/twitter.html' %}
