@@ -83,14 +83,10 @@
 
 .post-content {
   font-size: 1.333333rem;
-  min-height: 80vh;
+  min-height: 50vh;
 
   p:first-of-type {
     margin-top: 0;
-
-    &::first-letter {
-      font-size: 2em;
-    }
   }
 }
 

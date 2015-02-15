@@ -3051,13 +3051,10 @@ strong {
 
 .post-content {
   font-size: 1.333333rem;
-  min-height: 80vh;
+  min-height: 50vh;
 }
 .post-content p:first-of-type {
   margin-top: 0;
-}
-.post-content p:first-of-type::first-letter {
-  font-size: 2em;
 }
 
 .tags {
