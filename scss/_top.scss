@@ -26,7 +26,7 @@
     text-decoration: none;
 
     &:hover:not(.social-link) {
-      color: scale-color($link-selected, $lightness: 15%);
+      color: scale-color($link-selected, $lightness: 20%);
     }
   }
 
