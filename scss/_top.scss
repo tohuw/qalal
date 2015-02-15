@@ -21,11 +21,13 @@
     }
   }
 
-  a {
+  a,
+  a:visited {
     color: invert($link);
     text-decoration: none;
 
-    &:hover:not(.social-link) {
+    &:hover:not(.social-link),
+    &:active:not(.social-link) {
       color: scale-color($link-selected, $lightness: 20%);
     }
   }

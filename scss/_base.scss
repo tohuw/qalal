@@ -7,11 +7,13 @@ h2 {
   color: $subtext;
 }
 
-a {
+a,
+a:visited {
   @include single-transition(color);
   color: $link;
 
-  &:hover:not(.social-link) {
+  &:hover:not(.social-link),
+  &:active:not(.social-link) {
     color: $link-selected;
   }
 }
