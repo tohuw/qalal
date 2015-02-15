@@ -1,0 +1,41 @@
+code {
+  font-size: .9em;
+}
+
+.codehilitetable {
+  border-radius: .25em;
+  clear: both;
+  max-width: 85vw;
+  min-width: 85vw;
+
+  div {
+    font-size: 1rem;
+  }
+
+  .linenodiv,
+  .codehilite {
+    padding: 0 .67em 0 0;
+  }
+
+  .linenodiv pre {
+    border-right: 1px solid #a9a9a9;
+    color: $subtext;
+    padding: .25em .25em .25em 0;
+    text-align: right;
+  }
+
+  .codehilite pre {
+    padding: .25em .25em .25em 0;
+  }
+}
+
+.codehilite {
+  border-radius: .25em;
+  clear: both;
+  width: 85vw;
+
+  pre {
+    font-size: 1rem;
+    padding: .67em;
+  }
+}

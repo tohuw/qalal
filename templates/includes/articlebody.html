@@ -24,7 +24,7 @@
 
         {% if article.authors and ARTICLE_SHOW_AUTHORS %}
             <address>
-                By {% for author in article.authors %}
+                by {% for author in article.authors %}
                     {% if CUSTOM_AUTHOR_URL %}
                         <a href="{{ SITEURL }}/{{ CUSTOM_AUTHOR_URL }}">
                     {% else %}
@@ -37,7 +37,7 @@
 
         {% if ARTICLE_SHOW_STATS %}
             <span class="readtime" title="{{ article.stats['wc'] }} words">
-                a {{ article.stats['read_mins'] }} minute read
+                {{ article.stats['read_mins'] }} {% if article.stats['read_mins'] > 1 %}minutes{% else %}minute{% endif %}
             </span>
         {% endif %}
 

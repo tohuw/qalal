@@ -3,6 +3,20 @@ html {
   font-family: 'MavenPro Regular';
 }
 
-#{headers()} {
-  font-family: 'MavenPro Medium';
+h2 {
+  color: $subtext;
+}
+
+a {
+  @include single-transition(color);
+  color: $link;
+
+  &:hover:not(.social-link) {
+    color: $link-selected;
+  }
+}
+
+strong {
+  font-family: 'MavenPro Bold';
+  font-weight: normal;
 }

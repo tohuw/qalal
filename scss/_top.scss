@@ -1,22 +1,33 @@
 .top {
-  header {
-    padding-left: .67em;
+  color: invert($text);
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  header,
-  .links {
-    background-color: $overlay;
-    padding-bottom: .67em;
+  li {
+    font-size: 1.5em;
   }
 
-  .wrapper {
-    text-align: center;
+  nav {
+    li {
+      padding-right: .67em;
+    }
+
+    a {
+      text-decoration: underline;
+    }
   }
 
-  .links {
-    border-radius: 0 0 .9em .9em;
-    margin: auto;
-    padding: .67em;
+  a {
+    color: invert($link);
+    text-decoration: none;
+
+    &:hover {
+      color: scale-color($link-selected, $lightness: 15%);
+    }
   }
 
   #{headings(all)},
@@ -28,37 +39,71 @@
     margin: 0 .1em 0 0;
   }
 
-  .searchform {
-    float: right;
-    margin-right: .67em;
-    margin-top: .67em;
+  header {
+    @include background(linear-gradient($overlay, scale-color($overlay, $lightness: 5%)));
+    padding-left: .67em;
 
-    .fa-search.unfocused {
-      background: transparent;
-      border: 0;
-      cursor: pointer;
-      font-size: 2rem;
-      width: 1em;
+    h1:after {
+      color: scale-color(invert($subtext), $lightness: 85%);
+      content: ':';
     }
 
-    .fa-search.focused {
-      background: #fff;
-      border: 2px inset $overlay-shadow;
-      border-radius: .25em;
-      cursor: beam;
-      font-size: 1.25rem;
-      padding: .25em;
-      width: 10em;
+    h2 {
+      color: scale-color(invert($subtext), $lightness: 85%);
     }
   }
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  header,
+  .links {
+    background-color: $overlay;
+    padding-bottom: .67em;
   }
 
-  li {
-    font-size: 1.5em;
+  .wrapper {
+    text-align: right;
+  }
+
+  .links {
+    @include background(linear-gradient(scale-color($overlay, $lightness: 5%), scale-color($overlay, $lightness: 10%)));
+    border-bottom-left-radius: .9em;
+    margin: auto;
+    padding: .67em 1em;
+  }
+}
+
+.searchform {
+  float: right;
+  margin-right: .67em;
+  margin-top: .67em;
+
+  .fa-search {
+    @include input-placeholder {
+      color: invert($link);
+      opacity: 1;
+    }
+    background: transparent;
+    border: 0;
+    color: $text;
+    cursor: pointer;
+    font-size: 2rem;
+    width: 1em;
+  }
+}
+
+.fa-search:focus,
+.fa-search:hover {
+  @include single-transition(width);
+  background: #fff;
+  border: 2px inset $overlay-shadow;
+  border-radius: .25em;
+  color: $text;
+  cursor: auto;
+  font-size: 1.25rem;
+  padding: .25em;
+  width: 15em;
+
+  @include input-placeholder {
+    color: $text;
+    opacity: 1;
   }
 }

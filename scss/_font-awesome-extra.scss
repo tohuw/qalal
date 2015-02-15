@@ -3,18 +3,34 @@
   @extend .fa !optional;
 }
 
-a .fa-rss:hover:not(monochrome) {
-  color: #fa9c39;
+a .fa-rss:not(.monochrome) {
+  @include single-transition(color);
+
+  &:hover{
+    color: #fa9c39;
+  }
 }
 
-a .fa-twitter:hover:not(monochrome) {
-  color: #55acee;
+a .fa-twitter:not(.monochrome) {
+  @include single-transition(color);
+
+  &:hover{
+    color: #55acee;
+  }
 }
 
-a .fa-linkedin:hover:not(monochrome) {
-  color: #1884bb;
+a .fa-linkedin:not(.monochrome) {
+  @include single-transition(color);
+
+  &:hover{
+    color: #1884bb;
+  }
 }
 
-a .fa-github:hover:not(monochrome) {
-  color: #000;
+a .fa-github:hover:not(.monochrome) {
+  @include single-transition(color);
+
+  &:hover{
+    color: #4183C4;
+  }
 }
