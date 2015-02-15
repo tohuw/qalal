@@ -2977,26 +2977,26 @@ strong {
 }
 
 .content {
-  margin: 2em auto;
+  margin: auto;
   width: 88vw;
 }
 .content header,
 .content .post-title {
   margin: 0;
 }
+.content .post-title {
+  font-size: 3rem;
+}
 .content header:first-of-type,
 .content footer:first-of-type {
-  text-align: center;
+  display: inline-block;
+  margin-right: .5em;
 }
 .content address {
   display: inline-block;
 }
 .content article {
   clear: both;
-}
-.content article .post-content {
-  font-size: 1.333333rem;
-  min-height: 80vh;
 }
 .content article img {
   -moz-box-shadow: #a9a9a9 2px 2px 10px;
@@ -3047,6 +3047,17 @@ strong {
   font-family: 'FontAwesome';
   font-size: 1em;
   margin-left: -.3em;
+}
+
+.post-content {
+  font-size: 1.333333rem;
+  min-height: 80vh;
+}
+.post-content p:first-of-type {
+  margin-top: 0;
+}
+.post-content p:first-of-type::first-letter {
+  font-size: 2em;
 }
 
 .tags {

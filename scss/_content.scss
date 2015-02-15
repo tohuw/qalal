@@ -1,5 +1,5 @@
 .content {
-  margin: 2em auto;
+  margin: auto;
   width: 88vw;
 
   header,
@@ -7,9 +7,14 @@
     margin: 0;
   }
 
+  .post-title {
+    font-size: 3rem;
+  }
+
   header:first-of-type,
   footer:first-of-type {
-    text-align: center;
+    display: inline-block;
+    margin-right: .5em;
   }
 
   address {
@@ -18,11 +23,6 @@
 
   article {
     clear: both;
-
-    .post-content {
-      font-size: 1.333333rem;
-      min-height: 80vh;
-    }
 
     img {
       @include box-shadow($shadow 2px 2px 10px);
@@ -78,6 +78,19 @@
     font-family: 'FontAwesome';
     font-size: 1em;
     margin-left: -.3em;
+  }
+}
+
+.post-content {
+  font-size: 1.333333rem;
+  min-height: 80vh;
+
+  p:first-of-type {
+    margin-top: 0;
+
+    &::first-letter {
+      font-size: 2em;
+    }
   }
 }
 
