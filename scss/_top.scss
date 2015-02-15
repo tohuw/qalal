@@ -25,7 +25,7 @@
     color: invert($link);
     text-decoration: none;
 
-    &:hover {
+    &:hover:not(.social-link) {
       color: scale-color($link-selected, $lightness: 15%);
     }
   }
@@ -77,16 +77,18 @@
   margin-top: .67em;
 
   .fa-search {
-    @include input-placeholder {
-      color: invert($link);
-      opacity: 1;
-    }
+    @include single-transition(all, .5s);
     background: transparent;
     border: 0;
     color: $text;
     cursor: pointer;
     font-size: 2rem;
     width: 1em;
+
+    @include input-placeholder {
+      color: invert($link);
+      opacity: 1;
+    }
   }
 }
 

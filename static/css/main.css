@@ -2855,7 +2855,7 @@ strong {
   color: white;
   text-decoration: none;
 }
-.top a:hover {
+.top a:hover:not(.social-link) {
   color: #0092f0;
 }
 .top h1, .top h2, .top h3, .top h4, .top h5, .top h6,
@@ -2906,6 +2906,10 @@ strong {
   margin-top: .67em;
 }
 .searchform .fa-search {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   background: transparent;
   border: 0;
   color: #444;
