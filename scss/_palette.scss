@@ -1,14 +1,17 @@
+$background: #fff;
 $text: #444;
 $subtext: #555;
 $border: #a9a9a9;
 $shadow: #a9a9a9;
-$background: #fff;
 $link: #000;
 $link-selected: #0075c0;
 
 $overlay: #333;
+$overlay-text: scale-color(invert($text), $lightness: 50%);
+$overlay-subtext: scale-color(invert($subtext), $lightness: 33%);
 $overlay-shadow: #eee;
-$overlay-alt: #dfdfdf;
+$overlay-link: invert($link);
+$overlay-alt: #fefefe;
 
 $blockquote-text: scale-color($text, $lightness: 15%);
 $blockquote-border: scale-color($border, $lightness: 50%);

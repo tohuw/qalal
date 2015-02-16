@@ -8,54 +8,70 @@
   }
 }
 
-.info {
-  @include setbasewithdarkenedhover($info, $overlay);
-  display: block;
-  width: 95%;
-  min-height: 2rem;
-  margin: 1rem auto;
-  padding: .5rem;
-  padding-bottom: .0;
+%noticeboxes {
   border-radius: .5rem;
   color: $text;
+  display: block;
+  margin: 1rem auto;
+  min-height: 2rem;
+  padding: .5rem;
+  padding-bottom: .0;
+  width: 95%;
+
   &:before {
-    position: absolute;
-    margin-top: -.25rem;
+    color: $subtext;
     font-family: 'FontAwesome';
     font-size: 2.75rem;
-    color: $subtext;
-    content: '\f05a';
+    margin-top: -.25rem;
+    position: absolute;
   }
+
   p {
+    font-size: .9rem;
     margin-bottom: 0 !important;
     padding: 0 0 .25rem 2rem;
-    font-size: .9rem;
 
     &:before {
       font-style: italic;
-      content: "Note: ";
     }
   }
 }
 
+.info {
+  @extend %noticeboxes;
+  @include setbasewithdarkenedhover($info, $overlay);
+
+  &:before {
+    content: '\f05a';
+  }
+
+  p:before {
+    content: 'Note: ';
+  }
+}
+
 .warning {
-  @extend .info;
+  @extend %noticeboxes;
   @include setbasewithdarkenedhover($warning, $overlay);
+
   &:before {
     content: '\f06a';
   }
+
   p:before {
-    content: "Warning: "
+    content: 'Warning: '
   }
 }
 
 .error {
-  @extend .info;
+  @extend %noticeboxes;
   @include setbasewithdarkenedhover($alert, $overlay);
+
   &:before {
     content: '\f071';
   }
+
   p:before {
-    content: "Error: "
+    content: 'Error: '
   }
 }

@@ -1,18 +1,45 @@
 .bottom {
+  background-color: scale-color($overlay, $lightness: -7%);
   clear: both;
+  color: $overlay-text;
   margin-top: 5vh;
 
+  a,
+  a:visited {
+    @extend %overlaylinks;
+  }
+
+  aside {
+    @include box-sizing(border-box);
+    padding: .5em;
+  }
+
   .recent-articles {
+    background-color: scale-color($overlay, $lightness: -10%);
     float: left;
-    width: 50vw;
+    width: 60vw;
+
+    header {
+      background: transparent;
+    }
   }
 
   .links {
     float: right;
-    width: 50vw;
+    width: 40vw;
   }
 
   .credits {
+    @include background(linear-gradient(scale-color($overlay, $lightness: -10%), scale-color($overlay, $lightness: -5%)));
     clear: both;
+    color: $overlay-subtext;
+    height: 1.25em;
+    padding: 1em 1.25em .67em 0;
+    text-align: right;
+
+    a {
+      color: $overlay-subtext;
+      text-decoration: underline;
+    }
   }
 }

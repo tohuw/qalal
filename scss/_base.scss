@@ -22,3 +22,29 @@ strong {
   font-family: 'MavenPro Bold';
   font-weight: normal;
 }
+
+%flatlists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%overlaylinks {
+  color: $overlay-link;
+  text-decoration: none;
+
+  &:hover:not(.social-link),
+  &:active:not(.social-link) {
+    color: scale-color($link-selected, $lightness: 20%);
+  }
+}
+
+%overlaymenus {
+  li {
+    padding-right: .67em;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

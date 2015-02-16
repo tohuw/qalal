@@ -9,9 +9,15 @@
                 {% include 'includes/articleitem.html' %}
             {% endfor %}
         {% else %}
-            {% for article in articles %}
-                {% include 'includes/articleitem.html' %}
-            {% endfor %}
+            {% if ARTICLES_RECENT_COUNT == 0 %}
+                {% for article in articles %}
+                    {% include 'includes/articleitem.html' %}
+                {% endfor %}
+            {% else %}
+                {% for article in articles %}
+                    {% include 'includes/articleitem.html' %}
+                {% endfor %}
+            {% endif %}
         {% endif %}
     </ol>
 </aside>

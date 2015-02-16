@@ -1,3 +1,5 @@
+// Add the style provided by the class 'fa' to anything
+// with a class name containing 'fa-', e.g. fa-rss.
 [class^="fa-"],
 [class*=" fa-"] {
   @extend .fa !optional;
@@ -6,7 +8,7 @@
 a .fa-rss:not(.monochrome) {
   @include single-transition(color);
 
-  &:hover{
+  &:hover {
     color: #fa9c39;
   }
 }
@@ -14,7 +16,7 @@ a .fa-rss:not(.monochrome) {
 a .fa-twitter:not(.monochrome) {
   @include single-transition(color);
 
-  &:hover{
+  &:hover {
     color: #55acee;
   }
 }
@@ -22,7 +24,7 @@ a .fa-twitter:not(.monochrome) {
 a .fa-linkedin:not(.monochrome) {
   @include single-transition(color);
 
-  &:hover{
+  &:hover {
     color: #1884bb;
   }
 }
@@ -30,7 +32,7 @@ a .fa-linkedin:not(.monochrome) {
 a .fa-github:hover:not(.monochrome) {
   @include single-transition(color);
 
-  &:hover{
-    color: #4183C4;
+  &:hover {
+    color: #4183c4;
   }
 }
