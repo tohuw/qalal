@@ -11,24 +11,18 @@
     font-size: 3rem;
   }
 
-  header:first-of-type,
-  footer:first-of-type {
-    display: inline-block;
-    margin-right: .5em;
-  }
-
   address {
     display: inline-block;
   }
 
+  img {
+    @include box-shadow($shadow 2px 2px 10px);
+    float: right;
+    margin-left: 1em;
+  }
+
   article {
     clear: both;
-
-    img {
-      @include box-shadow($shadow 2px 2px 10px);
-      float: right;
-      margin-left: 1em;
-    }
 
     aside {
       float: right;
@@ -84,10 +78,6 @@
 .post-content {
   font-size: 1.333333rem;
   min-height: 50vh;
-
-  p:first-of-type {
-    margin-top: 0;
-  }
 }
 
 .tags {

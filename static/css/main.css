@@ -2987,23 +2987,18 @@ strong {
 .content .post-title {
   font-size: 3rem;
 }
-.content header:first-of-type,
-.content footer:first-of-type {
-  display: inline-block;
-  margin-right: .5em;
-}
 .content address {
   display: inline-block;
 }
-.content article {
-  clear: both;
-}
-.content article img {
+.content img {
   -moz-box-shadow: #a9a9a9 2px 2px 10px;
   -webkit-box-shadow: #a9a9a9 2px 2px 10px;
   box-shadow: #a9a9a9 2px 2px 10px;
   float: right;
   margin-left: 1em;
+}
+.content article {
+  clear: both;
 }
 .content article aside {
   float: right;
@@ -3053,9 +3048,6 @@ strong {
   font-size: 1.333333rem;
   min-height: 50vh;
 }
-.post-content p:first-of-type {
-  margin-top: 0;
-}
 
 .tags {
   margin-top: 3em;
@@ -3086,6 +3078,11 @@ strong {
 }
 .tags a:hover {
   color: #555;
+}
+
+.bottom {
+  clear: both;
+  margin-top: 5vh;
 }
 
 code {
