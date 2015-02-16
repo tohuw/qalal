@@ -1,4 +1,18 @@
 .bottom {
   clear: both;
   margin-top: 5vh;
+
+  .recent-articles {
+    float: left;
+    width: 50vw;
+  }
+
+  .links {
+    float: right;
+    width: 50vw;
+  }
+
+  .credits {
+    clear: both;
+  }
 }

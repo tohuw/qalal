@@ -3082,6 +3082,17 @@ strong {
   clear: both;
   margin-top: 5vh;
 }
+.bottom .recent-articles {
+  float: left;
+  width: 50vw;
+}
+.bottom .links {
+  float: right;
+  width: 50vw;
+}
+.bottom .credits {
+  clear: both;
+}
 
 code {
   font-size: .9em;

@@ -1,19 +1,21 @@
-$background: #fff;
-$border: #a9a9a9;
-$overlay: #333;
-$overlay-shadow: #eee;
-$shadow: #a9a9a9;
 $text: #444;
 $subtext: #555;
+$border: #a9a9a9;
+$shadow: #a9a9a9;
+$background: #fff;
 $link: #000;
 $link-selected: #0075c0;
 
+$overlay: #333;
+$overlay-shadow: #eee;
+$overlay-alt: #dfdfdf;
+
 $blockquote-text: scale-color($text, $lightness: 15%);
 $blockquote-border: scale-color($border, $lightness: 50%);
+$info: #bde5f8;
+$warning: #ffa;
+$alert: #ffbaba;
 $code-background: #f0f0f0;
 $tag-text: #555;
 $tag-background: #bde5f8;
 $tag-background-selected: #a6dcf6;
-$info: #bde5f8;
-$warning: #ffa;
-$alert: #ffbaba;
