@@ -9,7 +9,8 @@ $link-selected: #0075c0;
 $overlay: #333;
 $overlay-text: scale-color(invert($text), $lightness: 50%);
 $overlay-subtext: scale-color(invert($subtext), $lightness: 33%);
-$overlay-shadow: #eee;
+$overlay-border : #eee;
+$overlay-shadow: #3f3f3f;
 $overlay-link: invert($link);
 $overlay-alt: #fefefe;
 

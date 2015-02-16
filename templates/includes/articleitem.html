@@ -1,12 +1,9 @@
 <li>
     <article>
-        <header>
-            <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-            {% include 'includes/commentcounts.html' %}
-            {% if article.image %}
-                <aside class="article-image"><a href="{{ SITEURL }}/{{ article.url }}"><img src="{% if article.thumb %}{{ article.thumb }}{% else %}{{ article.image }}{% endif %}"></a></aside>
-            {% endif %}
-        </header>
+        {% if article.image %}
+            <aside class="article-image"><a href="{{ SITEURL }}/{{ article.url }}"><img src="{% if article.thumb %}{{ article.thumb }}{% else %}{{ article.image }}{% endif %}"></a></aside>
+        {% endif %}
+        <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
         <section class="post-summary">
             {{ article.summary }}
         </section>

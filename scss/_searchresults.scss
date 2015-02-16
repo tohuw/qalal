@@ -1,0 +1,40 @@
+#tipue_search_content {
+  min-height: 50vh;
+}
+
+#tipue_search_results_count {
+  font-size: 3em;
+}
+
+.tipue_search_content_title {
+  display: inline-block;
+  font-size: 2em;
+}
+
+.tipue_search_content_url {
+  color: subtext;
+  display: inline-block;
+  font-size: 1.1em;
+  margin-left: 1em;
+
+  &:before {
+    content: '(';
+  }
+
+  &:after {
+    content: ')';
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.tipue_search_content_text {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+#tipue_search_warning_head {
+  font-size: 2em;
+}

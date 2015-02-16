@@ -61,7 +61,7 @@
   margin-right: .67em;
   margin-top: .67em;
 
-  .fa-search {
+  .notresultspage {
     @include single-transition(all, .5s);
     background: transparent;
     border: 0;
@@ -77,11 +77,12 @@
   }
 }
 
-.fa-search:focus,
-.fa-search:hover {
+.notresultspage:focus,
+.notresultspage:hover,
+.resultspage {
   @include single-transition(width);
   background: #fff;
-  border: 2px inset $overlay-shadow;
+  border: 2px inset $overlay-border;
   border-radius: .25em;
   color: $text;
   cursor: auto;

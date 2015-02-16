@@ -14,7 +14,7 @@
                     {% include 'includes/articleitem.html' %}
                 {% endfor %}
             {% else %}
-                {% for article in articles %}
+                {% for article in articles[:ARTICLES_RECENT_COUNT] %}
                     {% include 'includes/articleitem.html' %}
                 {% endfor %}
             {% endif %}

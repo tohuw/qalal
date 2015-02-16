@@ -53,6 +53,8 @@
 
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" media="screen, print">
         <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     {% endblock head %}
     </head>
     <body>
@@ -86,15 +88,15 @@
         <footer class="bottom">
             {% include 'includes/articleslist.html' %}
             {% include 'includes/links.html' %}
-            <address class="credits">
-                <a href="{{ SITEURL }}">{{ SITENAME }}</a>: powered by <a href="http://getpelican.com/">Pelican</a>. {% if LICENSE_SHOW %}License: <a href="{{ LICENSE_URL }}">{{ LICENSE_TITLE }}</a>{% endif %} Theme: <a href="https://github.com/tohuw/qalal">Qalal</a>
-            </address>
+            {% if CREDITS_SHOW %}
+                <address class="credits">
+                    <a href="{{ SITEURL }}">{{ SITENAME }}</a>: powered by <a href="http://getpelican.com/">Pelican</a>. {% if LICENSE_SHOW %}License: <a href="{{ LICENSE_URL }}">{{ LICENSE_TITLE }}</a>{% endif %} Theme: <a href="https://github.com/tohuw/qalal">Qalal</a>
+                </address>
+            {% endif %}
         </footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="/js/plugins.js"></script>
-        <script src="/js/main.js"></script>
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}js/plugins.js"></script>
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}js/main.js"></script>
 
         {% include 'includes/googleanalytics.html' %}
         {% include 'includes/piwik.html' %}

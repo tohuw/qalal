@@ -7,12 +7,19 @@
     margin: 0;
   }
 
-  .post-title {
+  h1 {
     font-size: 3rem;
   }
 
   address {
     display: inline-block;
+  }
+
+  p,
+  ol,
+  ul,
+  dl {
+    font-size: 1.333333rem;
   }
 
   img {
@@ -22,19 +29,40 @@
     margin-left: 1em;
   }
 
-  article {
-    aside {
-      float: right;
-      margin-left: .25em;
-      width: 25vw;
-    }
+  aside:not(.article-image) {
+    border-bottom: 3px solid $border;
+    border-top: 3px solid $border;
+    float: right;
+    margin-left: .25em;
+    width: 25vw;
+  }
 
-    blockquote {
-      border-bottom: 3px solid $border;
-      border-top: 3px solid $border;
-      color: $blockquote-text;
-      padding-left: .5em;
-    }
+  .article-image {
+    float: left;
+    margin-right: 1em;
+  }
+
+  blockquote {
+    color: $blockquote-text;
+    padding-left: .5em;
+  }
+
+  .footnote ol,
+  .footnote p {
+    font-size: 1.1em;
+  }
+
+  .footnote-ref {
+    border: 1px solid $border;
+    border-radius: 100%;
+    font-size: .9em;
+    margin-left: .25em;
+    padding: .25em;
+    text-decoration: none;
+  }
+
+  .footnote-backref {
+    color: $subtext;
   }
 }
 
@@ -75,7 +103,6 @@
 }
 
 .post-content {
-  font-size: 1.333333rem;
   min-height: 50vh;
 }
 
@@ -110,4 +137,9 @@
       color: $tag-text;
     }
   }
+}
+
+#category-list,
+.categories-list {
+  @extend %flatlists;
 }

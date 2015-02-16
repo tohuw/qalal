@@ -2837,7 +2837,9 @@ strong {
   font-weight: normal;
 }
 
-.top ul {
+.top ul, #category-list,
+.categories-list, .bottom ol,
+.bottom ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2911,7 +2913,7 @@ strong {
   margin-right: .67em;
   margin-top: .67em;
 }
-.searchform .fa-search {
+.searchform .notresultspage {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -2923,25 +2925,26 @@ strong {
   font-size: 2rem;
   width: 1em;
 }
-.searchform .fa-search:-moz-placeholder {
+.searchform .notresultspage:-moz-placeholder {
   color: white;
   opacity: 1;
 }
-.searchform .fa-search::-moz-placeholder {
+.searchform .notresultspage::-moz-placeholder {
   color: white;
   opacity: 1;
 }
-.searchform .fa-search:-ms-input-placeholder {
+.searchform .notresultspage:-ms-input-placeholder {
   color: white;
   opacity: 1;
 }
-.searchform .fa-search::-webkit-input-placeholder {
+.searchform .notresultspage::-webkit-input-placeholder {
   color: white;
   opacity: 1;
 }
 
-.fa-search:focus,
-.fa-search:hover {
+.notresultspage:focus,
+.notresultspage:hover,
+.resultspage {
   -moz-transition: width 0.25s ease;
   -o-transition: width 0.25s ease;
   -webkit-transition: width 0.25s ease;
@@ -2955,23 +2958,27 @@ strong {
   padding: .25em;
   width: 15em;
 }
-.fa-search:focus:-moz-placeholder,
-.fa-search:hover:-moz-placeholder {
+.notresultspage:focus:-moz-placeholder,
+.notresultspage:hover:-moz-placeholder,
+.resultspage:-moz-placeholder {
   color: #444;
   opacity: 1;
 }
-.fa-search:focus::-moz-placeholder,
-.fa-search:hover::-moz-placeholder {
+.notresultspage:focus::-moz-placeholder,
+.notresultspage:hover::-moz-placeholder,
+.resultspage::-moz-placeholder {
   color: #444;
   opacity: 1;
 }
-.fa-search:focus:-ms-input-placeholder,
-.fa-search:hover:-ms-input-placeholder {
+.notresultspage:focus:-ms-input-placeholder,
+.notresultspage:hover:-ms-input-placeholder,
+.resultspage:-ms-input-placeholder {
   color: #444;
   opacity: 1;
 }
-.fa-search:focus::-webkit-input-placeholder,
-.fa-search:hover::-webkit-input-placeholder {
+.notresultspage:focus::-webkit-input-placeholder,
+.notresultspage:hover::-webkit-input-placeholder,
+.resultspage::-webkit-input-placeholder {
   color: #444;
   opacity: 1;
 }
@@ -2984,11 +2991,17 @@ strong {
 .content .post-title {
   margin: 0;
 }
-.content .post-title {
+.content h1 {
   font-size: 3rem;
 }
 .content address {
   display: inline-block;
+}
+.content p,
+.content ol,
+.content ul,
+.content dl {
+  font-size: 1.333333rem;
 }
 .content img {
   -moz-box-shadow: #a9a9a9 2px 2px 10px;
@@ -2998,16 +3011,35 @@ strong {
   margin-bottom: 1em;
   margin-left: 1em;
 }
-.content article aside {
+.content aside:not(.article-image) {
+  border-bottom: 3px solid #a9a9a9;
+  border-top: 3px solid #a9a9a9;
   float: right;
   margin-left: .25em;
   width: 25vw;
 }
-.content article blockquote {
-  border-bottom: 3px solid #a9a9a9;
-  border-top: 3px solid #a9a9a9;
+.content .article-image {
+  float: left;
+  margin-right: 1em;
+}
+.content blockquote {
   color: #606060;
   padding-left: .5em;
+}
+.content .footnote ol,
+.content .footnote p {
+  font-size: 1.1em;
+}
+.content .footnote-ref {
+  border: 1px solid #a9a9a9;
+  border-radius: 100%;
+  font-size: .9em;
+  margin-left: .25em;
+  padding: .25em;
+  text-decoration: none;
+}
+.content .footnote-backref {
+  color: #555;
 }
 
 .post-title a {
@@ -3043,7 +3075,6 @@ strong {
 }
 
 .post-content {
-  font-size: 1.333333rem;
   min-height: 50vh;
 }
 
@@ -3078,11 +3109,56 @@ strong {
   color: #555;
 }
 
+#tipue_search_content {
+  min-height: 50vh;
+}
+
+#tipue_search_results_count {
+  font-size: 3em;
+}
+
+.tipue_search_content_title {
+  display: inline-block;
+  font-size: 2em;
+}
+
+.tipue_search_content_url {
+  color: subtext;
+  display: inline-block;
+  font-size: 1.1em;
+  margin-left: 1em;
+}
+.tipue_search_content_url:before {
+  content: '(';
+}
+.tipue_search_content_url:after {
+  content: ')';
+}
+.tipue_search_content_url a {
+  text-decoration: none;
+}
+
+.tipue_search_content_text {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+#tipue_search_warning_head {
+  font-size: 2em;
+}
+
 .bottom {
-  background-color: #2f2f2f;
+  background-color: #2e2e2e;
   clear: both;
   color: #dddddd;
   margin-top: 5vh;
+}
+.bottom:before, .bottom:after {
+  content: " ";
+  display: table;
+}
+.bottom:after {
+  clear: both;
 }
 .bottom aside {
   -moz-box-sizing: border-box;
@@ -3091,16 +3167,48 @@ strong {
   padding: .5em;
 }
 .bottom .recent-articles {
-  background-color: #2e2e2e;
   float: left;
-  width: 60vw;
+  width: 60%;
 }
-.bottom .recent-articles header {
-  background: transparent;
+.bottom .recent-articles .content {
+  white-space: normal;
+  word-break: break-all;
+}
+.bottom .recent-articles ul {
+  margin-top: 1em;
+}
+.bottom .recent-articles li {
+  margin-bottom: 2em;
+}
+.bottom .recent-articles h2,
+.bottom .recent-articles p {
+  margin: 0;
+}
+.bottom .recent-articles p {
+  font-size: 1.1em;
+}
+.bottom .recent-articles img {
+  -moz-box-shadow: #3f3f3f 0.25em 0.25em 1.5em;
+  -webkit-box-shadow: #3f3f3f 0.25em 0.25em 1.5em;
+  box-shadow: #3f3f3f 0.25em 0.25em 1.5em;
+  border-radius: 100%;
+  float: left;
+  height: 5em;
+  margin-right: 1em;
+  width: 5em;
 }
 .bottom .links {
+  background-color: #2f2f2f;
   float: right;
-  width: 40vw;
+  width: 40%;
+}
+.bottom .links .links-name {
+  font-size: 1.25em;
+  margin-left: -1em;
+}
+.bottom .links li {
+  font-size: 1.1em;
+  padding: 1em 2em;
 }
 .bottom .credits {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlMmUyZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzMwMzAzMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -3112,7 +3220,7 @@ strong {
   color: #c6c6c6;
   height: 1.25em;
   padding: 1em 1.25em .67em 0;
-  text-align: right;
+  text-align: center;
 }
 .bottom .credits a {
   color: #c6c6c6;

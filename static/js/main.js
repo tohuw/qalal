@@ -3,7 +3,7 @@ var searchPlaceholder = $('#tipue_search_input').attr("placeholder")
 
 $('#tipue_search_input')
     .focus(function() {
-        if (!($(this).attr("placeholder") == searchPlaceholder)) {
+        if (!($(this).attr("placeholder") == searchPlaceholder) && $(this).attr("class").indexOf("notresultspage") > 1) {
             $(this).attr("placeholder", searchPlaceholder);
         };
     })
@@ -11,6 +11,8 @@ $('#tipue_search_input')
         $(this).focus();
     })
     .blur(function() {
-        $(this).val("");
-        $(this).attr("placeholder", "\uf002");
+        if ($(this).attr("class").indexOf("notresultspage") > 1) {
+            $(this).val("");
+            $(this).attr("placeholder", "\uf002");
+        }
     });

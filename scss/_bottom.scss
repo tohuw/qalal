@@ -1,5 +1,6 @@
 .bottom {
-  background-color: scale-color($overlay, $lightness: -7%);
+  @include html5bp-clearfix;
+  background-color: scale-color($overlay, $lightness: -10%);
   clear: both;
   color: $overlay-text;
   margin-top: 5vh;
@@ -14,19 +15,61 @@
     padding: .5em;
   }
 
-  .recent-articles {
-    background-color: scale-color($overlay, $lightness: -10%);
-    float: left;
-    width: 60vw;
+  ol,
+  ul {
+    @extend %flatlists;
+  }
 
-    header {
-      background: transparent;
+  .recent-articles {
+    float: left;
+    width: 60%;
+
+    .content {
+      white-space: normal;
+      word-break: break-all;
+    }
+
+    ul {
+      margin-top: 1em;
+    }
+
+    li {
+      margin-bottom: 2em;
+    }
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    img {
+      @include box-shadow($overlay-shadow .25em .25em 1.5em);
+      border-radius: 100%;
+      float: left;
+      height: 5em;
+      margin-right: 1em;
+      width: 5em;
     }
   }
 
   .links {
+    background-color: scale-color($overlay, $lightness: -7%);
     float: right;
-    width: 40vw;
+    width: 40%;
+
+    .links-name {
+      font-size: 1.25em;
+      margin-left: -1em;
+    }
+
+    li {
+      font-size: 1.1em;
+      padding: 1em 2em
+    }
   }
 
   .credits {
@@ -35,7 +78,7 @@
     color: $overlay-subtext;
     height: 1.25em;
     padding: 1em 1.25em .67em 0;
-    text-align: right;
+    text-align: center;
 
     a {
       color: $overlay-subtext;
