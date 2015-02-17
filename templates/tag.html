@@ -6,13 +6,19 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="category-title">Articles tagged "{{ tag }}" on {{ SITENAME }}</h1>
+    <h1 class="tag-title">Articles tagged "{{ tag }}" on {{ SITENAME }}</h1>
     <ol class="tag-list">
         {% for article in articles %}
             {% include 'includes/articleitem.html' %}
         {% endfor %}
     </ol>
 
-    <h2 class="tagcloud-title">All Tags</h2>
-    {% include 'includes/tagcloud.html' %}
+    <h2 class="tagcloud-title">More Tags</h2>
+    <ul class="tagcloud">
+        Tags: {{ tags }} <br>
+        TagCloud: {{ tag_cloud }} <br>
+        {% for tag in tag_cloud|sort %}
+            <li class="tagclouditem-{{ tag.1 }}"><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a>
+        {% endfor %}
+    </ul>
 {% endblock %}

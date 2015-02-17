@@ -1,36 +1,52 @@
+@mixin tagcloud($base-size: 1em) {
+  font-size: $base-size;
+  line-height: 1.2 * $base-size;
+
+  [class^="tagclouditem"],
+  [class*=" tagclouditem"] {
+    line-height: 1.2 * $base-size;
+  }
+
+  .tagclouditem-6 {
+    font-size: $base-size / 2;
+  }
+
+  .tagclouditem-5 {
+    font-size: 2 * $base-size / 3;
+  }
+
+  .tagclouditem-4 {
+    font-size: 3 * $base-size / 4;
+  }
+
+  .tagclouditem-3 {
+    font-size: 4 * $base-size / 3;
+  }
+
+  .tagclouditem-2 {
+    font-size: 3 * $base-size / 2;
+  }
+
+  .tagclouditem-1 {
+    font-size: 1.75 * $base-size;
+  }
+}
+
 .tagcloud {
-  @include tag-cloud;
+  @include tagcloud(1.1em);
   display: inline-block;
   list-style: none;
+  margin: 0;
   padding: 0;
 
   li {
     display: inline-block;
-
-    .tagclouditem-1 {
-      @extend .xxl;
-    }
-
-    .tagclouditem-2 {
-      @extend .xl;
-    }
-
-    .tagclouditem-3 {
-      @extend .l;
-    }
-
-    &.tagclouditem-4 {
-      @extend .s;
-    }
-
-    &.tagclouditem-5 {
-      @extend .xs;
-    }
-
-    &.tagclouditem-6 {
-      @extend .xxs;
-    }
+    margin-right: .5em;
   }
+}
+
+.tags-title {
+  margin-bottom: 0;
 }
 
 .tagcloud-title {

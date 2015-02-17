@@ -3341,35 +3341,42 @@ code {
 }
 
 .tagcloud {
-  font-size: 1em;
-  line-height: 1.2em;
+  font-size: 1.1em;
+  line-height: 1.32em;
   display: inline-block;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
-.tagcloud .xxs, .tagcloud li.tagclouditem-6, .tagcloud .xs, .tagcloud li.tagclouditem-5, .tagcloud .s, .tagcloud li.tagclouditem-4, .tagcloud .l, .tagcloud li .tagclouditem-3, .tagcloud .xl, .tagcloud li .tagclouditem-2, .tagcloud .xxl, .tagcloud li .tagclouditem-1 {
-  line-height: 1.2em;
+.tagcloud [class^="tagclouditem"],
+.tagcloud [class*=" tagclouditem"] {
+  line-height: 1.32em;
 }
-.tagcloud .xxs, .tagcloud li.tagclouditem-6 {
-  font-size: 0.5em;
+.tagcloud .tagclouditem-6 {
+  font-size: 0.55em;
 }
-.tagcloud .xs, .tagcloud li.tagclouditem-5 {
-  font-size: 0.66667em;
+.tagcloud .tagclouditem-5 {
+  font-size: 0.73333em;
 }
-.tagcloud .s, .tagcloud li.tagclouditem-4 {
-  font-size: 0.75em;
+.tagcloud .tagclouditem-4 {
+  font-size: 0.825em;
 }
-.tagcloud .l, .tagcloud li .tagclouditem-3 {
-  font-size: 1.33333em;
+.tagcloud .tagclouditem-3 {
+  font-size: 1.46667em;
 }
-.tagcloud .xl, .tagcloud li .tagclouditem-2 {
-  font-size: 1.5em;
+.tagcloud .tagclouditem-2 {
+  font-size: 1.65em;
 }
-.tagcloud .xxl, .tagcloud li .tagclouditem-1 {
-  font-size: 2em;
+.tagcloud .tagclouditem-1 {
+  font-size: 1.925em;
 }
 .tagcloud li {
   display: inline-block;
+  margin-right: .5em;
+}
+
+.tags-title {
+  margin-bottom: 0;
 }
 
 .tagcloud-title {

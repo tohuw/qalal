@@ -1,7 +1,0 @@
-<ul class="tagcloud">
-    {% for tag in tag_cloud %}
-        <li class="tagclouditem-{{ tag.1 }}">
-            <a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a> ({{ articles|count }})
-        </li>
-    {% endfor %}
-</ul>
