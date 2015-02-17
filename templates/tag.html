@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Articles on tagged {{ tag|striptags }} on 
+    Articles tagged {{ tag|striptags }} on
     {{ super () }}
 {% endblock %}
 
 {% block content %}
-    <h1 id="category-title">Articles tagged "{{ tag }}" on {{ SITENAME }}</h1>
-    <ol id="tag-list">
+    <h1 class="category-title">Articles tagged "{{ tag }}" on {{ SITENAME }}</h1>
+    <ol class="tag-list">
         {% for article in articles %}
             {% include 'includes/articleitem.html' %}
         {% endfor %}
     </ol>
+
+    <h2 class="tagcloud-title">All Tags</h2>
+    {% include 'includes/tagcloud.html' %}
 {% endblock %}

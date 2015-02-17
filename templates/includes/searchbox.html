@@ -1,5 +1,5 @@
 {% if TIPUE_SEARCH_ENABLED %}
     <form action="{{ SITEURL }}/search.html" class="searchform">
-        <input type="search" name="q" id="tipue_search_input" class="{% block searchboxclasses %}fa-search notresultspage{% endblock searchboxclasses %}" autocomplete="on" placeholder="&#xf002; {{ SEARCHBOX_PLACEHOLDER }}">
+        <input type="search" name="q" id="tipue_search_input" class="fa-search {%+ if output_file == "search.html" %}resultspage{%+ else %}notresultspage{% endif %}" autocomplete="on" placeholder="&#xf002; {{ SEARCHBOX_PLACEHOLDER }}">
     </form>
 {% endif %}

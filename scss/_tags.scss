@@ -1,5 +1,6 @@
 .tagcloud {
   @include tag-cloud;
+  display: inline-block;
   list-style: none;
   padding: 0;
 
@@ -28,6 +29,30 @@
 
     &.tagclouditem-6 {
       @extend .xxs;
+    }
+  }
+}
+
+.tagcloud-title {
+  clear: both;
+  display: inline-block;
+  font-size: 2em;
+
+  &:after {
+    content: ':';
+  }
+}
+
+.tag-list {
+  @extend %flatlists;
+  @include html5bp-clearfix;
+
+  li {
+    margin-bottom: 3em;
+
+    h2,
+    p {
+      margin: 0;
     }
   }
 }

@@ -6,12 +6,6 @@
 {% endblock title %}
 
 {% block content %}
-    <h1 id="tags-title">Tags on {{ SITENAME }}</h1>
-    <ul class="tagcloud">
-        {% for tag in tag_cloud %}
-            <li class="tagclouditem-{{ tag.1 }}">
-                <a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a> ({{ articles|count }})
-            </li>
-        {% endfor %}
-    </ul>
+    <h1 class="tagcloud-title">Tags on {{ SITENAME }}</h1>
+    {% include 'includes/tagcloud.html' %}
 {% endblock content %}

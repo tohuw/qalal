@@ -2837,9 +2837,9 @@ strong {
   font-weight: normal;
 }
 
-.top ul, #category-list,
+.top ul, .category-list,
 .categories-list, .bottom ol,
-.bottom ul {
+.bottom ul, .tag-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -3109,6 +3109,11 @@ strong {
   color: #555;
 }
 
+.category-list li,
+.categories-list li {
+  margin-bottom: 3em;
+}
+
 #tipue_search_content {
   min-height: 50vh;
 }
@@ -3338,6 +3343,7 @@ code {
 .tagcloud {
   font-size: 1em;
   line-height: 1.2em;
+  display: inline-block;
   list-style: none;
   padding: 0;
 }
@@ -3364,6 +3370,30 @@ code {
 }
 .tagcloud li {
   display: inline-block;
+}
+
+.tagcloud-title {
+  clear: both;
+  display: inline-block;
+  font-size: 2em;
+}
+.tagcloud-title:after {
+  content: ':';
+}
+
+.tag-list:before, .tag-list:after {
+  content: " ";
+  display: table;
+}
+.tag-list:after {
+  clear: both;
+}
+.tag-list li {
+  margin-bottom: 3em;
+}
+.tag-list li h2,
+.tag-list li p {
+  margin: 0;
 }
 
 .no-js .searchform {

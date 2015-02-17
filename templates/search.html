@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
+{% set SEARCH_RESULTS = 'resultspage' %}
+
 {% if TIPUE_SEARCH_ENABLED %}
     {% block title %}
         Search
         {{ super() }}
     {% endblock title %}
-
-    {% block searchboxclasses %}fa-search resultspage{% endblock searchboxclasses %}
 
     {% block content %}
     <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}js/tipuesearch_set.js"></script>

@@ -6,8 +6,8 @@
 {% endblock %}
 
 {% block content %}
-    <h1 id="category-title">{{ category }} Articles on {{ SITENAME }}</h1>
-    <ol id="category-list">
+    <h1 class="category-title">{{ category }} Articles on {{ SITENAME }}</h1>
+    <ol class="category-list">
         {% for article in articles %}
             {% include 'includes/articleitem.html' %}
         {% endfor %}

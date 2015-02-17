@@ -139,7 +139,11 @@
   }
 }
 
-#category-list,
+.category-list,
 .categories-list {
   @extend %flatlists;
+
+  li {
+    margin-bottom: 3em;
+  }
 }
